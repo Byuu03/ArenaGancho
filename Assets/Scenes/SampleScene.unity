@@ -158,7 +158,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovementSpeed: 4
-  JumpForce: 3
+  JumpForce: 15
+  derecha: 1
 --- !u!231 &96564254
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -336,10 +337,11 @@ MonoBehaviour:
   grabbed: 0
   distance: 5
   holdPoint: {fileID: 981475138}
-  throwForce: 10
+  throwForce: 28.5
   notgrabbed:
     serializedVersion: 2
     m_Bits: 567
+  pm: {fileID: 96564252}
 --- !u!1 &108838394
 GameObject:
   m_ObjectHideFlags: 0

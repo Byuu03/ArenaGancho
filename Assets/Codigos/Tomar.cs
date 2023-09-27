@@ -11,6 +11,8 @@ public class Tomar : MonoBehaviour
     public float throwForce;
     public LayerMask notgrabbed;
 
+    public PlayerMovement pm;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,16 @@ public class Tomar : MonoBehaviour
             if (!grabbed)
             {
                 Physics2D.queriesStartInColliders = false;
+
                 hit = Physics2D.Raycast(transform.position, Vector2.right * transform.localScale.x, distance);
+                if (pm.derecha)
+                {
+                    hit = Physics2D.Raycast(transform.position, Vector2.right * transform.localScale.x, distance);
+                }
+                else
+                {
+                    hit = Physics2D.Raycast(transform.position, -Vector2.right * transform.localScale.x, distance);
+                }
 
                 if (hit.collider != null && hit.collider.tag == "Box")
                 {
@@ -37,9 +48,18 @@ public class Tomar : MonoBehaviour
             else if(!Physics2D.OverlapPoint(holdPoint.position, notgrabbed))
             {
                 grabbed = false;
+                hit.collider.gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
                 if (hit.collider.gameObject.GetComponent<Rigidbody2D>() !=null)
                 {
-                    hit.collider.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(transform.localScale.x,1) * throwForce;
+                    if (pm.derecha)
+                    {
+                        hit.collider.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(transform.localScale.x, 0.2f) * throwForce;
+                    }
+                    else
+                    {
+                        hit.collider.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(transform.localScale.x, -0.2f) * -throwForce;
+                    }
+                    //hit.collider.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(transform.localScale.x, 0.2f) * throwForce;
                 }
 
                 //throw
@@ -49,6 +69,7 @@ public class Tomar : MonoBehaviour
         if (grabbed)
         {
             hit.collider.gameObject.transform.position = holdPoint.position;
+            hit.collider.gameObject.GetComponent<BoxCollider2D>().isTrigger=true;
         }
     }
 
