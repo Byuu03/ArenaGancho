@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Box
+  - PlayerOne
+  - PlayerTwo
+  - Puas
   layers:
   - Default
   - TransparentFX
