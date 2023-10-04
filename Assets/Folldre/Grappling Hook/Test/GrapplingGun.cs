@@ -111,7 +111,7 @@ public class GrapplingGun : MonoBehaviour
 
       
 
-
+        //ESTE ES EL PRINCIPAL
         else if (Input.GetKeyDown(KeyCode.E) && !atraer)
         {
             SetGrapplePoint();              //Establece el punto de agarre
