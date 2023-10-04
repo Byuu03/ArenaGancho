@@ -5,13 +5,13 @@ public class GrapplingGun : MonoBehaviour
     [Header("Scripts:")]
     public GrappleRope grappleRope;
 
-    //public GameObject point;   //
-    //private GameObject hitObj;   //
+    public GameObject point;   //
+    private GameObject hitObj;   //
 
     [Header("Layer Settings:")]
     [SerializeField] private bool grappleToAll = false;
     [SerializeField] private int grappableLayerNumber = 9;
-    //[SerializeField] private int arrastableLayerNumber = 10; //
+    [SerializeField] private int arrastableLayerNumber = 10; //
 
     //ATRACCION VAR
     [SerializeField] private float attractionForce;
@@ -54,6 +54,7 @@ public class GrapplingGun : MonoBehaviour
 
     public Rigidbody2D ballRigidbody;
 
+    [SerializeField] 
     private bool atraer = false; //
 
     private void Start()
@@ -65,25 +66,56 @@ public class GrapplingGun : MonoBehaviour
 
     private void Update()
     {
-        //if (atraer)
+        if (atraer)
+        {
+
+            //Vector3 direccion = (point.transform.position).normalized;
+            //float distancia = Vector3.Distance(transform.position, point.transform.position);
+            //if (distancia > 0.1f)
+            //{
+            //    ballRigidbody.isKinematic = true;
+            //    point.transform.Translate(direccion * 5f * Time.deltaTime);
+            //}
+            //else if(distancia < 0.1)
+            //{
+
+            //    atraer = false;
+            //}
+
+            //grappleRope.transform.parent = point.transform;
+            grapplePoint = new Vector2(point.transform.position.x, point.transform.position.y);
+            point.transform.position = Vector2.MoveTowards(point.transform.position, this.transform.position, 0.05f);
+            DistanceVector = (Vector2)point.transform.position - (Vector2)gunPivot.position;    //CALCULA EL VECTOR DE DISTANCIA
+                                                                                                //grappleRope.enabled = true;
+                                                                                                //m_springJoint2D.enabled = true;
+            print("ccc");
+            if (Input.GetKeyDown(KeyCode.E)) //Aqui detecto si el objeto esta apegado a mi, de momento al estar cerca mio lo suelto pero si quiero lanzarlo aqui la logica
+            {
+                //logica de enganche
+                hitObj.transform.parent = null;
+                
+                point.transform.position = new Vector3(100, 100, 0);
+                print("Solte");
+                atraer = false; 
+                //grappleRope.transform.parent = null;
+                //grappleRope.enabled = false;
+                //m_springJoint2D.enabled = false;
+                //ballRigidbody.gravityScale = 1;
+                //hitObj.transform.parent = null;
+            }
+        }
+        //else
         //{
-        //    point.transform.position = Vector2.MoveTowards(point.transform.position, this.transform.position, 0.5f);
-        //    DistanceVector = (Vector2)point.transform.position - (Vector2)gunPivot.position;    //CALCULA EL VECTOR DE DISTANCIA
-        //                                                                                        //grappleRope.enabled = true;
-        //                                                                                        //m_springJoint2D.enabled = true;
-        //    print("ccc");
-        //}
-        //if (/*point.transform.position == this.firePoint.transform.position*/ Vector2.Distance(point.transform.position, this.transform.position) < 0.5f) //Aqui detecto si el objeto esta apegado a mi, de momento al estar cerca mio lo suelto pero si quiero lanzarlo aqui la logica
-        //{
-        //    print("dd");
-        //    atraer = false;
-        //    hitObj.transform.parent = null;
+        //    ballRigidbody.isKinematic = false;
         //}
 
+      
 
-        if (Input.GetKeyDown(KeyCode.E))
+
+        else if (Input.GetKeyDown(KeyCode.E) && !atraer)
         {
             SetGrapplePoint();              //Establece el punto de agarre
+            print("Dispare");
         }
         else if (Input.GetKey(KeyCode.R))   //Manejo de rotacion y lanzamiento
         {
@@ -126,7 +158,21 @@ public class GrapplingGun : MonoBehaviour
         if (Physics2D.Raycast(firePoint.position, transform.right))
         {
             RaycastHit2D _hit = Physics2D.Raycast(firePoint.position, transform.right);
-            if ((_hit.transform.gameObject.layer == grappableLayerNumber || grappleToAll) && ((Vector2.Distance(_hit.point, firePoint.position) <= maxDistance) || !hasMaxDistance))
+            if ((_hit.transform.gameObject.layer == arrastableLayerNumber || grappleToAll) && ((Vector2.Distance(_hit.point, firePoint.position) <= maxDistance) || !hasMaxDistance))
+            {
+                print("bbbb");
+                atraer = true;
+                
+                DistanceVector = (Vector2)point.transform.position - (Vector2)gunPivot.position;
+                //grappleRope.enabled = true;
+                //Instantiate(point,grapplePoint,Quaternion.identity);
+                hitObj = _hit.transform.gameObject;
+                //point.transform.position = grapplePoint;
+                hitObj.transform.parent = point.transform;
+                grapplePoint = _hit.point;
+
+            }
+            else if ((_hit.transform.gameObject.layer == grappableLayerNumber || grappleToAll) && ((Vector2.Distance(_hit.point, firePoint.position) <= maxDistance) || !hasMaxDistance))
             {
                 print("aaa");
                 //COMPROBAR SI EL OBJETO ES ENGANCHABLE Y SI ESTA DENTRO DE LA DISTANCIA MAXIMA
@@ -135,19 +181,7 @@ public class GrapplingGun : MonoBehaviour
                 grappleRope.enabled = true;
             }
 
-            //if ((_hit.transform.gameObject.layer == arrastableLayerNumber || grappleToAll) && ((Vector2.Distance(_hit.point, firePoint.position) <= maxDistance) || !hasMaxDistance))
-            //{
-            //    print("bbbb");
-            //    grapplePoint = _hit.point;
-            //    DistanceVector = grapplePoint - (Vector2)gunPivot.position;
-            //    grappleRope.enabled = true;
-            //    //Instantiate(point,grapplePoint,Quaternion.identity);
-            //    hitObj = _hit.transform.gameObject;
-            //    point.transform.position = grapplePoint;
-            //    hitObj.transform.parent = point.transform;
-            //    atraer = true;
-
-            //}
+           
         }
     }
 
@@ -164,8 +198,9 @@ public class GrapplingGun : MonoBehaviour
             m_springJoint2D.frequency = targetFrequency;
         }
 
-        if (!launchToPoint)
+        if (!launchToPoint && !atraer)
         {
+            
             if (autoCongifureDistance)
             {
                 m_springJoint2D.autoConfigureDistance = true;  // Habilita la configuración automática de la distancia del resorte
@@ -194,18 +229,21 @@ public class GrapplingGun : MonoBehaviour
 
         else
         {
-            if (Launch_Type == LaunchType.Transform_Launch)
+            if (Launch_Type == LaunchType.Transform_Launch && !atraer)
             {
                 ballRigidbody.gravityScale = 0;
                 ballRigidbody.velocity = Vector2.zero;
+                print("Grapple");
             }
-            if (Launch_Type == LaunchType.Physics_Launch)
+            if (Launch_Type == LaunchType.Physics_Launch && !atraer)
             {
                 m_springJoint2D.connectedAnchor = grapplePoint;
                 m_springJoint2D.distance = 0;
                 m_springJoint2D.frequency = launchSpeed;
                 m_springJoint2D.enabled = true;
+                print("Grapple");
             }
+           
         }
     }
 
