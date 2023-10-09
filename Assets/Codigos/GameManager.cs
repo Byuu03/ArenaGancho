@@ -16,14 +16,11 @@ public class GameManager : MonoBehaviour
     public int P1Life;
     public int P2Life;
 
-    //Sprites
+    //Sprites De Hp
     public GameObject[] p1Stock;
     public GameObject[] p2Stock;
 
     //public Slider barrahp;
-
-    // private int scoreOne;
-    // private int scoreTwo;
 
     //Puntos Jugadores
 
@@ -37,9 +34,11 @@ public class GameManager : MonoBehaviour
     //private bool stopTimer;
 
     //Pantallas
-    public GameObject p1Wins;
-    public GameObject p2Wins;
-    //public WinScreen WinEndScreen;
+    //public GameObject p1Wins;
+    //public GameObject p2Wins;
+
+    public WinScreen WinEndScreen;
+    public WinPlayerTwo WinTwo;
     //public GameoverScreen GameOverScreen;
 
 
@@ -47,8 +46,6 @@ public class GameManager : MonoBehaviour
     {
         manager = this;
         //score = 0;
-        //scoreOne = 0;
-        //scoreTwo = 0;
         //UpdatedScore();
         //Application.targetFrameRate = 60;
 
@@ -74,13 +71,20 @@ public class GameManager : MonoBehaviour
     //}
 
 
-    //public void WinGame()
-    //{
-    //    print("WinGame");
-    //    Cursor.visible = true;
-    //    Cursor.lockState = CursorLockMode.None;
-    //    //WinEndScreen.Setup(score);
-    //}
+    public void WinGame()
+    {
+        print("JUGADOR 1 GANO");
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        //WinEndScreen.Setup(score);
+    }
+
+    public void WinPjTwo()
+    {
+        print("JUGADOR 2 GANO");
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
 
     //public void ResetearJuego()
     //{
@@ -112,13 +116,17 @@ public class GameManager : MonoBehaviour
         if (P1Life <= 0)
         {
             player1.SetActive(false);
-            p2Wins.SetActive(true);
+            //p2Wins.SetActive(true);
+
+            WinPjTwo();
         }
 
         if (P2Life <= 0)
         {
             player2.SetActive(false);
-            p1Wins.SetActive(true);
+            //p1Wins.SetActive(true);
+
+            WinGame();
         }
 
     }
