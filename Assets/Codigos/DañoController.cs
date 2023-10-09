@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DañoController : MonoBehaviour
 {
+    public int daño;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +21,9 @@ public class DañoController : MonoBehaviour
     {
         if (collision.gameObject.tag == "PlayerOne")
         {
-            GameManager.manager.HurtP1();
+            GameManager.manager.HurtP1(daño);
             //FindObjectOfType<GameManager>().HurtP1();
-            GameManager.manager.WinGame();
+            //GameManager.manager.WinGame();
         }
 
         if (collision.gameObject.tag == "PlayerTwo")
@@ -30,7 +31,7 @@ public class DañoController : MonoBehaviour
             GameManager.manager.HurtP2();
             //FindObjectOfType<GameManager>().HurtP2();
 
-            GameManager.manager.WinPjTwo();
+            //GameManager.manager.WinPjTwo();
         }
     }
 

@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] p2Stock;
 
     //public Slider barrahp;
+    private int score;
 
     //Puntos Jugadores
 
@@ -77,6 +78,8 @@ public class GameManager : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         //WinEndScreen.Setup(score);
+        WinOne.Setup(score);
+
     }
 
     public void WinPjTwo()
@@ -84,6 +87,7 @@ public class GameManager : MonoBehaviour
         print("JUGADOR 2 GANO");
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        WinTwo.Setup(score);
     }
 
     //public void ResetearJuego()
@@ -131,9 +135,9 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void HurtP1()
+    public void HurtP1(int restarhp)
     {
-        P1Life -= 1;
+        P1Life -= restarhp;
 
         for (int i = 0; i < p1Stock.Length; i++)
         {
