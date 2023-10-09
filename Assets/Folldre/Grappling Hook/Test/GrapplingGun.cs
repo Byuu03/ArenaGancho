@@ -57,12 +57,27 @@ public class GrapplingGun : MonoBehaviour
     [SerializeField] 
     private bool atraer = false; //
 
+    //private LineRenderer linerender;
+
     private void Start()
     {
         grappleRope.enabled = false;
         m_springJoint2D.enabled = false;
         ballRigidbody.gravityScale = 1;
+
+        //CHAT GPT
+        //linerender = GetComponent<LineRenderer>();
+
+        //if (linerender != null)
+        //{
+        //    linerender.positionCount = 2;
+        //    linerender.SetPosition(0, gunPivot.position);
+        //    linerender.SetPosition(1, point.transform.position);
+        //}
+
     }
+
+    
 
     private void Update()
     {
@@ -86,8 +101,8 @@ public class GrapplingGun : MonoBehaviour
             grapplePoint = new Vector2(point.transform.position.x, point.transform.position.y);
             point.transform.position = Vector2.MoveTowards(point.transform.position, this.transform.position, 0.05f);
             DistanceVector = (Vector2)point.transform.position - (Vector2)gunPivot.position;    //CALCULA EL VECTOR DE DISTANCIA
-                                                                                                //grappleRope.enabled = true;
-                                                                                                //m_springJoint2D.enabled = true;
+
+
             print("ccc");
             if (Input.GetKeyDown(KeyCode.E)) //Aqui detecto si el objeto esta apegado a mi, de momento al estar cerca mio lo suelto pero si quiero lanzarlo aqui la logica
             {
@@ -104,9 +119,12 @@ public class GrapplingGun : MonoBehaviour
                 //hitObj.transform.parent = null;
             }
         }
-        //else
+       
+
+        //GPT
+        //if (linerender != null)
         //{
-        //    ballRigidbody.isKinematic = false;
+        //    linerender.SetPosition(1, point.transform.position);
         //}
 
       
@@ -139,7 +157,7 @@ public class GrapplingGun : MonoBehaviour
             }
 
         }
-        else if (Input.GetKeyUp(KeyCode.Q))
+        else if (Input.GetKeyUp(KeyCode.E))
         {
             //DEHABILITA EL GANCHO
             grappleRope.enabled = false;
