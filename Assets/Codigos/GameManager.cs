@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     //public GameObject p1Wins;
     //public GameObject p2Wins;
 
-    public WinScreen WinEndScreen;
+    public WinScreen WinOne;
     public WinPlayerTwo WinTwo;
     //public GameoverScreen GameOverScreen;
 
