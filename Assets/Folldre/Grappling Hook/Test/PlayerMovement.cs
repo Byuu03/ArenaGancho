@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D _rigidbody;
     public bool derecha = true;
 
-    //public bool canMove;
+    public bool canMove;
 
     //Paralisis
     //public bool isParalyzed;
@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
-        //canMove = true;
+        canMove = true;
 
         //isParalyzed = false;
         //checkingParalyze = false;
@@ -31,26 +31,56 @@ public class PlayerMovement : MonoBehaviour
         //var movement = Input.GetAxis("Horizontal");
         //transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
 
-        if (Input.GetKey(KeyCode.A))
+        if (canMove)
         {
-            derecha = false;
-            _rigidbody.velocity = new Vector2(-MovementSpeed, _rigidbody.velocity.y);
-            transform.localRotation = Quaternion.Euler(0, -180, 0f);
+            if (Input.GetKey(KeyCode.A))
+            {
+                derecha = false;
+                _rigidbody.velocity = new Vector2(-MovementSpeed, _rigidbody.velocity.y);
+                transform.localRotation = Quaternion.Euler(0, -180, 0f);
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                derecha = true;
+                _rigidbody.velocity = new Vector2(MovementSpeed, _rigidbody.velocity.y);
+                transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            }
+
+
+
+            if (Input.GetButtonDown("Jump") && Mathf.Abs(_rigidbody.velocity.y) < 0.001f)
+            {
+                _rigidbody.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
+            }
         }
-        else if (Input.GetKey(KeyCode.D))
+      
+
+       
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Box")
         {
-            derecha = true;
-            _rigidbody.velocity = new Vector2(MovementSpeed, _rigidbody.velocity.y);
-            transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
-        }
-
-
-
-        if (Input.GetButtonDown("Jump") && Mathf.Abs(_rigidbody.velocity.y) < 0.001f)
-        {
-            _rigidbody.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
+            Invoke("DesactivarMovimiento", 0f);
+            
         }
     }
+
+    public void DesactivarMovimiento()
+    {
+        canMove = false;
+        Invoke("ActivarMovimiento", 3f);
+        print("No me puedo Mover");
+    }
+
+    public void ActivarMovimiento()
+    {
+        canMove = true;
+        print("Me puedo Mover");
+    }
+
+
 
     //public void CheckStatusEffect()
     //{
@@ -82,8 +112,6 @@ public class PlayerMovement : MonoBehaviour
     //        Debug.Log("Paralizado");
     //        MovementSpeed = 0f;
     //        yield return new WaitForSeconds(2f);
-
-            
     //    }
     //}
 
