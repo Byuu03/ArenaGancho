@@ -7,7 +7,8 @@ public class ChangeTag : MonoBehaviour
 {
     public string newTag;
 
-    public PlayerMovement playerMove;
+    public PlayerMovement playerOneMove;
+    public PlayerMovement playerTwoMove;
 
     public float mSpeed;
 
@@ -30,25 +31,45 @@ public class ChangeTag : MonoBehaviour
     {
         if (collision.gameObject.tag == "PlayerOne")
         {
-            //StartCoroutine(ChangeTagWithDelay());
             gameObject.tag = newTag;
-            //return;
+        }
+
+        if (collision.gameObject.tag == "PlayerTwo")
+        {
+            gameObject.tag = newTag;
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "PlayerOne")
         {
-            playerMove.KBCounter = playerMove.KBTotalTime;
+            playerOneMove.KBCounter = playerOneMove.KBTotalTime;
             if (collision.transform.position.x <= transform.position.x)
             {
-                playerMove.KnockFromRight = true;
+                playerOneMove.KnockFromRight = true;
             }
             if (collision.transform.position.x > transform.position.x)
             {
-                playerMove.KnockFromRight = false;
+                playerOneMove.KnockFromRight = false;
             }
+
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "PlayerTwo")
+        {
+            playerTwoMove.KBCounter = playerTwoMove.KBTotalTime;
+            if (collision.transform.position.x <= transform.position.x)
+            {
+                playerTwoMove.KnockFromRight = true;
+            }
+            if (collision.transform.position.x > transform.position.x)
+            {
+                playerTwoMove.KnockFromRight = false;
+            }
+
+            Destroy(gameObject);
         }
     }
 
@@ -75,10 +96,4 @@ public class ChangeTag : MonoBehaviour
 
     //}
 
-    //IEnumerator ChangeTagWithDelay()
-    //{
-    //    yield return new WaitForSeconds(delayTime);
-    //    gameObject.tag = newTag;
-    //    tagChange = true;
-    //}
 }

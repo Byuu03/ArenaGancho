@@ -22,9 +22,9 @@ public class GrapplingGun : MonoBehaviour
     public Transform gunPivot;
     public Transform firePoint;
 
-    //[Header("Rotation:")]
-    //[SerializeField] private bool rotateOverTime = true;
-    //[Range(0, 80)] [SerializeField] private float rotationSpeed = 4;
+    [Header("LanzarGancho")]
+    public KeyCode lanzarGancho;
+    
 
     [Header("Distance:")]
     [SerializeField] private bool hasMaxDistance = true;
@@ -104,7 +104,7 @@ public class GrapplingGun : MonoBehaviour
 
 
             print("ccc");
-            if (Input.GetKeyDown(KeyCode.E)) //Aqui detecto si el objeto esta apegado a mi, de momento al estar cerca mio lo suelto pero si quiero lanzarlo aqui la logica
+            if (Input.GetKeyDown(lanzarGancho)) //Aqui detecto si el objeto esta apegado a mi, de momento al estar cerca mio lo suelto pero si quiero lanzarlo aqui la logica
             {
                 //logica de enganche
                 hitObj.transform.parent = null;
@@ -130,7 +130,7 @@ public class GrapplingGun : MonoBehaviour
       
 
         //ESTE ES EL PRINCIPAL
-        else if (Input.GetKeyDown(KeyCode.E) && !atraer)
+        else if (Input.GetKeyDown(lanzarGancho) && !atraer)
         {
             SetGrapplePoint();              //Establece el punto de agarre
             print("Dispare");
@@ -157,7 +157,7 @@ public class GrapplingGun : MonoBehaviour
             }
 
         }
-        else if (Input.GetKeyUp(KeyCode.E))
+        else if (Input.GetKeyUp(lanzarGancho))
         {
             //DEHABILITA EL GANCHO
             grappleRope.enabled = false;

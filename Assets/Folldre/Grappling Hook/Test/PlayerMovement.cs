@@ -10,6 +10,10 @@ public class PlayerMovement : MonoBehaviour
 
     public bool canMove;
 
+    [Header("Keybinds")]
+    public KeyCode derechaKey;
+    public KeyCode izquierdaKey;
+
     //RETROCESO
     public float KBForce;
     public float KBCounter;
@@ -28,13 +32,13 @@ public class PlayerMovement : MonoBehaviour
 
         if (canMove)
         {
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(izquierdaKey))
             {
                 derecha = false;
                 _rigidbody.velocity = new Vector2(-MovementSpeed, _rigidbody.velocity.y);
                 transform.localRotation = Quaternion.Euler(0, -180, 0f);
             }
-            else if (Input.GetKey(KeyCode.D))
+            else if (Input.GetKey(derechaKey))
             {
                 derecha = true;
                 _rigidbody.velocity = new Vector2(MovementSpeed, _rigidbody.velocity.y);

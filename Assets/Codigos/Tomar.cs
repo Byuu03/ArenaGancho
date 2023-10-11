@@ -11,6 +11,9 @@ public class Tomar : MonoBehaviour
     public float throwForce;
     public LayerMask notgrabbed;
 
+    [Header("Keybinds")]
+    public KeyCode tomarKey;
+
     public PlayerMovement pm;
 
     // Start is called before the first frame update
@@ -22,7 +25,7 @@ public class Tomar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.B))
+        if (Input.GetKeyDown(tomarKey))
         {
             if (!grabbed)
             {
