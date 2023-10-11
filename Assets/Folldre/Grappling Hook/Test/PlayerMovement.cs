@@ -10,26 +10,21 @@ public class PlayerMovement : MonoBehaviour
 
     public bool canMove;
 
-    //Paralisis
-    //public bool isParalyzed;
-    //public float paralyzedEffectTimer;
-    //public float paralyzedStatusDuration;
-    //public bool checkingParalyze;
-    //public int paralyzeChance;
+    //RETROCESO
+    public float KBForce;
+    public float KBCounter;
+    public float KBTotalTime;
+    public bool KnockFromRight;
 
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         canMove = true;
 
-        //isParalyzed = false;
-        //checkingParalyze = false;
     }
 
     private void Update()
     {
-        //var movement = Input.GetAxis("Horizontal");
-        //transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
 
         if (canMove)
         {
@@ -58,9 +53,31 @@ public class PlayerMovement : MonoBehaviour
        
     }
 
+    private void FixedUpdate()
+    {
+        if (KBCounter <= 0) //Aqui se debe de desactivar el movimiento
+        {
+            //_rigidbody.velocity = new Vector2(canMove * MovementSpeed, _rigidbody.velocity.y);
+        }
+        else
+        {
+            if (KnockFromRight == true)
+            {
+                _rigidbody.velocity = new Vector2(-KBForce, KBForce);
+            }
+            if (KnockFromRight == false)
+            {
+                _rigidbody.velocity = new Vector2(KBForce, KBForce);
+            }
+
+            KBCounter -= Time.deltaTime;
+
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Box")
+        if (collision.gameObject.tag == "ParalyzeBox")
         {
             Invoke("DesactivarMovimiento", 0f);
             
@@ -80,39 +97,5 @@ public class PlayerMovement : MonoBehaviour
         print("Me puedo Mover");
     }
 
-
-
-    //public void CheckStatusEffect()
-    //{
-    //    if (isParalyzed == true)
-    //    {
-    //        paralyzedEffectTimer -= Time.deltaTime;
-    //        if (paralyzedEffectTimer <= 0f)
-    //        {
-    //            isParalyzed = false;
-    //            paralyzedEffectTimer = paralyzedStatusDuration;
-    //        }
-
-    //        if (checkingParalyze == true)
-    //        {
-    //            return;
-    //        }
-    //        else
-    //        {
-    //            StartCoroutine("CheckParalyze");
-    //        }
-    //    }
-    //}
-
-    //IEnumerator CheckParalyze()
-    //{
-    //    checkingParalyze = true;
-    //    if (Random.Range(0, 100) <= paralyzeChance)
-    //    {
-    //        Debug.Log("Paralizado");
-    //        MovementSpeed = 0f;
-    //        yield return new WaitForSeconds(2f);
-    //    }
-    //}
 
 }

@@ -8,6 +8,7 @@ TagManager:
   - PlayerOne
   - PlayerTwo
   - Puas
+  - ParalyzeBox
   layers:
   - Default
   - TransparentFX

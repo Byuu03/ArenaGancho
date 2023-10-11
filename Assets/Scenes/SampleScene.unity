@@ -274,6 +274,10 @@ MonoBehaviour:
   JumpForce: 15
   derecha: 1
   canMove: 0
+  KBForce: 0
+  KBCounter: 0
+  KBTotalTime: 0
+  KnockFromRight: 0
 --- !u!231 &96564254
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -578,7 +582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &108838395
 Rigidbody2D:
   serializedVersion: 4
@@ -3562,6 +3566,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21149aecd82e3c34ebd208b446017a88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  newTag: ParalyzeBox
+  playerMove: {fileID: 0}
+  mSpeed: 5
 --- !u!1 &1575914314
 GameObject:
   m_ObjectHideFlags: 0
@@ -4630,6 +4637,7 @@ GameObject:
   - component: {fileID: 2039387857}
   - component: {fileID: 2039387859}
   - component: {fileID: 2039387858}
+  - component: {fileID: 2039387860}
   m_Layer: 0
   m_Name: GrapplingGun
   m_TagString: Untagged
@@ -4740,6 +4748,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2039387860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039387856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e98a90dfa72e06429093d041e5ba8fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitLayers:
+    serializedVersion: 2
+    m_Bits: 1024
+  rayDistance: 10
 --- !u!1 &2118964482
 GameObject:
   m_ObjectHideFlags: 0
