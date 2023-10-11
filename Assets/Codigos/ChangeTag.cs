@@ -10,6 +10,8 @@ public class ChangeTag : MonoBehaviour
     public PlayerMovement playerOneMove;
     public PlayerMovement playerTwoMove;
 
+    private SpriteRenderer spRender;
+
     public float mSpeed;
 
     //public float delayTime; //Gpt
@@ -18,7 +20,7 @@ public class ChangeTag : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        spRender = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -32,11 +34,15 @@ public class ChangeTag : MonoBehaviour
         if (collision.gameObject.tag == "PlayerOne")
         {
             gameObject.tag = newTag;
+            spRender.color = Color.yellow;
+            //Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "PlayerTwo")
         {
             gameObject.tag = newTag;
+            spRender.color = Color.yellow;
+            //Destroy(gameObject);
         }
     }
 
@@ -54,7 +60,7 @@ public class ChangeTag : MonoBehaviour
                 playerOneMove.KnockFromRight = false;
             }
 
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "PlayerTwo")
@@ -69,7 +75,7 @@ public class ChangeTag : MonoBehaviour
                 playerTwoMove.KnockFromRight = false;
             }
 
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 

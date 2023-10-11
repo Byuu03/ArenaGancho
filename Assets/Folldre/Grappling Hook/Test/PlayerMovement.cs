@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "ParalyzeBox")
         {
             Invoke("DesactivarMovimiento", 0f);
-            
+            Destroy(collision.gameObject);
         }
     }
 
