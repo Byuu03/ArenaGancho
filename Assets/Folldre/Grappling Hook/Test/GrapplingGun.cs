@@ -84,19 +84,6 @@ public class GrapplingGun : MonoBehaviour
         if (atraer)
         {
 
-            //Vector3 direccion = (point.transform.position).normalized;
-            //float distancia = Vector3.Distance(transform.position, point.transform.position);
-            //if (distancia > 0.1f)
-            //{
-            //    ballRigidbody.isKinematic = true;
-            //    point.transform.Translate(direccion * 5f * Time.deltaTime);
-            //}
-            //else if(distancia < 0.1)
-            //{
-
-            //    atraer = false;
-            //}
-
             //grappleRope.transform.parent = point.transform;
             grapplePoint = new Vector2(point.transform.position.x, point.transform.position.y);
             point.transform.position = Vector2.MoveTowards(point.transform.position, this.transform.position, 0.05f);
