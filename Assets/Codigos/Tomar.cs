@@ -66,6 +66,7 @@ public class Tomar : MonoBehaviour
                 }
 
                 //throw
+                //AÑADIR EL PODER AGARRAR AL OTRO JUGADOR
             }
         }
 
