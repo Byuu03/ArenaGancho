@@ -46,6 +46,17 @@ public class Tomar : MonoBehaviour
                     grabbed = true;
                 }
 
+                if (hit.collider != null && hit.collider.tag == "SpecialBox")
+                {
+                    grabbed = true;
+                }
+
+                if (hit.collider != null && hit.collider.tag == "PlayerTwo")
+                {
+                    grabbed = true;
+                }
+
+
                 //grab
             }
             else if(!Physics2D.OverlapPoint(holdPoint.position, notgrabbed))

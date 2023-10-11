@@ -9,6 +9,7 @@ TagManager:
   - PlayerTwo
   - Puas
   - ParalyzeBox
+  - SpecialBox
   layers:
   - Default
   - TransparentFX
