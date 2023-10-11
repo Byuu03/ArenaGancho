@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LanzaRaycast : MonoBehaviour
 {
-
     public LayerMask hitLayers;
     public float rayDistance;
 
@@ -13,7 +12,6 @@ public class LanzaRaycast : MonoBehaviour
     {
         
     }
-
     // Update is called once per frame
     void Update()
     {
