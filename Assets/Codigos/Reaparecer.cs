@@ -5,7 +5,14 @@ using UnityEngine;
 public class Reaparecer : MonoBehaviour
 {
     public Vector2 startPos;
+    //SpriteRenderer sprender;
     //public Particle
+
+
+    private void Awake()
+    {
+        //sprender = GetComponent<SpriteRenderer>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -18,14 +25,6 @@ public class Reaparecer : MonoBehaviour
     {
         
     }
-
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if (collision.CompareTag("Puas"))
-    //    {
-    //        Die();
-    //    }
-    //}
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -47,10 +46,14 @@ public class Reaparecer : MonoBehaviour
         transform.position = startPos;
     }
 
+    //Timer para reaparecer
+
     //IEnumerator Reaparcer(float duration)
     //{
+    //    sprender.enabled = false;
     //    yield return new WaitForSeconds(duration);
     //    transform.position = startPos;
+    //    sprender.enabled = true;
     //}
 
 }
