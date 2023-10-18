@@ -6,7 +6,7 @@ public class Reaparecer : MonoBehaviour
 {
     public Vector2 startPos;
     //SpriteRenderer sprender;
-    //public Particle
+    public ParticleController particleController;
     //public Rigidbody2D myRb;
 
 
@@ -39,6 +39,7 @@ public class Reaparecer : MonoBehaviour
 
     void Die()
     {
+        particleController.PlayParticle(ParticleController.Particles.die, transform.position);
         Respawn();
         //StartCoroutine(Reaparcer(0.5f));
     }
