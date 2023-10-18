@@ -7,11 +7,13 @@ public class Reaparecer : MonoBehaviour
     public Vector2 startPos;
     //SpriteRenderer sprender;
     //public Particle
+    //public Rigidbody2D myRb;
 
 
     private void Awake()
     {
         //sprender = GetComponent<SpriteRenderer>();
+        //myRb = GetComponent<Rigidbody2D>();
     }
 
     // Start is called before the first frame update
@@ -50,10 +52,13 @@ public class Reaparecer : MonoBehaviour
 
     //IEnumerator Reaparcer(float duration)
     //{
+    //    myRb.simulated = false;
+    //    myRb.velocity = new Vector2(0, 0);
     //    sprender.enabled = false;
     //    yield return new WaitForSeconds(duration);
     //    transform.position = startPos;
     //    sprender.enabled = true;
+    //    myRb.simulated = true;
     //}
 
 }

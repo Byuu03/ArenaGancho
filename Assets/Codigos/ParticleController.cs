@@ -4,36 +4,105 @@ using UnityEngine;
 
 public class ParticleController : MonoBehaviour
 {
+
+    [Header("Movement Particle")]
     [SerializeField] ParticleSystem movementParticle;
 
-    [Range(0, 10)]
+    [Range(0,10)]
     [SerializeField] int occurAfterVelocity;
 
-    [Range(0, 0.2f)]
+    [Range(0,0.2f)]
     [SerializeField] float dustFormationPeriod;
+    [SerializeField] Rigidbody2D playerRb;
 
     float counter;
+    bool isOnGround;
 
-    [SerializeField] Rigidbody2D myRb;
+    [Header("Particles")]
+    [SerializeField] ParticleSystem fallParticle;
+    [SerializeField] ParticleSystem touchParticle;
+    [SerializeField] ParticleSystem dieParticle;
 
-    // Start is called before the first frame update
-    void Start()
+    //AudioManager audioManager;
+
+    private void Awake()
     {
-        
+       // audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
-    // Update is called once per frame
+
+    private void Start()
+    {
+        touchParticle.transform.parent = null;
+        dieParticle.transform.parent = null;
+    }
+
     private void Update()
     {
         counter += Time.deltaTime;
 
-        if (Mathf.Abs(myRb.velocity.x) > occurAfterVelocity)
+        if (isOnGround && Mathf.Abs(playerRb.velocity.x) > occurAfterVelocity)
         {
             if (counter > dustFormationPeriod)
             {
                 movementParticle.Play();
                 counter = 0;
             }
+
         }
     }
+
+
+    public void PlayParticle(Particles particle, Vector2 pos = default(Vector2))
+    {
+        switch (particle)
+        {
+            case Particles.touch:
+                //audioManager.PlaySFX(audioManager.wallTouch);
+                touchParticle.transform.position = pos;
+                touchParticle.Play();
+                break;
+
+            case Particles.fall:
+                //audioManager.PlaySFX(audioManager.wallTouch);
+                fallParticle.Play();
+                break;
+
+            case Particles.die:
+                //audioManager.PlaySFX(audioManager.death);
+                dieParticle.transform.position = pos;
+                dieParticle.Play();
+                isOnGround = false;
+                break;
+
+            default:
+                break;
+        }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Suelo"))
+        {
+            PlayParticle(Particles.fall);
+            isOnGround = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Suelo"))
+        {
+            isOnGround = false;
+        }
+    }
+
+    public enum Particles
+    {
+        touch,
+        fall,
+        die
+    }
+
 }

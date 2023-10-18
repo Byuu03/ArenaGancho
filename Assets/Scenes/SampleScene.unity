@@ -1562,7 +1562,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &427376089
 Transform:
   m_ObjectHideFlags: 0
@@ -1572,7 +1572,7 @@ Transform:
   m_GameObject: {fileID: 427376088}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -33.590027, y: -6.2422366, z: 7.0569506}
+  m_LocalPosition: {x: -1.45, y: -0.68, z: 7.0569506}
   m_LocalScale: {x: 5.187423, y: 5.187423, z: 5.187423}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1904,7 +1904,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.33
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -2661,7 +2661,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0
+          time: 0.12371063
           value: 0
           inSlope: 0
           outSlope: 0
@@ -3921,7 +3921,7 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -7538,7 +7538,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &778417743
 Transform:
   m_ObjectHideFlags: 0
@@ -7548,7 +7548,7 @@ Transform:
   m_GameObject: {fileID: 778417742}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -33.590027, y: -6.2422366, z: 7.0569506}
+  m_LocalPosition: {x: 2.01, y: 0.58, z: 7.0569506}
   m_LocalScale: {x: 5.187423, y: 5.187423, z: 5.187423}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7880,7 +7880,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.33
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -8344,7 +8344,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.4099078
+      value: 0.03
       mode: 3
       spread: 0
       speed:
@@ -8637,8 +8637,8 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0
-          value: 0
+          time: 0.14175415
+          value: 0.07086182
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -8661,8 +8661,8 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0
-          value: 0.5135131
+          time: 0.14175415
+          value: 0.4111495
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -9897,7 +9897,7 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 0.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -20392,8 +20392,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1676414940}
-  - component: {fileID: 1676414941}
   - component: {fileID: 1676414942}
+  - component: {fileID: 1676414943}
   m_Layer: 9
   m_Name: Particles
   m_TagString: Untagged
@@ -20419,19 +20419,6 @@ Transform:
   - {fileID: 778417743}
   m_Father: {fileID: 1994754063}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1676414941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1676414939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f26e5bc6fb6c1e4291c22334ed2df91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dustCloud: {fileID: 2017043788204912554, guid: f91baaf9859f83c4f808e24499284917, type: 3}
 --- !u!58 &1676414942
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -20467,6 +20454,25 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.56
+--- !u!114 &1676414943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676414939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 515f252a5f448734d9306d592634d64c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementParticle: {fileID: 427376091}
+  occurAfterVelocity: 4
+  dustFormationPeriod: 0.037
+  playerRb: {fileID: 1994754061}
+  fallParticle: {fileID: 2140024556}
+  touchParticle: {fileID: 778417745}
+  dieParticle: {fileID: 0}
 --- !u!1 &1728946083
 GameObject:
   m_ObjectHideFlags: 0
@@ -21287,7 +21293,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1850708407}
   - component: {fileID: 1850708409}
-  - component: {fileID: 1850708408}
   m_Layer: 9
   m_Name: Particles
   m_TagString: Untagged
@@ -21311,19 +21316,6 @@ Transform:
   - {fileID: 1622671919}
   m_Father: {fileID: 96564257}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1850708408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850708406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f26e5bc6fb6c1e4291c22334ed2df91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dustCloud: {fileID: 2017043788204912554, guid: f91baaf9859f83c4f808e24499284917, type: 3}
 --- !u!58 &1850708409
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -23040,7 +23032,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2140024554
 Transform:
   m_ObjectHideFlags: 0
@@ -23050,7 +23042,7 @@ Transform:
   m_GameObject: {fileID: 2140024553}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -33.590027, y: -6.2422366, z: 7.0569506}
+  m_LocalPosition: {x: -0.02, y: -0.68, z: 7.0569506}
   m_LocalScale: {x: 5.187423, y: 5.187423, z: 5.187423}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23382,7 +23374,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.33
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -23846,7 +23838,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.4099078
+      value: 0.0001
       mode: 3
       spread: 0
       speed:
@@ -24139,8 +24131,8 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0
-          value: 0
+          time: 0.17267609
+          value: 0.10235596
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -24163,8 +24155,8 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0
-          value: 0.5135131
+          time: 0.1546402
+          value: 0.55288076
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -25346,8 +25338,8 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 3
-      minScalar: -3
+      scalar: 1
+      minScalar: -1
       maxCurve:
         serializedVersion: 2
         m_Curve:
