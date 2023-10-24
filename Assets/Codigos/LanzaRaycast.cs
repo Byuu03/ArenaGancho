@@ -7,6 +7,9 @@ public class LanzaRaycast : MonoBehaviour
     public LayerMask hitLayers;
     public float rayDistance;
 
+    [Header("Keybinds")]
+    public KeyCode lanzaRay;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +18,8 @@ public class LanzaRaycast : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        // Lanzar raycast
+        if (Input.GetKeyDown(lanzaRay))
         {
             Vector2 raycastOrigin = transform.position;
             Vector2 raycastDirection = transform.right;

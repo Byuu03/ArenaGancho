@@ -14,9 +14,6 @@ public class ChangeTag : MonoBehaviour
 
     public float mSpeed;
 
-    //public float delayTime; //Gpt
-    //private bool tagChange = false; //gpt
-
     // Start is called before the first frame update
     void Start()
     {
@@ -84,22 +81,8 @@ public class ChangeTag : MonoBehaviour
         //transform.position = Vector2.MoveTowards(transform.position, origin.)
         Vector2 moveDirection = (origin - (Vector2)transform.position).normalized;
         Vector2 newpos = Vector2.MoveTowards((Vector2)transform.position, origin, mSpeed * Time.deltaTime);
-
         transform.position = newpos;
-
         //transform.Translate(moveDirection * mSpeed * Time.deltaTime); //APENAS SE MUEVE .gpt
     }
-
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if ( tagChange || collision.gameObject.tag == "PlayerOne")
-    //    {
-    //        StartCoroutine(ChangeTagWithDelay());
-    //        //gameObject.tag = newTag;
-    //        return;
-    //    }
-
-
-    //}
 
 }
