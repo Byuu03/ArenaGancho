@@ -80,7 +80,7 @@ public class ChangeTag : MonoBehaviour
     {
         //transform.position = Vector2.MoveTowards(transform.position, origin.)
         Vector2 moveDirection = (origin - (Vector2)transform.position).normalized;
-        Vector2 newpos = Vector2.MoveTowards((Vector2)transform.position, origin, mSpeed * Time.deltaTime);
+        Vector2 newpos = Vector2.MoveTowards(transform.position, origin, mSpeed * Time.deltaTime);
         transform.position = newpos;
         //transform.Translate(moveDirection * mSpeed * Time.deltaTime); //APENAS SE MUEVE .gpt
     }
