@@ -65,16 +65,6 @@ public class GrapplingGun : MonoBehaviour
         m_springJoint2D.enabled = false;
         ballRigidbody.gravityScale = 1;
 
-        //CHAT GPT
-        //linerender = GetComponent<LineRenderer>();
-
-        //if (linerender != null)
-        //{
-        //    linerender.positionCount = 2;
-        //    linerender.SetPosition(0, gunPivot.position);
-        //    linerender.SetPosition(1, point.transform.position);
-        //}
-
     }
 
     
@@ -99,28 +89,15 @@ public class GrapplingGun : MonoBehaviour
                 point.transform.position = new Vector3(100, 100, 0);
                 print("Solte");
                 atraer = false; 
-                //grappleRope.transform.parent = null;
-                //grappleRope.enabled = false;
-                //m_springJoint2D.enabled = false;
-                //ballRigidbody.gravityScale = 1;
-                //hitObj.transform.parent = null;
             }
         }
-       
 
-        //GPT
-        //if (linerender != null)
-        //{
-        //    linerender.SetPosition(1, point.transform.position);
-        //}
-
-      
 
         //ESTE ES EL PRINCIPAL
         else if (Input.GetKeyDown(lanzarGancho) && !atraer)
         {
             SetGrapplePoint();              //Establece el punto de agarre
-            print("Dispare");
+            //print("Dispare");
         }
         else if (Input.GetKey(KeyCode.R))   //Manejo de rotacion y lanzamiento
         {
@@ -153,6 +130,7 @@ public class GrapplingGun : MonoBehaviour
         }
         else
         {
+            //print("Nada habia");
             //RotateGun(m_camera.ScreenToWorldPoint(Input.mousePosition), true);
         }
     }
@@ -165,29 +143,33 @@ public class GrapplingGun : MonoBehaviour
             RaycastHit2D _hit = Physics2D.Raycast(firePoint.position, transform.right);
             if ((_hit.transform.gameObject.layer == arrastableLayerNumber || grappleToAll) && ((Vector2.Distance(_hit.point, firePoint.position) <= maxDistance) || !hasMaxDistance))
             {
-                print("bbbb");
+                
                 atraer = true;
                 
                 DistanceVector = (Vector2)point.transform.position - (Vector2)gunPivot.position;
-                //grappleRope.enabled = true;
-                //Instantiate(point,grapplePoint,Quaternion.identity);
+              
                 hitObj = _hit.transform.gameObject;
-                //point.transform.position = grapplePoint;
+                
                 hitObj.transform.parent = point.transform;
                 grapplePoint = _hit.point;
 
             }
             else if ((_hit.transform.gameObject.layer == grappableLayerNumber || grappleToAll) && ((Vector2.Distance(_hit.point, firePoint.position) <= maxDistance) || !hasMaxDistance))
             {
-                print("aaa");
+                //print("aaa");
                 //COMPROBAR SI EL OBJETO ES ENGANCHABLE Y SI ESTA DENTRO DE LA DISTANCIA MAXIMA
                 grapplePoint = _hit.point;                                  //ESTABLECE EL PUNTO DE AGARRE
                 DistanceVector = grapplePoint - (Vector2)gunPivot.position;    //CALCULA EL VECTOR DE DISTANCIA
                 grappleRope.enabled = true;
             }
+            else
+            {
+                print("Nada habia");
+            }
 
            
         }
+       
     }
 
     //FUNCION QUE MANEJA LA LOGICA DE LANZAMIENTO Y ATRACCION
@@ -198,6 +180,7 @@ public class GrapplingGun : MonoBehaviour
 
         if (!launchToPoint && !autoCongifureDistance)
         {
+            print("Nada habia");
             // Establece la distancia del resorte y la frecuencia según los valores de targetDistance y targetFrequency
             m_springJoint2D.distance = targetDistance;
             m_springJoint2D.frequency = targetFrequency;
@@ -205,9 +188,11 @@ public class GrapplingGun : MonoBehaviour
 
         if (!launchToPoint && !atraer)
         {
-            
+            print("Nada habia");
+
             if (autoCongifureDistance)
             {
+                print("Nada habia");
                 m_springJoint2D.autoConfigureDistance = true;  // Habilita la configuración automática de la distancia del resorte
                 m_springJoint2D.frequency = 0;                 // Establece la frecuencia del resorte en 0 para evitar que oscile
             }
@@ -222,8 +207,11 @@ public class GrapplingGun : MonoBehaviour
                 Rigidbody2D rb = collider.GetComponent<Rigidbody2D>();
                 if (rb != null)
                 {
+                    //print("Nada habia");
                     Vector2 attracDirection = ((Vector2)gunPivot.position - rb.position).normalized;  // Calcular la dirección de atracción desde el pivote de la pistola hacia el objeto
                     rb.AddForce(attracDirection * attractionForce, ForceMode2D.Force);  // Aplicar una fuerza de atracción al objeto utilizando la dirección calculada y la fuerza de atracción configurada
+                    print("Nada habia");
+
                 }
             }
 

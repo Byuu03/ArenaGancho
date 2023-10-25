@@ -29,12 +29,23 @@ public class LanzaRaycast : MonoBehaviour
             if (hit.collider != null)
             {
                 Debug.Log("Raycast golpeo: " + hit.collider.name);
+
+                if (hit.collider.CompareTag("Box"))
+                {
+                    ChangeTag changeTagScript = hit.collider.GetComponent<ChangeTag>();
+                    if (changeTagScript != null)
+                    {
+                        changeTagScript.MoveToRay(raycastOrigin);
+                    }
+
+                    //hit.collider.GetComponent<ChangeTag>().MoveToRay(raycastOrigin);
+                }
             }
 
-            if (hit.collider.CompareTag("Box"))
-            {
-                hit.collider.GetComponent<ChangeTag>().MoveToRay(raycastOrigin);
-            }
+            //if (hit.collider.CompareTag("Box"))
+            //{
+            //    hit.collider.GetComponent<ChangeTag>().MoveToRay(raycastOrigin);
+            //}
 
             Debug.DrawRay(raycastOrigin, raycastDirection * rayDistance, Color.yellow);
         }

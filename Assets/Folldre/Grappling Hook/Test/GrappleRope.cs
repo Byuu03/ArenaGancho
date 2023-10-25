@@ -47,6 +47,7 @@ public class GrappleRope : MonoBehaviour
 
     private void OnDisable()
     {
+        //print("Nada habia");
         m_lineRenderer.enabled = false;
         isGrappling = false;
     }

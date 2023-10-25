@@ -78,11 +78,17 @@ public class ChangeTag : MonoBehaviour
 
     public void MoveToRay(Vector2 origin) //Apenas se mueve hacia el origen del raycast
     {
-        //transform.position = Vector2.MoveTowards(transform.position, origin.)
+        print("Impacto raycast");
+
+        //transform.position = Vector2.MoveTowards(transform.position, origin, 0.05f); No se Movio
+
+        //transform.position = Vector3.Lerp(transform.position, origin, mSpeed); No se mueve
+
         Vector2 moveDirection = (origin - (Vector2)transform.position).normalized;
         Vector2 newpos = Vector2.MoveTowards(transform.position, origin, mSpeed * Time.deltaTime);
         transform.position = newpos;
-        //transform.Translate(moveDirection * mSpeed * Time.deltaTime); //APENAS SE MUEVE .gpt
+
+        transform.Translate(moveDirection * mSpeed * Time.deltaTime); //APENAS SE MUEVE .gpt
     }
 
 }
