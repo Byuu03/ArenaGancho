@@ -455,7 +455,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96564251}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 708ded5c49814fe4aa8be3126dc55704, type: 3}
   m_Name: 
@@ -6626,8 +6626,8 @@ Transform:
   m_GameObject: {fileID: 481806037}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5, y: 0.29, z: -1.4570312}
-  m_LocalScale: {x: 0.6813368, y: 0.068340644, z: 0.33709}
+  m_LocalPosition: {x: 0.8058, y: 0.29, z: -1.4570312}
+  m_LocalScale: {x: 1.3431193, y: 0.068340644, z: 0.33709}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 70087011}
@@ -29890,7 +29890,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1570581307
 Rigidbody2D:
   serializedVersion: 4
@@ -36496,6 +36496,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   rayDistance: 10
+  firepoint: {fileID: 0}
   lanzaRay: 0
 --- !u!212 &1971850235
 SpriteRenderer:
@@ -37254,7 +37255,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039387856}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e98a90dfa72e06429093d041e5ba8fe, type: 3}
   m_Name: 
@@ -37263,6 +37264,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   rayDistance: 10
+  firepoint: {fileID: 520050144}
   lanzaRay: 113
 --- !u!1 &2039427057
 GameObject:

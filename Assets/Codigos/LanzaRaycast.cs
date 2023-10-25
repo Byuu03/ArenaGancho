@@ -7,6 +7,8 @@ public class LanzaRaycast : MonoBehaviour
     public LayerMask hitLayers;
     public float rayDistance;
 
+    public Transform firepoint;
+
     [Header("Keybinds")]
     public KeyCode lanzaRay;
 
@@ -21,8 +23,8 @@ public class LanzaRaycast : MonoBehaviour
         // Lanzar raycast
         if (Input.GetKeyDown(lanzaRay))
         {
-            Vector2 raycastOrigin = transform.position;
-            Vector2 raycastDirection = transform.right;
+            Vector2 raycastOrigin = firepoint.position;
+            Vector2 raycastDirection = firepoint.right;
 
             RaycastHit2D hit = Physics2D.Raycast(raycastOrigin, raycastDirection, rayDistance, hitLayers);
 
@@ -35,11 +37,23 @@ public class LanzaRaycast : MonoBehaviour
                     ChangeTag changeTagScript = hit.collider.GetComponent<ChangeTag>();
                     if (changeTagScript != null)
                     {
-                        changeTagScript.MoveToRay(raycastOrigin);
+                        //changeTagScript.MoveToRay(raycastOrigin);
                     }
 
                     //hit.collider.GetComponent<ChangeTag>().MoveToRay(raycastOrigin);
                 }
+            }
+
+            //if (hit.transform.gameObject.tag == "Box")
+            //{
+            //    hit.transform.GetComponent<SpriteRenderer>().color = Color.red;
+
+            //}
+
+            if (hit != null && hit.transform.gameObject.tag == "Box")
+            {
+                hit.transform.gameObject.SendMessage("MoveToRay", raycastOrigin);
+                //SE MUEVE DE A POCO
             }
 
             //if (hit.collider.CompareTag("Box"))
