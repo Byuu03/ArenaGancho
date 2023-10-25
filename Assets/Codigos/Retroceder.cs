@@ -58,6 +58,11 @@ public class Retroceder : MonoBehaviour
 
             //Destroy(gameObject);
         }
+
+        if (collision.gameObject.tag == "Suelo")
+        {
+            StopAttrack();
+        }
     }
 
     public void AttrackToRay(Vector2 origin)

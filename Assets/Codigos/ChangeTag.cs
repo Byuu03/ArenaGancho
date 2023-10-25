@@ -14,6 +14,9 @@ public class ChangeTag : MonoBehaviour
 
     public float mSpeed;
 
+    private bool isAttracted = false;
+    private Vector2 attractionOrigin;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +26,10 @@ public class ChangeTag : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (isAttracted)
+        {
+            MoveToRay(attractionOrigin);
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -40,6 +46,12 @@ public class ChangeTag : MonoBehaviour
             gameObject.tag = newTag;
             spRender.color = Color.yellow;
             //Destroy(gameObject);
+        }
+
+
+        if (collision.gameObject.tag == "Suelo")
+        {
+            StopAttrack();
         }
     }
 
@@ -76,21 +88,27 @@ public class ChangeTag : MonoBehaviour
         }
     }
 
+    public void AttrackToRay(Vector2 origin)
+    {
+        isAttracted = true;
+        attractionOrigin = origin;
+    }
+
+    public void StopAttrack()
+    {
+        print("Soy la cajaSpecial y me detuve");
+        isAttracted = false;
+    }
+
+
     public void MoveToRay(Vector2 origin) //Apenas se mueve hacia el origen del raycast
     {
         print("Impacto raycast");
 
-        //transform.position = Vector2.MoveTowards(transform.position, origin, 0.05f); //No se Movio
 
         transform.position = Vector3.Lerp(transform.position, origin, mSpeed); //No se mueve
 
-        //Vector2 moveDirection = (origin - (Vector2)transform.position).normalized;
-        //Vector2 newpos = Vector2.MoveTowards(transform.position, origin, mSpeed * Time.deltaTime);
-        //transform.position = newpos;
-
-        //transform.Translate(moveDirection * mSpeed * Time.deltaTime); //NO SE MUEVE .gpt
-
-        //ULTIMA ACTUALIZACION: YA NO SE MUEVE
+       
     }
 
 }

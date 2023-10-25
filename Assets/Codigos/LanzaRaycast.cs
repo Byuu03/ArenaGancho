@@ -52,7 +52,7 @@ public class LanzaRaycast : MonoBehaviour
                     ChangeTag changeTagScript = hit.collider.GetComponent<ChangeTag>();
                     if (changeTagScript != null)
                     {
-                        changeTagScript.MoveToRay(raycastOrigin);
+                        changeTagScript.AttrackToRay(raycastOrigin);
                         //linrender.enabled = true;
                     }
 
