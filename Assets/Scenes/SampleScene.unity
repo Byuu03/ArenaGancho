@@ -22411,7 +22411,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &919662959
 Rigidbody2D:
   serializedVersion: 4
@@ -22565,7 +22565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerOneMove: {fileID: 96564252}
   playerTwoMove: {fileID: 1994754059}
-  mSpeed: 5
+  mSpeed: 3
 --- !u!1 &967147221
 GameObject:
   m_ObjectHideFlags: 0
@@ -29870,7 +29870,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerOneMove: {fileID: 96564252}
   playerTwoMove: {fileID: 1994754059}
-  mSpeed: 5
+  mSpeed: 3
 --- !u!1 &1570581306
 GameObject:
   m_ObjectHideFlags: 0
@@ -30045,7 +30045,7 @@ MonoBehaviour:
   newTag: ParalyzeBox
   playerOneMove: {fileID: 96564252}
   playerTwoMove: {fileID: 1994754059}
-  mSpeed: 5
+  mSpeed: 3
 --- !u!1 &1575914314
 GameObject:
   m_ObjectHideFlags: 0
@@ -30511,7 +30511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerOneMove: {fileID: 96564252}
   playerTwoMove: {fileID: 1994754059}
-  mSpeed: 5
+  mSpeed: 3
 --- !u!1 &1750224611
 GameObject:
   m_ObjectHideFlags: 0
@@ -37263,7 +37263,7 @@ MonoBehaviour:
   hitLayers:
     serializedVersion: 2
     m_Bits: 1024
-  rayDistance: 10
+  rayDistance: 6.79
   firepoint: {fileID: 520050144}
   lanzaRay: 113
 --- !u!1 &2039427057
@@ -42325,7 +42325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerOneMove: {fileID: 96564252}
   playerTwoMove: {fileID: 1994754059}
-  mSpeed: 5
+  mSpeed: 3
 --- !u!1 &2118964482
 GameObject:
   m_ObjectHideFlags: 0

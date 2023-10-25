@@ -42,6 +42,16 @@ public class LanzaRaycast : MonoBehaviour
 
                     //hit.collider.GetComponent<ChangeTag>().MoveToRay(raycastOrigin);
                 }
+
+                if (hit.collider.CompareTag("Box"))
+                {
+                    Retroceder retrocederscript = hit.collider.GetComponent<Retroceder>();
+                    if (retrocederscript != null)
+                    {
+                        retrocederscript.MoveToRay(raycastOrigin);
+                    }
+                }
+
             }
 
             //if (hit.transform.gameObject.tag == "Box")
@@ -50,11 +60,11 @@ public class LanzaRaycast : MonoBehaviour
 
             //}
 
-            if (hit != null && hit.transform.gameObject.tag == "Box")
-            {
-                hit.transform.gameObject.SendMessage("MoveToRay", raycastOrigin);
-                //SE MUEVE DE A POCO
-            }
+            //if (hit != null && hit.transform.gameObject.tag == "Box")
+            //{
+            //    hit.transform.gameObject.SendMessage("MoveToRay", raycastOrigin);
+            //    //SE MUEVE DE A POCO
+            //}
 
             //if (hit.collider.CompareTag("Box"))
             //{
