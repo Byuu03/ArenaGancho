@@ -32,12 +32,12 @@ public class LanzaRaycast : MonoBehaviour
             {
                 Debug.Log("Raycast golpeo: " + hit.collider.name);
 
-                if (hit.collider.CompareTag("Box"))
+                if (hit.collider.CompareTag("SpecialBox"))
                 {
                     ChangeTag changeTagScript = hit.collider.GetComponent<ChangeTag>();
                     if (changeTagScript != null)
                     {
-                        //changeTagScript.MoveToRay(raycastOrigin);
+                        changeTagScript.MoveToRay(raycastOrigin);
                     }
 
                     //hit.collider.GetComponent<ChangeTag>().MoveToRay(raycastOrigin);

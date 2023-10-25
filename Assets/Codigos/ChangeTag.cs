@@ -80,7 +80,7 @@ public class ChangeTag : MonoBehaviour
     {
         print("Impacto raycast");
 
-        //transform.position = Vector2.MoveTowards(transform.position, origin, 0.05f); No se Movio
+        //transform.position = Vector2.MoveTowards(transform.position, origin, 0.05f); //No se Movio
 
         transform.position = Vector3.Lerp(transform.position, origin, mSpeed); //No se mueve
 
