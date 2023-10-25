@@ -22565,7 +22565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerOneMove: {fileID: 96564252}
   playerTwoMove: {fileID: 1994754059}
-  mSpeed: 1
+  mSpeed: 0.1
 --- !u!1 &967147221
 GameObject:
   m_ObjectHideFlags: 0
@@ -36494,9 +36494,9 @@ MonoBehaviour:
   hitLayers:
     serializedVersion: 2
     m_Bits: 1024
-  rayDistance: 10
-  firepoint: {fileID: 0}
-  lanzaRay: 0
+  rayDistance: 6.79
+  firepoint: {fileID: 804719551}
+  lanzaRay: 112
   linrender: {fileID: 0}
 --- !u!212 &1971850235
 SpriteRenderer:

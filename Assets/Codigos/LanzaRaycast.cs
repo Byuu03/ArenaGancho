@@ -14,6 +14,10 @@ public class LanzaRaycast : MonoBehaviour
 
     public LineRenderer linrender;
 
+    
+    //private bool isAttracting = false; //
+    //private Retroceder attractedObj;  //
+
     private void Awake()
     {
         
@@ -57,21 +61,25 @@ public class LanzaRaycast : MonoBehaviour
 
                 if (hit.collider.CompareTag("Box"))
                 {
+                    //attraobj = hit.collider. GetComponent<>
                     Retroceder retrocederscript = hit.collider.GetComponent<Retroceder>();
                     if (retrocederscript != null)
                     {
                         //linrender.enabled = true;
-                        retrocederscript.MoveToRay(raycastOrigin);
+                        //retrocederscript.MoveToRay(raycastOrigin);
                         //linrender.enabled = false;
+                        retrocederscript.AttrackToRay(raycastOrigin);
+                        
+                    }
+                    else
+                    {
+                        //retrocederscript.StopAttrack();
                     }
                     linrender.enabled = false;
                 }
 
             }
-            //else
-            //{
-            //    linrender.SetPosition(1, raycastOrigin + ((Vector2)firepoint.transform.right * rayDistance));
-            //}
+       
 
             if (hit)
             {
@@ -83,16 +91,16 @@ public class LanzaRaycast : MonoBehaviour
             }
             else
             {
-                //linrender.SetPosition(0, firepoint.position);
-                //linrender.SetPosition(1, firepoint.position);
-                //linrender.enabled = false;
+               
             }
 
 
             Debug.DrawRay(raycastOrigin, raycastDirection * rayDistance, Color.yellow);
         }
-        else if (Input.GetKeyUp(lanzaRay))
+        if (Input.GetKeyUp(lanzaRay))
         {
+      
+            
             linrender.enabled = false;
         }
 

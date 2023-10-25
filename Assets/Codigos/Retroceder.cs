@@ -9,6 +9,9 @@ public class Retroceder : MonoBehaviour
 
     public float mSpeed;
 
+    private bool isAttracted = false;
+    private Vector2 attractionOrigin;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +21,10 @@ public class Retroceder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (isAttracted)
+        {
+            MoveToRay(attractionOrigin);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -54,19 +60,23 @@ public class Retroceder : MonoBehaviour
         }
     }
 
+    public void AttrackToRay(Vector2 origin)
+    {
+        isAttracted = true;
+        attractionOrigin = origin;
+    }
+
+    public void StopAttrack()
+    {
+        print("Soy la caja y me detuve");
+        isAttracted = false;
+    }
+
     public void MoveToRay(Vector2 origin) //Apenas se mueve hacia el origen del raycast
     {
         print("Atraje caja");
 
-        //transform.position = Vector3.Lerp(transform.position, origin, mSpeed); //1
-
-        transform.position = Vector2.MoveTowards(transform.position, origin, mSpeed * Time.deltaTime); //2
-
-        //Vector2 moveDirection = (origin - (Vector2)transform.position).normalized;
-        //Vector2 newpos = Vector2.MoveTowards(transform.position, origin, mSpeed * Time.deltaTime);
-        //transform.position = newpos;
-
-        //transform.Translate(moveDirection * mSpeed * Time.deltaTime); //3
+        transform.position = Vector3.Lerp(transform.position, origin, mSpeed); //1
 
     }
 
