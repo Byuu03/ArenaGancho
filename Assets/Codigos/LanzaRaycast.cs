@@ -12,10 +12,12 @@ public class LanzaRaycast : MonoBehaviour
     [Header("Keybinds")]
     public KeyCode lanzaRay;
 
+    public LineRenderer linrender;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        linrender.enabled = false;
     }
     // Update is called once per frame
     void Update()
@@ -38,6 +40,7 @@ public class LanzaRaycast : MonoBehaviour
                     if (changeTagScript != null)
                     {
                         changeTagScript.MoveToRay(raycastOrigin);
+                        linrender.enabled = true;
                     }
 
                     //hit.collider.GetComponent<ChangeTag>().MoveToRay(raycastOrigin);
@@ -49,29 +52,33 @@ public class LanzaRaycast : MonoBehaviour
                     if (retrocederscript != null)
                     {
                         retrocederscript.MoveToRay(raycastOrigin);
+                        linrender.enabled = true;
                     }
                 }
 
             }
 
-            //if (hit.transform.gameObject.tag == "Box")
-            //{
-            //    hit.transform.GetComponent<SpriteRenderer>().color = Color.red;
+            if (hit)
+            {
 
-            //}
+                linrender.SetPosition(0, firepoint.position);
+                linrender.SetPosition(1, hit.point);
 
-            //if (hit != null && hit.transform.gameObject.tag == "Box")
-            //{
-            //    hit.transform.gameObject.SendMessage("MoveToRay", raycastOrigin);
-            //    //SE MUEVE DE A POCO
-            //}
+            }
+            else
+            {
+                linrender.SetPosition(0, firepoint.position);
+                linrender.SetPosition(1, firepoint.position);
+                //linrender.enabled = false;
+            }
 
-            //if (hit.collider.CompareTag("Box"))
-            //{
-            //    hit.collider.GetComponent<ChangeTag>().MoveToRay(raycastOrigin);
-            //}
 
             Debug.DrawRay(raycastOrigin, raycastDirection * rayDistance, Color.yellow);
         }
+        else if (Input.GetKeyUp(lanzaRay))
+        {
+            linrender.enabled = false;
+        }
+
     }
 }
