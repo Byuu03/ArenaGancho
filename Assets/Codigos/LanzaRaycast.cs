@@ -64,6 +64,7 @@ public class LanzaRaycast : MonoBehaviour
                         retrocederscript.MoveToRay(raycastOrigin);
                         //linrender.enabled = false;
                     }
+                    linrender.enabled = false;
                 }
 
             }
@@ -74,10 +75,11 @@ public class LanzaRaycast : MonoBehaviour
 
             if (hit)
             {
-
+                linrender.enabled = true;
                 linrender.SetPosition(0, firepoint.position);
                 linrender.SetPosition(1, hit.point);
-                linrender.enabled = true;
+                //linrender.enabled = false;
+
             }
             else
             {

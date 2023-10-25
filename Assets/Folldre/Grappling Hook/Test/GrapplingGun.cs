@@ -5,7 +5,7 @@ public class GrapplingGun : MonoBehaviour
     [Header("Scripts:")]
     public GrappleRope grappleRope;
 
-    public GameObject point;   //
+    //public GameObject point;   //
     private GameObject hitObj;   //
 
     [Header("Layer Settings:")]
@@ -75,9 +75,10 @@ public class GrapplingGun : MonoBehaviour
         {
 
             //grappleRope.transform.parent = point.transform;
-            grapplePoint = new Vector2(point.transform.position.x, point.transform.position.y);
-            point.transform.position = Vector2.MoveTowards(point.transform.position, this.transform.position, 0.05f);
-            DistanceVector = (Vector2)point.transform.position - (Vector2)gunPivot.position;    //CALCULA EL VECTOR DE DISTANCIA
+
+            //grapplePoint = new Vector2(point.transform.position.x, point.transform.position.y);
+            //point.transform.position = Vector2.MoveTowards(point.transform.position, this.transform.position, 0.05f);
+            //DistanceVector = (Vector2)point.transform.position - (Vector2)gunPivot.position;    //CALCULA EL VECTOR DE DISTANCIA
 
             //ESTA
             //print("Agarre algo");
@@ -142,11 +143,11 @@ public class GrapplingGun : MonoBehaviour
                 
                 //atraer = true; //ESTA
                 
-                DistanceVector = (Vector2)point.transform.position - (Vector2)gunPivot.position;
+                //DistanceVector = (Vector2)point.transform.position - (Vector2)gunPivot.position;
               
                 hitObj = _hit.transform.gameObject;
                 
-                hitObj.transform.parent = point.transform;
+                //hitObj.transform.parent = point.transform;
                 grapplePoint = _hit.point;
 
             }
