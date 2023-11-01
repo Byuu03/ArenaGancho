@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ChangeTag : MonoBehaviour
 {
     public string[] newTag = { "ParalyzeBox", "InverseBox", "ShieldBox" };   //
+    public Sprite[] tagSprites;
 
     public PlayerMovement playerOneMove;
     public PlayerMovement playerTwoMove;
@@ -42,7 +43,12 @@ public class ChangeTag : MonoBehaviour
             int randomIndex = Random.Range(0, newTag.Length);
             gameObject.tag = newTag[randomIndex];
 
-            spRender.color = Color.yellow;
+            SpriteRenderer spriterenderere = GetComponent<SpriteRenderer>();
+            if (spriterenderere != null && randomIndex < tagSprites.Length)
+            {
+                spriterenderere.sprite = tagSprites[randomIndex];
+            }
+            //spRender.color = Color.yellow;
             //Destroy(gameObject);
         }
 
@@ -53,7 +59,7 @@ public class ChangeTag : MonoBehaviour
             int randomIndex = Random.Range(0, newTag.Length);
             gameObject.tag = newTag[randomIndex];
 
-            spRender.color = Color.yellow;
+            //spRender.color = Color.yellow;
             //Destroy(gameObject);
         }
 

@@ -30049,6 +30049,10 @@ MonoBehaviour:
   - ParalyzeBox
   - InverseBox
   - ShieldBox
+  tagSprites:
+  - {fileID: -1667262999, guid: 2350b6dfbc008c545b968eec046e0696, type: 3}
+  - {fileID: 21300000, guid: 0d9de1494e4ade54fad270add330df33, type: 3}
+  - {fileID: 21300000, guid: 132f4b4683113ae4ab6147b3d474430f, type: 3}
   playerOneMove: {fileID: 96564252}
   playerTwoMove: {fileID: 1994754059}
   mSpeed: 0.5
