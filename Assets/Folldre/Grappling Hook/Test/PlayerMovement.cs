@@ -124,6 +124,11 @@ public class PlayerMovement : MonoBehaviour
             Invoke("DesactivarMovimientoAnormal", 0f);
             Destroy(collision.gameObject);
         }
+
+        if (collision.gameObject.tag == "SlowBox")
+        {
+
+        }
     }
 
     //PARALISIS
