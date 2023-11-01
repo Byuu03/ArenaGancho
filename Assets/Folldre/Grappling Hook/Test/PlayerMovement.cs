@@ -11,6 +11,9 @@ public class PlayerMovement : MonoBehaviour
     //PARALISIS
     public bool canMove;
 
+    //LENTITUD
+    public bool isSlow;
+
     //MOVIMIENTOS
     [Header("Keybinds")]
     public KeyCode derechaKey;
@@ -34,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         canMove = true;
 
+        isSlow = false;
         isTwist = false;
 
     }
@@ -79,6 +83,11 @@ public class PlayerMovement : MonoBehaviour
                 _rigidbody.velocity = new Vector2(MovementSpeed, _rigidbody.velocity.y);
                 transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
             }
+        }
+
+        if (isSlow)
+        {
+            MovementSpeed = 2f;
         }
       
 
@@ -127,7 +136,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (collision.gameObject.tag == "SlowBox")
         {
-
+            Invoke("DesactivarLentitud", 0f);
+            Destroy(collision.gameObject);
         }
     }
 
@@ -146,7 +156,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
     //TWIST
-
     public void DesactivarMovimientoAnormal()
     {
         isTwist = true;
@@ -158,6 +167,22 @@ public class PlayerMovement : MonoBehaviour
     {
         isTwist = false;
         print("Movimineto Normal");
+    }
+
+    //LENTITUD
+
+    public void DesactivarLentitud()
+    {
+        isSlow = true;
+        Invoke("ActivarLentitud", 5f);
+        print("LENTO");
+    }
+
+    public void ActivarLentitud()
+    {
+        isSlow = false;
+        MovementSpeed = 4f;
+        print("NORMAL VEL");
     }
 
 }

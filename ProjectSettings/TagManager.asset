@@ -14,6 +14,7 @@ TagManager:
   - InverseBox
   - ShieldBox
   - ShieldPJ
+  - SlowBox
   layers:
   - Default
   - TransparentFX
