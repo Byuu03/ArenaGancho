@@ -32,6 +32,7 @@ public class ChangeTag : MonoBehaviour
         }
     }
 
+    //CAMBIAR TAG
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "PlayerOne")
@@ -55,6 +56,8 @@ public class ChangeTag : MonoBehaviour
         }
     }
 
+
+    //RETROCESO AL IMPACTAR
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "PlayerOne")
@@ -88,6 +91,9 @@ public class ChangeTag : MonoBehaviour
         }
     }
 
+
+
+    //ATRAER CAJA
     public void AttrackToRay(Vector2 origin)
     {
         isAttracted = true;

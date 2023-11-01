@@ -8,11 +8,20 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D _rigidbody;
     public bool derecha = true;
 
+    //PARALISIS
     public bool canMove;
 
+    //MOVIMIENTOS
     [Header("Keybinds")]
     public KeyCode derechaKey;
     public KeyCode izquierdaKey;
+
+    //INVERTIR Controles
+    public bool isTwist;
+
+    [Header("KeyTwist")]
+    public KeyCode nuevaDerechaKey;
+    public KeyCode nuevaIzquierdaKey;
 
     //RETROCESO
     public float KBForce;
@@ -25,8 +34,11 @@ public class PlayerMovement : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         canMove = true;
 
+        isTwist = false;
+
     }
 
+    //CONTROLES
     private void Update()
     {
 
@@ -52,11 +64,29 @@ public class PlayerMovement : MonoBehaviour
                 _rigidbody.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
             }
         }
+
+        if (isTwist)
+        {
+            if (Input.GetKey(nuevaIzquierdaKey))
+            {
+                derecha = false;
+                _rigidbody.velocity = new Vector2(-MovementSpeed, _rigidbody.velocity.y);
+                transform.localRotation = Quaternion.Euler(0, -180, 0f);
+            }
+            else if (Input.GetKey(nuevaDerechaKey))
+            {
+                derecha = true;
+                _rigidbody.velocity = new Vector2(MovementSpeed, _rigidbody.velocity.y);
+                transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            }
+        }
       
 
        
     }
 
+
+    //RETROCESO
     private void FixedUpdate()
     {
         if (KBCounter <= 0) //Aqui se debe de desactivar el movimiento
@@ -79,6 +109,8 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+
+    //PARALISIS & TWIST
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "ParalyzeBox")
@@ -86,8 +118,15 @@ public class PlayerMovement : MonoBehaviour
             Invoke("DesactivarMovimiento", 0f);
             Destroy(collision.gameObject);
         }
+
+        if (collision.gameObject.tag == "InverseBox")
+        {
+            Invoke("DesactivarMovimientoAnormal", 0f);
+            Destroy(collision.gameObject);
+        }
     }
 
+    //PARALISIS
     public void DesactivarMovimiento()
     {
         canMove = false;
@@ -101,5 +140,19 @@ public class PlayerMovement : MonoBehaviour
         print("Me puedo Mover");
     }
 
+    //TWIST
+
+    public void DesactivarMovimientoAnormal()
+    {
+        isTwist = true;
+        Invoke("ActivarMovimientoAnormal", 4f);
+        print("MOVIMIENTO ALTERADO");
+    }
+
+    public void ActivarMovimientoAnormal()
+    {
+        isTwist = false;
+        print("Movimineto Normal");
+    }
 
 }

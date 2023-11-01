@@ -281,6 +281,9 @@ MonoBehaviour:
   canMove: 0
   derechaKey: 100
   izquierdaKey: 97
+  isTwist: 0
+  nuevaDerechaKey: 97
+  nuevaIzquierdaKey: 100
   KBForce: 2
   KBCounter: 0
   KBTotalTime: 0.1
@@ -22411,7 +22414,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &919662959
 Rigidbody2D:
   serializedVersion: 4
@@ -29491,8 +29494,8 @@ Transform:
   m_GameObject: {fileID: 1480744273}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.1747, y: 0.29, z: -1.4570312}
-  m_LocalScale: {x: 1.2146192, y: 0.068340644, z: 0.33709}
+  m_LocalPosition: {x: -5.979, y: 0.29, z: -1.4570312}
+  m_LocalScale: {x: 1.2910186, y: 0.068340644, z: 0.33709}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 70087011}
@@ -30024,7 +30027,7 @@ Transform:
   m_GameObject: {fileID: 1570581306}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.43, y: 1.187, z: -1.4570312}
+  m_LocalPosition: {x: -3.34, y: 1.187, z: -1.4570312}
   m_LocalScale: {x: 0.16792713, y: 0.14845063, z: 0.12430884}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30042,7 +30045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21149aecd82e3c34ebd208b446017a88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newTag: ParalyzeBox
+  newTag: InverseBox
   playerOneMove: {fileID: 96564252}
   playerTwoMove: {fileID: 1994754059}
   mSpeed: 0.5
@@ -36777,6 +36780,9 @@ MonoBehaviour:
   canMove: 0
   derechaKey: 275
   izquierdaKey: 276
+  isTwist: 0
+  nuevaDerechaKey: 0
+  nuevaIzquierdaKey: 0
   KBForce: 2
   KBCounter: 0
   KBTotalTime: 0.1
