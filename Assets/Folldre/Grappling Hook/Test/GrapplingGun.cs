@@ -8,6 +8,8 @@ public class GrapplingGun : MonoBehaviour
     //public GameObject point;   //
     private GameObject hitObj;   //
 
+    public GameObject fueraRangojpg;
+
     [Header("Layer Settings:")]
     [SerializeField] private bool grappleToAll = false;
     [SerializeField] private int grappableLayerNumber = 9;
@@ -128,6 +130,8 @@ public class GrapplingGun : MonoBehaviour
             grappleRope.enabled = false;
             m_springJoint2D.enabled = false;
             ballRigidbody.gravityScale = 1;
+
+            fueraRangojpg.SetActive(false);
         }
      
     }
@@ -161,6 +165,7 @@ public class GrapplingGun : MonoBehaviour
             }
             else
             {
+                fueraRangojpg.SetActive(true);
                 print("Nada habia Al final de todo");
             }
 

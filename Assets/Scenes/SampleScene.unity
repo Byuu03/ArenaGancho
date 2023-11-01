@@ -36464,6 +36464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grappleRope: {fileID: 1120365138}
+  fueraRangojpg: {fileID: 0}
   grappleToAll: 0
   grappableLayerNumber: 9
   arrastableLayerNumber: 10
@@ -37288,6 +37289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grappleRope: {fileID: 1292011518}
+  fueraRangojpg: {fileID: 2128015436}
   grappleToAll: 0
   grappableLayerNumber: 9
   arrastableLayerNumber: 10
@@ -42690,7 +42692,7 @@ GameObject:
   - component: {fileID: 2128015438}
   - component: {fileID: 2128015437}
   m_Layer: 9
-  m_Name: New Sprite (1)
+  m_Name: Alerta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42703,7 +42705,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2128015436}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -42802,8 +42804,8 @@ Transform:
   m_GameObject: {fileID: 2128015436}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.07, y: -4.23, z: -1.4570312}
-  m_LocalScale: {x: 0.36253542, y: 1.3786043, z: 1}
+  m_LocalPosition: {x: -8.82, y: 1.65, z: -1.4570312}
+  m_LocalScale: {x: 0.08463807, y: 0.08463807, z: 0.08463807}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 70087011}
