@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ChangeTag : MonoBehaviour
 {
-    public string newTag;
+    public string[] newTag = { "ParalyzeBox", "InverseBox", "ShieldBox" };   //
 
     public PlayerMovement playerOneMove;
     public PlayerMovement playerTwoMove;
@@ -37,14 +37,22 @@ public class ChangeTag : MonoBehaviour
     {
         if (collision.gameObject.tag == "PlayerOne")
         {
-            gameObject.tag = newTag;
+            //gameObject.tag = newTag;
+
+            int randomIndex = Random.Range(0, newTag.Length);
+            gameObject.tag = newTag[randomIndex];
+
             spRender.color = Color.yellow;
             //Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "PlayerTwo")
         {
-            gameObject.tag = newTag;
+            //gameObject.tag = newTag;
+
+            int randomIndex = Random.Range(0, newTag.Length);
+            gameObject.tag = newTag[randomIndex];
+
             spRender.color = Color.yellow;
             //Destroy(gameObject);
         }

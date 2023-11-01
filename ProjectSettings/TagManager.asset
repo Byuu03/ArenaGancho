@@ -12,6 +12,7 @@ TagManager:
   - SpecialBox
   - Suelo
   - InverseBox
+  - ShieldBox
   layers:
   - Default
   - TransparentFX

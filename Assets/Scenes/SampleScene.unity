@@ -30045,7 +30045,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21149aecd82e3c34ebd208b446017a88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newTag: InverseBox
+  newTag:
+  - ParalyzeBox
+  - InverseBox
+  - ShieldBox
   playerOneMove: {fileID: 96564252}
   playerTwoMove: {fileID: 1994754059}
   mSpeed: 0.5
