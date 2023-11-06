@@ -59,6 +59,12 @@ public class ChangeTag : MonoBehaviour
             int randomIndex = Random.Range(0, newTag.Length);
             gameObject.tag = newTag[randomIndex];
 
+            SpriteRenderer spriterenderere = GetComponent<SpriteRenderer>();
+            if (spriterenderere != null && randomIndex < tagSprites.Length)
+            {
+                spriterenderere.sprite = tagSprites[randomIndex];
+            }
+
             //spRender.color = Color.yellow;
             //Destroy(gameObject);
         }
