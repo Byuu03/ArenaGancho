@@ -37498,8 +37498,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e0716fdb528414983aded58d0415a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paralisis: {fileID: 414572135}
-  timerparalis: 3
+  colisionesNecesarias: 1
+  objetoAActivar: {fileID: 414572135}
+  tiempoDeActivacion: 3
+  colisionesActuales: 0
+  objetoActivado: 0
 --- !u!1 &2002867286
 GameObject:
   m_ObjectHideFlags: 0

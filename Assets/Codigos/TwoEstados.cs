@@ -4,35 +4,44 @@ using UnityEngine;
 
 public class TwoEstados : MonoBehaviour
 {
-    public GameObject paralisis;
-    public float timerparalis;
+    public int colisionesNecesarias; // Cambia este valor al número de colisiones requeridas.
+    public GameObject objetoAActivar;
+    public float tiempoDeActivacion; // Cambia este valor al tiempo que deseas que el objeto esté activado.
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        paralisis.SetActive(false);
-    }
+    [SerializeField]private int colisionesActuales = 0;
+    [SerializeField]private bool objetoActivado = false;
+    private float tiempoPasado = 0.0f;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "ParalyzeBox")
+        if (collision.gameObject.CompareTag("ParalyzeBox") && !objetoActivado)
         {
-            print("salio paralisis");
-            paralisis.SetActive(true);
-            Invoke("DesavtivarParalitico", timerparalis);
+            colisionesActuales++;
 
+            if (colisionesActuales >= colisionesNecesarias)
+            {
+                objetoActivado = true;
+                objetoAActivar.SetActive(true);
+            }
         }
     }
 
-    private void DesavtivarParalitico()
+    private void Update()
     {
-        paralisis.SetActive(false);
+        if (objetoActivado)
+        {
+            tiempoPasado += Time.deltaTime;
+
+            if (tiempoPasado >= tiempoDeActivacion)
+            {
+                objetoActivado = false;
+                objetoAActivar.SetActive(false);
+                colisionesActuales = 0;
+                tiempoPasado = 0.0f;
+            }
+        }
     }
 
 }
