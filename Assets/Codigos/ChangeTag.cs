@@ -9,8 +9,6 @@ public class ChangeTag : MonoBehaviour
     public string[] newTag = { "ParalyzeBox", "InverseBox", "SlowBox" };   //
     public Sprite[] tagSprites;
 
-    //private string currentTag;
-    //private Sprite currentSprite;
 
     private SpriteRenderer spRender;
 
@@ -28,7 +26,7 @@ public class ChangeTag : MonoBehaviour
     void Start()
     {
         spRender = GetComponent<SpriteRenderer>();
-        //SetRandomTagAndSprite();
+    
     }
 
     // Update is called once per frame
@@ -43,13 +41,9 @@ public class ChangeTag : MonoBehaviour
     //CAMBIAR TAG y SPRITE
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "PlayerOne" || collision.gameObject.tag == "PlayerTwo")
+        if (collision.gameObject.tag == "PlayerOne")
         {
-            //gameObject.tag = currentTag;
-            //spRender.sprite = currentSprite;
-
-            // Luego, asignar un nuevo tag y sprite aleatorio
-            //SetRandomTagAndSprite();
+           
 
             int randomIndex = Random.Range(0, newTag.Length);
             gameObject.tag = newTag[randomIndex];
@@ -59,35 +53,27 @@ public class ChangeTag : MonoBehaviour
                 spRender.sprite = tagSprites[randomIndex];
             }
 
-            //SpriteRenderer spriterenderere = GetComponent<SpriteRenderer>();
-            //if (spriterenderere != null && randomIndex < tagSprites.Length)
-            //{
-            //    spriterenderere.sprite = tagSprites[randomIndex];
-            //}
+         
 
         }
 
-        //if (collision.gameObject.tag == "PlayerTwo")
-        //{
-        //    //gameObject.tag = newTag;
+        if (collision.gameObject.tag == "PlayerTwo")
+        {
 
-        //    int randomIndex = Random.Range(0, newTag.Length);
-        //    gameObject.tag = newTag[randomIndex];
+            print("Choco pj2");
+            int randomIndex = Random.Range(0, newTag.Length);
+            gameObject.tag = newTag[randomIndex];
 
-        //    if (randomIndex < tagSprites.Length)
-        //    {
-        //        spRender.sprite = tagSprites[randomIndex];
-        //    }
-
-
-        //    SpriteRenderer spriterenderere = GetComponent<SpriteRenderer>();
-        //    if (spriterenderere != null && randomIndex < tagSprites.Length)
-        //    {
-        //        spriterenderere.sprite = tagSprites[randomIndex];
-        //    }
+            if (randomIndex < tagSprites.Length)
+            {
+                spRender.sprite = tagSprites[randomIndex];
+            }
 
 
-        //}
+           
+
+
+        }
 
 
         if (collision.gameObject.tag == "Suelo")
@@ -96,17 +82,7 @@ public class ChangeTag : MonoBehaviour
         }
     }
 
-    //private void SetRandomTagAndSprite()
-    //{
-    //    int randomIndex = Random.Range(0, newTag.Length);
-    //    currentTag = newTag[randomIndex];
-
-    //    if (randomIndex < tagSprites.Length)
-    //    {
-    //        currentSprite = tagSprites[randomIndex];
-    //        spRender.sprite = currentSprite;
-    //    }
-    //}
+   
 
 
     //RETROCESO AL IMPACTAR
