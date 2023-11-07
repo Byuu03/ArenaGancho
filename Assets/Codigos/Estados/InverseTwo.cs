@@ -2,21 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TwoEstados : MonoBehaviour
+public class InverseTwo : MonoBehaviour
 {
-    public int colisionesNecesarias; 
+    public int colisionesNecesarias;
     public GameObject objetoAActivar;
-    public float tiempoDeActivacion; 
+    public float tiempoDeActivacion;
 
-    [SerializeField]private int colisionesActuales = 0;
-    [SerializeField]private bool objetoActivado = false;
+    [SerializeField] private int colisionesActuales = 0;
+    [SerializeField] private bool objetoActivado = false;
     private float tiempoPasado = 0.0f;
 
-    
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("ParalyzeBox") && !objetoActivado)
+        if (collision.gameObject.CompareTag("InverseBox") && !objetoActivado)
         {
             colisionesActuales++;
 
@@ -43,5 +43,4 @@ public class TwoEstados : MonoBehaviour
             }
         }
     }
-
 }
