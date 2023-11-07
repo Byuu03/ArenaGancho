@@ -73,13 +73,13 @@ public class Retroceder : MonoBehaviour
 
     public void StopAttrack()
     {
-        print("Soy la caja y me detuve");
+        //print("Soy la caja y me detuve");
         isAttracted = false;
     }
 
     public void MoveToRay(Vector2 origin) //Apenas se mueve hacia el origen del raycast
     {
-        print("Atraje caja");
+        //print("Atraje caja");
 
         transform.position = Vector3.Lerp(transform.position, origin, mSpeed); //1
 

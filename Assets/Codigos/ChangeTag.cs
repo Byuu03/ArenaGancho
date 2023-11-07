@@ -5,16 +5,22 @@ using UnityEngine.UI;
 
 public class ChangeTag : MonoBehaviour
 {
-    public string[] newTag = { "ParalyzeBox", "InverseBox", "ShieldBox" };   //
+    //CAMBIAR TAG Y SPRITE
+    public string[] newTag = { "ParalyzeBox", "InverseBox", "SlowBox" };   //
     public Sprite[] tagSprites;
 
-    public PlayerMovement playerOneMove;
-    public PlayerMovement playerTwoMove;
+    //private string currentTag;
+    //private Sprite currentSprite;
 
     private SpriteRenderer spRender;
 
+    //RETROCESO
+    public PlayerMovement playerOneMove;
+    public PlayerMovement playerTwoMove;
+
     public float mSpeed;
 
+    //ATRACCION
     private bool isAttracted = false;
     private Vector2 attractionOrigin;
 
@@ -22,6 +28,7 @@ public class ChangeTag : MonoBehaviour
     void Start()
     {
         spRender = GetComponent<SpriteRenderer>();
+        //SetRandomTagAndSprite();
     }
 
     // Update is called once per frame
@@ -33,41 +40,54 @@ public class ChangeTag : MonoBehaviour
         }
     }
 
-    //CAMBIAR TAG
+    //CAMBIAR TAG y SPRITE
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "PlayerOne")
+        if (collision.gameObject.tag == "PlayerOne" || collision.gameObject.tag == "PlayerTwo")
         {
-            //gameObject.tag = newTag;
+            //gameObject.tag = currentTag;
+            //spRender.sprite = currentSprite;
+
+            // Luego, asignar un nuevo tag y sprite aleatorio
+            //SetRandomTagAndSprite();
 
             int randomIndex = Random.Range(0, newTag.Length);
             gameObject.tag = newTag[randomIndex];
 
-            SpriteRenderer spriterenderere = GetComponent<SpriteRenderer>();
-            if (spriterenderere != null && randomIndex < tagSprites.Length)
+            if (randomIndex < tagSprites.Length)
             {
-                spriterenderere.sprite = tagSprites[randomIndex];
-            }
-            //spRender.color = Color.yellow;
-            //Destroy(gameObject);
-        }
-
-        if (collision.gameObject.tag == "PlayerTwo")
-        {
-            //gameObject.tag = newTag;
-
-            int randomIndex = Random.Range(0, newTag.Length);
-            gameObject.tag = newTag[randomIndex];
-
-            SpriteRenderer spriterenderere = GetComponent<SpriteRenderer>();
-            if (spriterenderere != null && randomIndex < tagSprites.Length)
-            {
-                spriterenderere.sprite = tagSprites[randomIndex];
+                spRender.sprite = tagSprites[randomIndex];
             }
 
-            //spRender.color = Color.yellow;
-            //Destroy(gameObject);
+            //SpriteRenderer spriterenderere = GetComponent<SpriteRenderer>();
+            //if (spriterenderere != null && randomIndex < tagSprites.Length)
+            //{
+            //    spriterenderere.sprite = tagSprites[randomIndex];
+            //}
+
         }
+
+        //if (collision.gameObject.tag == "PlayerTwo")
+        //{
+        //    //gameObject.tag = newTag;
+
+        //    int randomIndex = Random.Range(0, newTag.Length);
+        //    gameObject.tag = newTag[randomIndex];
+
+        //    if (randomIndex < tagSprites.Length)
+        //    {
+        //        spRender.sprite = tagSprites[randomIndex];
+        //    }
+
+
+        //    SpriteRenderer spriterenderere = GetComponent<SpriteRenderer>();
+        //    if (spriterenderere != null && randomIndex < tagSprites.Length)
+        //    {
+        //        spriterenderere.sprite = tagSprites[randomIndex];
+        //    }
+
+
+        //}
 
 
         if (collision.gameObject.tag == "Suelo")
@@ -75,6 +95,18 @@ public class ChangeTag : MonoBehaviour
             StopAttrack();
         }
     }
+
+    //private void SetRandomTagAndSprite()
+    //{
+    //    int randomIndex = Random.Range(0, newTag.Length);
+    //    currentTag = newTag[randomIndex];
+
+    //    if (randomIndex < tagSprites.Length)
+    //    {
+    //        currentSprite = tagSprites[randomIndex];
+    //        spRender.sprite = currentSprite;
+    //    }
+    //}
 
 
     //RETROCESO AL IMPACTAR
@@ -92,7 +124,7 @@ public class ChangeTag : MonoBehaviour
                 playerOneMove.KnockFromRight = false;
             }
 
-            //Destroy(gameObject);
+
         }
 
         if (collision.gameObject.tag == "PlayerTwo")
@@ -107,7 +139,7 @@ public class ChangeTag : MonoBehaviour
                 playerTwoMove.KnockFromRight = false;
             }
 
-            //Destroy(gameObject);
+
         }
     }
 
@@ -122,7 +154,7 @@ public class ChangeTag : MonoBehaviour
 
     public void StopAttrack()
     {
-        print("Soy la cajaSpecial y me detuve");
+        //print("Soy la cajaSpecial y me detuve");
         isAttracted = false;
     }
 

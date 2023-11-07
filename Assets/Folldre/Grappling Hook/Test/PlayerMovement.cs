@@ -125,19 +125,22 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "ParalyzeBox")
         {
             Invoke("DesactivarMovimiento", 0f);
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
         }
 
         if (collision.gameObject.tag == "InverseBox")
         {
             Invoke("DesactivarMovimientoAnormal", 0f);
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
         }
 
         if (collision.gameObject.tag == "SlowBox")
         {
             Invoke("DesactivarLentitud", 0f);
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
         }
     }
 
