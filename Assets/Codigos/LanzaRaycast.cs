@@ -14,10 +14,6 @@ public class LanzaRaycast : MonoBehaviour
 
     public LineRenderer linrender;
 
-    
-    //private bool isAttracting = false; //
-    //private Retroceder attractedObj;  //
-
     private void Awake()
     {
         
@@ -34,7 +30,7 @@ public class LanzaRaycast : MonoBehaviour
         // Lanzar raycast
         if (Input.GetKeyDown(lanzaRay))
         {
-            //linrender.SetPosition(0, firepoint.position);
+          
             Vector2 raycastOrigin = firepoint.position;
             Vector2 raycastDirection = firepoint.right;
 
@@ -43,7 +39,7 @@ public class LanzaRaycast : MonoBehaviour
             if (hit.collider != null)
             {
 
-                //linrender.SetPosition(1, hit.point);
+               
 
                 Debug.Log("Raycast golpeo: " + hit.collider.name);
 
@@ -53,7 +49,7 @@ public class LanzaRaycast : MonoBehaviour
                     if (changeTagScript != null)
                     {
                         changeTagScript.AttrackToRay(raycastOrigin);
-                        //linrender.enabled = true;
+                     
                     }
 
                     //hit.collider.GetComponent<ChangeTag>().MoveToRay(raycastOrigin);
@@ -65,15 +61,13 @@ public class LanzaRaycast : MonoBehaviour
                     Retroceder retrocederscript = hit.collider.GetComponent<Retroceder>();
                     if (retrocederscript != null)
                     {
-                        //linrender.enabled = true;
-                        //retrocederscript.MoveToRay(raycastOrigin);
-                        //linrender.enabled = false;
+                     
                         retrocederscript.AttrackToRay(raycastOrigin);
                         
                     }
                     else
                     {
-                        //retrocederscript.StopAttrack();
+                        
                     }
                     linrender.enabled = false;
                 }
@@ -86,7 +80,7 @@ public class LanzaRaycast : MonoBehaviour
                 linrender.enabled = true;
                 linrender.SetPosition(0, firepoint.position);
                 linrender.SetPosition(1, hit.point);
-                //linrender.enabled = false;
+               
 
             }
             else
