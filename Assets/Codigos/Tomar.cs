@@ -56,6 +56,11 @@ public class Tomar : MonoBehaviour
                     grabbed = true;
                 }
 
+                if (hit.collider != null && hit.collider.tag == "PlayerOne")
+                {
+                    grabbed = true;
+                }
+
 
                 //grab
             }
