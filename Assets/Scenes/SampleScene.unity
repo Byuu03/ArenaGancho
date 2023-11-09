@@ -7707,6 +7707,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasPreparacion
       objectReference: {fileID: 0}
+    - target: {fileID: 5223981095558540729, guid: 8c4a9621c1e92e84a9087e694dea8918, type: 3}
+      propertyPath: m_text
+      value: Tira tu rival hacia las puas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223981095558540729, guid: 8c4a9621c1e92e84a9087e694dea8918, type: 3}
+      propertyPath: m_fontSize
+      value: 22.05
+      objectReference: {fileID: 0}
     - target: {fileID: 7364346435641965659, guid: 8c4a9621c1e92e84a9087e694dea8918, type: 3}
       propertyPath: nivel
       value: SampleScene
@@ -8074,8 +8082,8 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 5876829847575454693}
   - {fileID: 7571939293292609286}
-  - {fileID: 1190437673}
   - {fileID: 901990371}
+  - {fileID: 1190437673}
   - {fileID: 70087011}
   - {fileID: 439815141}
   - {fileID: 792567001}
