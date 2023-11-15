@@ -23,14 +23,20 @@ public class DañoController : MonoBehaviour
         {
             
             GameManager.manager.HurtP1(daño);
+
+            CinemachineMovimientoCamara.Instance.MoverCamara(2, 2, 0.2f);
+
             //FindObjectOfType<GameManager>().HurtP1();
-            //CineMachineMovimientoCamara.Instance.MoverCamara(5, 5, 0.5f);
+            //CineMachineMovimientoCamara.Instance.MoverCamara(2, 2, 0.2f);
             //GameManager.manager.WinGame();
         }
 
         if (collision.gameObject.tag == "PlayerTwo")
         {
             GameManager.manager.HurtP2();
+
+            CinemachineMovimientoCamara.Instance.MoverCamara(2, 2, 0.2f);
+
             //FindObjectOfType<GameManager>().HurtP2();
             //CineMachineMovimientoCamara.Instance.MoverCamara(5, 5, 0.5f);
             //GameManager.manager.WinPjTwo();

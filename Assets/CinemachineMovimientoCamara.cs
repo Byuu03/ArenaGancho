@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
-public class CineMachineMovimientoCamara : MonoBehaviour
+public class CinemachineMovimientoCamara : MonoBehaviour
 {
-    public static CineMachineMovimientoCamara Instance;
-
     private CinemachineVirtualCamera cinemachineVirtualCamera;
+    public static CinemachineMovimientoCamara Instance;
     private CinemachineBasicMultiChannelPerlin cinemachineBasicMultiChannelPerlin;
 
     private float tiempoMovimiento;
@@ -18,25 +17,9 @@ public class CineMachineMovimientoCamara : MonoBehaviour
     {
         Instance = this;
         cinemachineVirtualCamera = GetComponent<CinemachineVirtualCamera>();
-        cinemachineBasicMultiChannelPerlin = cinemachineVirtualCamera.GetComponent<CinemachineBasicMultiChannelPerlin>();
-    }
+        cinemachineBasicMultiChannelPerlin = cinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (tiempoMovimiento > 0)
-        {
-            tiempoMovimiento -= Time.deltaTime;
-            cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = Mathf.Lerp(intensidadInicial, 0, 1 - (tiempoMovimiento / tiempoMovimientoTotal));
-        }
-    }
-
 
     public void MoverCamara(float intensidad, float frecuencia, float tiempo)
     {
@@ -47,6 +30,13 @@ public class CineMachineMovimientoCamara : MonoBehaviour
         tiempoMovimiento = tiempo;
     }
 
-    
+    private void Update()
+    {
+        if (tiempoMovimiento > 0)
+        {
+            tiempoMovimiento -= Time.deltaTime;
+            cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = Mathf.Lerp(intensidadInicial, 0, 1 - (tiempoMovimiento / tiempoMovimientoTotal));
 
+        }
+    }
 }

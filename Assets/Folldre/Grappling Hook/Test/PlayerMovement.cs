@@ -142,6 +142,11 @@ public class PlayerMovement : MonoBehaviour
             Destroy(collision.gameObject);
             //collision.gameObject.SetActive(false);
         }
+
+        if (collision.gameObject.tag == "Puas")
+        {
+           // CineMachineMovimientoCamara.Instance.MoverCamara(5, 5, 0.5f);
+        }
     }
 
     //PARALISIS
