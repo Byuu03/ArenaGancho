@@ -8,6 +8,11 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D _rigidbody;
     public bool derecha = true;
 
+    bool Air = false;
+
+    //Animacion
+    public Animator animator;
+
     //PARALISIS
     public bool canMove;
 
@@ -48,8 +53,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (canMove)
         {
+            //animator.SetFloat("Speed", Mathf.Abs(MovementSpeed));
             if (Input.GetKey(izquierdaKey))
             {
+                animator.SetFloat("Speed", Mathf.Abs(MovementSpeed));
                 derecha = false;
                 _rigidbody.velocity = new Vector2(-MovementSpeed, _rigidbody.velocity.y);
                 transform.localRotation = Quaternion.Euler(0, -180, 0f);
@@ -57,10 +64,23 @@ public class PlayerMovement : MonoBehaviour
             else if (Input.GetKey(derechaKey))
             {
                 derecha = true;
+                animator.SetFloat("Speed", Mathf.Abs(MovementSpeed));
                 _rigidbody.velocity = new Vector2(MovementSpeed, _rigidbody.velocity.y);
                 transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
             }
 
+
+            if (Input.GetKeyUp(izquierdaKey))
+            {
+                animator.SetFloat("Speed", 0);
+            }
+            if (Input.GetKeyUp(derechaKey))
+            {
+                derecha = true;
+                animator.SetFloat("Speed", 0);
+                //_rigidbody.velocity = new Vector2(MovementSpeed, _rigidbody.velocity.y);
+                //transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            }
 
 
             if (Input.GetButtonDown("Jump") && Mathf.Abs(_rigidbody.velocity.y) < 0.001f)
@@ -95,6 +115,8 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
+
+
     //RETROCESO
     private void FixedUpdate()
     {
@@ -115,6 +137,15 @@ public class PlayerMovement : MonoBehaviour
 
             KBCounter -= Time.deltaTime;
 
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Suelo")
+        {
+            Air = true;
+            animator.SetBool("isAir", true);
         }
     }
 
