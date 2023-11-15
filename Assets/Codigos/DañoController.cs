@@ -21,8 +21,10 @@ public class DañoController : MonoBehaviour
     {
         if (collision.gameObject.tag == "PlayerOne")
         {
+            
             GameManager.manager.HurtP1(daño);
             //FindObjectOfType<GameManager>().HurtP1();
+            //CineMachineMovimientoCamara.Instance.MoverCamara(5, 5, 0.5f);
             //GameManager.manager.WinGame();
         }
 
@@ -30,7 +32,7 @@ public class DañoController : MonoBehaviour
         {
             GameManager.manager.HurtP2();
             //FindObjectOfType<GameManager>().HurtP2();
-
+            //CineMachineMovimientoCamara.Instance.MoverCamara(5, 5, 0.5f);
             //GameManager.manager.WinPjTwo();
         }
     }

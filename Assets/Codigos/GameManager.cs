@@ -138,7 +138,7 @@ public class GameManager : MonoBehaviour
     public void HurtP1(int restarhp)
     {
         P1Life -= restarhp;
-
+        //CineMachineMovimientoCamara.Instance.MoverCamara(5, 5, 0.5f);
         for (int i = 0; i < p1Stock.Length; i++)
         {
             if (P1Life > i)
@@ -155,7 +155,7 @@ public class GameManager : MonoBehaviour
     public void HurtP2()
     {
         P2Life -= 1;
-
+        //CineMachineMovimientoCamara.Instance.MoverCamara(5, 5, 0.5f);
         for (int i = 0; i < p2Stock.Length; i++)
         {
             if (P2Life > i)
