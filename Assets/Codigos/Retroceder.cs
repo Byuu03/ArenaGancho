@@ -5,7 +5,7 @@ using UnityEngine;
 public class Retroceder : MonoBehaviour
 {
     public PlayerMovement playerOneMove;
-    public PlayerMovement playerTwoMove;
+    public PlayerTwoMovement playerTwoMove;
 
     public float mSpeed;
 
