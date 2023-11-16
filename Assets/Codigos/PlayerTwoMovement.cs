@@ -9,6 +9,12 @@ public class PlayerTwoMovement : MonoBehaviour
     //private Rigidbody2D _rigidbody;
     //public bool derecha = true;
 
+    //bool Air = false;
+    //bool Pua = false;
+
+    ////Animacion
+    //public Animator animator;
+
     ////PARALISIS
     //public bool canMove;
 
@@ -49,8 +55,10 @@ public class PlayerTwoMovement : MonoBehaviour
 
     //    if (canMove)
     //    {
+    //        //animator.SetFloat("Speed", Mathf.Abs(MovementSpeed));
     //        if (Input.GetKey(izquierdaKey))
     //        {
+    //            animator.SetFloat("Speed", Mathf.Abs(MovementSpeed));
     //            derecha = false;
     //            _rigidbody.velocity = new Vector2(-MovementSpeed, _rigidbody.velocity.y);
     //            transform.localRotation = Quaternion.Euler(0, -180, 0f);
@@ -58,10 +66,23 @@ public class PlayerTwoMovement : MonoBehaviour
     //        else if (Input.GetKey(derechaKey))
     //        {
     //            derecha = true;
+    //            animator.SetFloat("Speed", Mathf.Abs(MovementSpeed));
     //            _rigidbody.velocity = new Vector2(MovementSpeed, _rigidbody.velocity.y);
     //            transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
     //        }
 
+
+    //        if (Input.GetKeyUp(izquierdaKey))
+    //        {
+    //            animator.SetFloat("Speed", 0);
+    //        }
+    //        if (Input.GetKeyUp(derechaKey))
+    //        {
+    //            derecha = true;
+    //            animator.SetFloat("Speed", 0);
+    //            //_rigidbody.velocity = new Vector2(MovementSpeed, _rigidbody.velocity.y);
+    //            //transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+    //        }
 
 
     //        if (Input.GetButtonDown("Jump") && Mathf.Abs(_rigidbody.velocity.y) < 0.001f)
@@ -96,6 +117,8 @@ public class PlayerTwoMovement : MonoBehaviour
     //}
 
 
+
+
     ////RETROCESO
     //private void FixedUpdate()
     //{
@@ -119,10 +142,37 @@ public class PlayerTwoMovement : MonoBehaviour
     //    }
     //}
 
+    //private void OnCollisionExit2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Suelo")
+    //    {
+    //        Air = true;
+    //        animator.SetBool("inAir", true);
+    //    }
+
+    //    if (collision.gameObject.tag == "Puas")
+    //    {
+    //        Pua = false;
+    //        animator.SetBool("inPuas", false);
+    //    }
+    //}
+
 
     ////PARALISIS & TWIST
     //private void OnCollisionEnter2D(Collision2D collision)
     //{
+    //    if (collision.gameObject.tag == "Suelo")
+    //    {
+    //        Air = false;
+    //        animator.SetBool("inAir", false);
+    //    }
+
+    //    if (collision.gameObject.tag == "Puas")
+    //    {
+    //        Pua = true;
+    //        animator.SetBool("inPuas", true);
+    //    }
+
     //    if (collision.gameObject.tag == "ParalyzeBox")
     //    {
     //        Invoke("DesactivarMovimiento", 0f);
@@ -144,10 +194,7 @@ public class PlayerTwoMovement : MonoBehaviour
     //        //collision.gameObject.SetActive(false);
     //    }
 
-    //    if (collision.gameObject.tag == "Puas")
-    //    {
-    //        // CineMachineMovimientoCamara.Instance.MoverCamara(5, 5, 0.5f);
-    //    }
+
     //}
 
     ////PARALISIS
@@ -193,4 +240,5 @@ public class PlayerTwoMovement : MonoBehaviour
     //    MovementSpeed = 4f;
     //    print("NORMAL VEL");
     //}
+
 }

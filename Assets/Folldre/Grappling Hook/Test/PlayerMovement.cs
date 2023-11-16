@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public bool derecha = true;
 
     bool Air = false;
+    bool Pua = false;
 
     //Animacion
     public Animator animator;
@@ -145,7 +146,13 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Suelo")
         {
             Air = true;
-            animator.SetBool("isAir", true);
+            animator.SetBool("inAir", true);
+        }
+
+        if (collision.gameObject.tag == "Puas")
+        {
+            Pua = false;
+            animator.SetBool("inPuas", false);
         }
     }
 
@@ -153,6 +160,18 @@ public class PlayerMovement : MonoBehaviour
     //PARALISIS & TWIST
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == "Suelo")
+        {
+            Air = false;
+            animator.SetBool("inAir", false);
+        }
+
+        if (collision.gameObject.tag == "Puas")
+        {
+            Pua = true;
+            animator.SetBool("inPuas", true);
+        }
+
         if (collision.gameObject.tag == "ParalyzeBox")
         {
             Invoke("DesactivarMovimiento", 0f);
@@ -174,10 +193,7 @@ public class PlayerMovement : MonoBehaviour
             //collision.gameObject.SetActive(false);
         }
 
-        if (collision.gameObject.tag == "Puas")
-        {
-           // CineMachineMovimientoCamara.Instance.MoverCamara(5, 5, 0.5f);
-        }
+      
     }
 
     //PARALISIS
