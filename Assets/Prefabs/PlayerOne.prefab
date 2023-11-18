@@ -15604,7 +15604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grabbed: 0
-  distance: 3
+  distance: 1.5
   holdPoint: {fileID: 3973829514912592645}
   throwForce: 28.5
   notgrabbed:
@@ -16012,7 +16012,7 @@ MonoBehaviour:
   hitLayers:
     serializedVersion: 2
     m_Bits: 1024
-  rayDistance: 6.79
+  rayDistance: 4
   firepoint: {fileID: 7401716199653444432}
   lanzaRay: 101
   linrender: {fileID: 7933658334689936808}

@@ -40,7 +40,7 @@ public class Retroceder : MonoBehaviour
             {
                 playerOneMove.KnockFromRight = false;
             }
-
+            StopAttrack();
             //Destroy(gameObject);
         }
 
@@ -55,7 +55,7 @@ public class Retroceder : MonoBehaviour
             {
                 playerTwoMove.KnockFromRight = false;
             }
-
+            StopAttrack();
             //Destroy(gameObject);
         }
 

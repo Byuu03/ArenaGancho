@@ -77,7 +77,7 @@ public class SimpleTagChange : MonoBehaviour
             {
                 playerOneMove.KnockFromRight = false;
             }
-
+            StopAttrack();
 
         }
 
@@ -92,7 +92,7 @@ public class SimpleTagChange : MonoBehaviour
             {
                 playerTwoMove.KnockFromRight = false;
             }
-
+            StopAttrack();
 
         }
     }
