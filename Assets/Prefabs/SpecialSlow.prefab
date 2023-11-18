@@ -258,6 +258,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newTag: SlowBox
   nuevoSprite: {fileID: 21300000, guid: 084d3516c32877d499c468761b9c2e92, type: 3}
-  playerOneMove: {fileID: 3816221489592935767, guid: 0a2d54e5ae3f7aa4fa60dbe79e61fb89, type: 3}
-  playerTwoMove: {fileID: 7956536553115716693, guid: 4119b0dd0e284d240bd340de60f0de1a, type: 3}
+  playerOneMove: {fileID: 6684766381349434031, guid: 0a2d54e5ae3f7aa4fa60dbe79e61fb89, type: 3}
+  playerTwoMove: {fileID: 3138926283834835988, guid: 4119b0dd0e284d240bd340de60f0de1a, type: 3}
   mSpeed: 0.5
