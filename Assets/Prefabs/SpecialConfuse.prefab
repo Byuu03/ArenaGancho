@@ -208,7 +208,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.688889, y: 5.688889}
+    oldSize: {x: 2.56, y: 2.56}
     newSize: {x: 5.12, y: 5.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -258,6 +258,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newTag: InverseBox
   nuevoSprite: {fileID: 21300000, guid: 8949a6cc5da0b41428a21ac9a1b70879, type: 3}
-  playerOneMove: {fileID: 6684766381349434031, guid: 0a2d54e5ae3f7aa4fa60dbe79e61fb89, type: 3}
-  playerTwoMove: {fileID: 3138926283834835988, guid: 4119b0dd0e284d240bd340de60f0de1a, type: 3}
+  playerOneMove: {fileID: 3816221489592935767, guid: 0a2d54e5ae3f7aa4fa60dbe79e61fb89, type: 3}
+  playerTwoMove: {fileID: 7956536553115716693, guid: 4119b0dd0e284d240bd340de60f0de1a, type: 3}
   mSpeed: 0.5

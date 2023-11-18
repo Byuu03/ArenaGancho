@@ -11,7 +11,7 @@ public class SimpleTagChange : MonoBehaviour
 
     //RETROCESO
     public PlayerMovement playerOneMove;
-    public PlayerTwoMovement playerTwoMove;
+    public PlayerMovement playerTwoMove;
 
     public float mSpeed;
 
