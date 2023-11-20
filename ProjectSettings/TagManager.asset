@@ -15,6 +15,7 @@ TagManager:
   - ShieldBox
   - ShieldPJ
   - SlowBox
+  - Bomba
   layers:
   - Default
   - TransparentFX

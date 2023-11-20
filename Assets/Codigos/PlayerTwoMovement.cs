@@ -152,7 +152,7 @@ public class PlayerTwoMovement : MonoBehaviour
         if (collision.gameObject.tag == "Puas")
         {
             Pua = false;
-            //animator.SetBool("inPuas", false);
+            animator.SetBool("enPua", false);
         }
     }
 
@@ -169,7 +169,9 @@ public class PlayerTwoMovement : MonoBehaviour
         if (collision.gameObject.tag == "Puas")
         {
             Pua = true;
-            //animator.SetBool("inPuas", true);
+            Invoke("DesactivarReaccion", 0f);
+            animator.SetBool("enPua", true);
+            animator.SetBool("enAire", false);
         }
 
         if (collision.gameObject.tag == "ParalyzeBox")
@@ -208,6 +210,18 @@ public class PlayerTwoMovement : MonoBehaviour
     {
         canMove = true;
         print("Me puedo Mover");
+    }
+
+    //KILL / PUA
+    public void DesactivarReaccion()
+    {
+        canMove = false;
+        Invoke("ActivarReaccion", 0.5f);
+    }
+
+    public void ActivarReaccion()
+    {
+        canMove = true;
     }
 
     //TWIST

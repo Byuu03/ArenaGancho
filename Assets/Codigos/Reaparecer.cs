@@ -40,26 +40,26 @@ public class Reaparecer : MonoBehaviour
     void Die()
     {
         particleController.PlayParticle(ParticleController.Particles.die, transform.position);
-        Respawn();
-        //StartCoroutine(Reaparcer(0.5f));
+        //Respawn();
+        StartCoroutine(Reaparcer(0.5f));
     }
 
-    void Respawn()
-    {
-        transform.position = startPos;
-    }
+    //void Respawn()
+    //{
+    //    transform.position = startPos;
+    //}
 
     //Timer para reaparecer
 
-    //IEnumerator Reaparcer(float duration)
-    //{
-    //    myRb.simulated = false;
-    //    myRb.velocity = new Vector2(0, 0);
-    //    sprender.enabled = false;
-    //    yield return new WaitForSeconds(duration);
-    //    transform.position = startPos;
-    //    sprender.enabled = true;
-    //    myRb.simulated = true;
-    //}
+    IEnumerator Reaparcer(float duration)
+    {
+        //myRb.simulated = false;
+        //myRb.velocity = new Vector2(0, 0);
+        //sprender.enabled = false;
+        yield return new WaitForSeconds(duration);
+        transform.position = startPos;
+        //sprender.enabled = true;
+        //myRb.simulated = true;
+    }
 
 }

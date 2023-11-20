@@ -65,6 +65,14 @@ public class Retroceder : MonoBehaviour
         }
     }
 
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Suelo")
+        {
+            StopAttrack();
+        }
+    }
+
     public void AttrackToRay(Vector2 origin)
     {
         isAttracted = true;

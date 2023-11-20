@@ -72,11 +72,11 @@ public class Tomar : MonoBehaviour
                 {
                     if (pm.derecha)
                     {
-                        hit.collider.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(transform.localScale.x, 0.2f) * throwForce;
+                        hit.collider.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(transform.localScale.x, 0.1f) * throwForce;
                     }
                     else
                     {
-                        hit.collider.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(transform.localScale.x, -0.2f) * -throwForce;
+                        hit.collider.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(transform.localScale.x, -0.1f) * -throwForce;
                     }
                     //hit.collider.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(transform.localScale.x, 0.2f) * throwForce;
                 }
