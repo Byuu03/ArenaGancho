@@ -6,13 +6,14 @@ public class Boomba : MonoBehaviour
 {
     [SerializeField] private float radio;
     [SerializeField] private float fuerzaExplos;
+    [SerializeField] private float timerExplosion;
 
     public Animator animattor;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+       // Invoke("Explosion", timerExplosion);
     }
 
     // Update is called once per frame
@@ -35,13 +36,15 @@ public class Boomba : MonoBehaviour
     {
         if (collision.gameObject.tag == "PlayerOne")
         {
-            Explosion();
+            Invoke("Explosion", timerExplosion);
+            //Explosion();
             animattor.SetBool("Touch", true);
         }
 
         if (collision.gameObject.tag == "PlayerTwo")
         {
-            Explosion();
+            Invoke("Explosion", timerExplosion);
+            //Explosion();
             animattor.SetBool("Touch", true);
         }
     }
@@ -64,7 +67,7 @@ public class Boomba : MonoBehaviour
             }
         }
 
-        Destroy(gameObject);
+        Destroy(gameObject, 0.1f);
     }
 
     private void OnDrawGizmos()

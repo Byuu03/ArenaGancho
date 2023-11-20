@@ -61,6 +61,11 @@ public class Tomar : MonoBehaviour
                     grabbed = true;
                 }
 
+                if (hit.collider != null && hit.collider.tag == "Bomba")
+                {
+                    grabbed = true;
+                }
+
 
                 //grab
             }
@@ -68,6 +73,7 @@ public class Tomar : MonoBehaviour
             {
                 grabbed = false;
                 hit.collider.gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
+                //hit.collider.gameObject.GetComponent<CircleCollider2D>().isTrigger = false; //
                 if (hit.collider.gameObject.GetComponent<Rigidbody2D>() !=null)
                 {
                     if (pm.derecha)
@@ -90,6 +96,7 @@ public class Tomar : MonoBehaviour
         {
             hit.collider.gameObject.transform.position = holdPoint.position;
             hit.collider.gameObject.GetComponent<BoxCollider2D>().isTrigger=true;
+            //hit.collider.gameObject.GetComponent<CircleCollider2D>().isTrigger = true; //
         }
     }
 
