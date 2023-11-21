@@ -28,7 +28,7 @@ public class WearponManager : MonoBehaviour
             StartCoroutine("CoolDown");
 
             Vector3 rotation = transform.parent.localScale.x == 1 ? Vector3.zero : Vector3.forward * 180; //MIRAR PLAYERMOVEMENT ROTATION
-            GameObject projectile = (GameObject) Instantiate(wpn.projectile, transform.position + activeWeapon.transform.GetChild(0).localPosition*transform.parent.localScale.x, Quaternion.Euler(rotation));
+            GameObject projectile = Instantiate(wpn.projectile, transform.position + activeWeapon.transform.GetChild(0).localPosition * transform.parent.localScale.x, Quaternion.Euler(rotation));
 
             if (wpn.missilModes == Wearpon.Modes.Straight)
             {

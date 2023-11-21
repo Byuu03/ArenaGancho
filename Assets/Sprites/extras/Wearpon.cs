@@ -20,4 +20,5 @@ public class Wearpon : MonoBehaviour
     public Modes missilModes;
 
     //AÑADIR LIMITE DE USOS A LAS ARMAS Y DESPUES QUE DESAPAREZCAN
+    //CONTROLADOR DE ARMAS OJO GRABBED
 }
