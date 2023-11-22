@@ -42,9 +42,10 @@ public class WearponPickUp : MonoBehaviour
             collision.transform.Find("WeaponSlot").GetComponent<WeaponManager>().UpdateWeapon(weaponHere);
             caught = true;
             GetComponent<SpriteRenderer>().sprite = null;
+            collision.transform.GetComponent<Tomar>().grabbed = true;
         }
 
-        if (collision.tag == "PlayerOne")
+        if (collision.tag == "PlayerTwo")
         {
             collision.transform.Find("WearponSlot").GetComponent<WeaponManager>().UpdateWeapon(weaponHere);
             caught = true;

@@ -5460,7 +5460,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6819655039093764644}
-  - component: {fileID: 2461761039868412828}
   - component: {fileID: 3811368676745491480}
   m_Layer: 9
   m_Name: WeaponSlot
@@ -5479,25 +5478,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4.2795806, y: 4.2795806, z: 4.2795806}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4102929471705182150}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2461761039868412828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1672105329488155556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd43cbde39b1d3746b250453299e37c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activeWeapon: {fileID: 7286720932323126464, guid: 08711f280acec284aa3b51ef0dd41ec1, type: 3}
-  ShotKey: 99
 --- !u!212 &3811368676745491480
 SpriteRenderer:
   m_ObjectHideFlags: 0

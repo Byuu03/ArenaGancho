@@ -18,6 +18,7 @@ public class Wearpon : MonoBehaviour
     public float coolDown;
     //public Vector3 tip;
     public Modes missilModes;
+    //public int totalBullets;
 
     //AÑADIR LIMITE DE USOS A LAS ARMAS Y DESPUES QUE DESAPAREZCAN
     //CONTROLADOR DE ARMAS OJO GRABBED

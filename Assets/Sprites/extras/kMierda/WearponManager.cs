@@ -8,6 +8,8 @@ public class WearponManager : MonoBehaviour
     Wearpon wpn;
     bool canShoot = true;
 
+    public int totalShoots;
+
     [Header("ShootBoton")]
     public KeyCode ShotKey;
 
@@ -30,6 +32,8 @@ public class WearponManager : MonoBehaviour
             Vector3 rotation = transform.parent.localScale.x == 1 ? Vector3.zero : Vector3.forward * 180; //MIRAR PLAYERMOVEMENT ROTATION
             GameObject projectile = Instantiate(wpn.projectile, transform.position + activeWeapon.transform.GetChild(0).localPosition * transform.parent.localScale.x, Quaternion.Euler(rotation));
 
+            totalShoots--;
+
             if (wpn.missilModes == Wearpon.Modes.Straight)
             {
                 projectile.GetComponent<Rigidbody2D>().velocity = transform.parent.localScale.x * Vector2.right * wpn.missilSpeed;
@@ -40,7 +44,15 @@ public class WearponManager : MonoBehaviour
 
                 projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(transform.parent.localScale.x, 1) * wpn.missilSpeed;
             }
+
+
         }
+
+        if (totalShoots <= 0)
+        {
+            activeWeapon = null;
+        }
+
     }
 
     IEnumerator CoolDown()

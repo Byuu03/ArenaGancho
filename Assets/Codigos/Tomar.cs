@@ -66,6 +66,12 @@ public class Tomar : MonoBehaviour
                     grabbed = true;
                 }
 
+                if (hit.collider != null && hit.collider.tag == "Misil")
+                {
+                    grabbed = true;
+                    //hit.collider.GetComponent<WeaponController>().Shooter;
+                }
+
 
                 //grab
             }
