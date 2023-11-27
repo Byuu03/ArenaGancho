@@ -2683,6 +2683,11 @@ MonoBehaviour:
   tiempoDeActivacion: 3
   colisionesActuales: 0
   objetoActivado: 0
+--- !u!1 &573982968 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1672105329488155556, guid: 0a2d54e5ae3f7aa4fa60dbe79e61fb89, type: 3}
+  m_PrefabInstance: {fileID: 4933937799815152841}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &643914592
 GameObject:
   m_ObjectHideFlags: 0
@@ -7625,6 +7630,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6819655039093764644, guid: 0a2d54e5ae3f7aa4fa60dbe79e61fb89, type: 3}
   m_PrefabInstance: {fileID: 4933937799815152841}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2009803543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573982968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1dd0c8bf673a194f8e1482a8d6ca40e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balas: {fileID: 609782899248694212, guid: e900a757dcfac2748bc752a046c4b26d, type: 3}
+  shotPoint: {fileID: 786874941}
+  bulletForce: 15
+  fireRate: 0.5
+  maxShots: 3
+  bang: 99
 --- !u!4 &2014886482 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3215864406560491343, guid: b11c40208663f5f4db86b94f0b3ef089, type: 3}
@@ -8537,7 +8560,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6819655039093764644, guid: 0a2d54e5ae3f7aa4fa60dbe79e61fb89, type: 3}
       insertIndex: -1
       addedObject: {fileID: 786874941}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1672105329488155556, guid: 0a2d54e5ae3f7aa4fa60dbe79e61fb89, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2009803543}
   m_SourcePrefab: {fileID: 100100000, guid: 0a2d54e5ae3f7aa4fa60dbe79e61fb89, type: 3}
 --- !u!1001 &5729044571072392435
 PrefabInstance:
@@ -8590,6 +8616,10 @@ PrefabInstance:
     - target: {fileID: 7286720932323126464, guid: 08711f280acec284aa3b51ef0dd41ec1, type: 3}
       propertyPath: m_Name
       value: Bazooka
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286720932323126464, guid: 08711f280acec284aa3b51ef0dd41ec1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -8,6 +8,12 @@ public class Dissparos : MonoBehaviour
     public Transform shotPoint;
     public float bulletForce;
 
+    public float fireRate;
+    float nextFire;
+
+    public int maxShots;
+    int shotsFire;
+
     [Header ("Boton")]
     public KeyCode bang;
 
@@ -29,9 +35,32 @@ public class Dissparos : MonoBehaviour
 
     public void Shoot()
     {
-        GameObject bullet = Instantiate(balas, shotPoint.position, shotPoint.rotation) as GameObject;
-        bullet.GetComponent<Rigidbody2D>().AddForce(shotPoint.right * bulletForce, ForceMode2D.Impulse);
+        if (Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
 
+            GameObject bullet = Instantiate(balas, shotPoint.position, shotPoint.rotation) as GameObject;
+            bullet.GetComponent<Rigidbody2D>().AddForce(shotPoint.right * bulletForce, ForceMode2D.Impulse);
+
+            shotsFire++;
+
+            if (shotsFire == maxShots)
+            {
+                gameObject.SetActive(false);
+                print("Se acabaron los disparos");
+
+                Invoke("ResetShots", 0.2f);
+            }
+
+        }
+
+       
+
+    }
+
+    void ResetShots()
+    {
+        shotsFire = 0;
     }
 
 }
