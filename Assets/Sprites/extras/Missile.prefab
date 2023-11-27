@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3273598019115963335}
   - component: {fileID: 5490638855700419961}
   - component: {fileID: 795274335647121670}
+  - component: {fileID: -1003997811055436876}
   m_Layer: 0
   m_Name: Missile
   m_TagString: Misil
@@ -115,7 +116,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.09452012, y: 0.000000029802322}
@@ -158,3 +159,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-1003997811055436876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609782899248694212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 805eea3e854c8754bb0c80211546703a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerOneMove: {fileID: 6684766381349434031, guid: 0a2d54e5ae3f7aa4fa60dbe79e61fb89, type: 3}
+  playerTwoMove: {fileID: 3138926283834835988, guid: 4119b0dd0e284d240bd340de60f0de1a, type: 3}

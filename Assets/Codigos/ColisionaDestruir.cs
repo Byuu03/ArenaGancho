@@ -20,7 +20,8 @@ public class ColisionaDestruir : MonoBehaviour
     {
         if (collision.gameObject.tag == "PlayerOne")
         {
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 
