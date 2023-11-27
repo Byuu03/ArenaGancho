@@ -1,12 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
-public class ControlArmas : MonoBehaviour
+public class ColisionaDestruir : MonoBehaviour
 {
-    [SerializeField] private UnityEvent enBazooka;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +16,11 @@ public class ControlArmas : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Bazooka")
+        if (collision.gameObject.tag == "PlayerOne")
         {
-            enBazooka?.Invoke();
+            gameObject.SetActive(false);
         }
     }
 
