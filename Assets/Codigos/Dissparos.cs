@@ -47,7 +47,7 @@ public class Dissparos : MonoBehaviour
             if (shotsFire == maxShots)
             {
                 gameObject.SetActive(false);
-                print("Se acabaron los disparos");
+                //print("Se acabaron los disparos");
 
                 Invoke("ResetShots", 0.2f);
             }

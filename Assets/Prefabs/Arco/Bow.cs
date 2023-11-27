@@ -13,7 +13,13 @@ public class Bow : MonoBehaviour
     public int numberOfPoints;
     public float spaceBetweenPoints;
 
-    Vector2 direction;
+    public float fireRate;
+    float nextFire;
+
+    public int maxShots;
+    int shotsFire;
+
+    Vector2 direction; //
 
     [Header("Keybinds")]
     public KeyCode shotKey;
@@ -44,14 +50,37 @@ public class Bow : MonoBehaviour
 
     void LaunchShoot()
     {
-        GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
-        newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * launchforce;
+        if (Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+
+            GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
+            newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * launchforce;
+
+            shotsFire++;
+
+            if (shotsFire == maxShots)
+            {
+                gameObject.SetActive(false);
+                //print("Se acabaron los disparos");
+
+                Invoke("ReseetShots", 0.2f);
+            }
+        }
+
+        //GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
+        //newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * launchforce;
     }
 
     Vector2 PointPosition(float t) //
     {
         Vector2 position = (Vector2)shotPoint.position + (direction.normalized * launchforce * t) + 0.5f * Physics2D.gravity * (t * t);
         return position;
+    }
+
+    void ReseetShots()
+    {
+        shotsFire = 0;
     }
 
 }

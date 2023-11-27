@@ -34,7 +34,7 @@ public class Arrow : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         hasHit = true;
-        rb.velocity = Vector2.zero;
-        rb.isKinematic = true;
+        //rb.velocity = Vector2.zero;
+        //rb.isKinematic = true;
     }
 }

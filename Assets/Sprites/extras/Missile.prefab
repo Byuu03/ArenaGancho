@@ -187,5 +187,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radio: 1
-  fuerzaExplos: 2500
-  timerExplosion: 0
+  fuerzaExplos: 2100
