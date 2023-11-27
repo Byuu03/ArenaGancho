@@ -7,6 +7,8 @@ public class RetrocederSimple : MonoBehaviour
     public PlayerMovement playerOneMove;
     public PlayerTwoMovement playerTwoMove;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,6 +59,16 @@ public class RetrocederSimple : MonoBehaviour
         }
 
         if (collision.gameObject.tag == "Pared")
+        {
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "Box")
+        {
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "SpecialBox")
         {
             Destroy(gameObject);
         }

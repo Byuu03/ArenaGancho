@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ColisionaDestruir : MonoBehaviour
 {
+    [SerializeField] private float radio;
+    [SerializeField] private float fuerzaExplos;
+    //[SerializeField] private float timerExplosion;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +24,66 @@ public class ColisionaDestruir : MonoBehaviour
     {
         if (collision.gameObject.tag == "PlayerOne")
         {
-            //gameObject.SetActive(false);
-            Destroy(gameObject);
+            //Invoke("Explosion", timerExplosion);
+            Explosion();
+            //animattor.SetBool("Touch", true);
         }
+
+        if (collision.gameObject.tag == "PlayerTwo")
+        {
+            //Invoke("Explosion", timerExplosion);
+            Explosion();
+            //animattor.SetBool("Touch", true);
+        }
+
+        if (collision.gameObject.tag == "Puas")
+        {
+            Explosion();
+        }
+
+        if (collision.gameObject.tag == "Box")
+        {
+            Explosion();
+        }
+
+        if (collision.gameObject.tag == "SpecialBox")
+        {
+            Explosion();
+        }
+
     }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+       
+    }
+
+    public void Explosion()
+    {
+        CinemachineMovimientoCamara.Instance.MoverCamara(2, 2, 0.2f);
+
+        Collider2D[] objetos = Physics2D.OverlapCircleAll(transform.position, radio);
+
+        foreach (Collider2D colisionador in objetos)
+        {
+            Rigidbody2D rb2D = colisionador.GetComponent<Rigidbody2D>();
+            if (rb2D != null)
+            {
+                Vector2 direccion = colisionador.transform.position - transform.position;
+                float distancia = 1 + direccion.magnitude;
+                float fuerzaFinal = fuerzaExplos / distancia;
+                rb2D.AddForce(direccion * fuerzaFinal);
+            }
+        }
+
+        Destroy(gameObject, 0.1f);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireSphere(transform.position, radio);
+    }
+
 
 }

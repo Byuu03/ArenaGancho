@@ -1504,7 +1504,6 @@ GameObject:
   - component: {fileID: 351924192}
   - component: {fileID: 351924191}
   - component: {fileID: 351924193}
-  - component: {fileID: 351924194}
   - component: {fileID: 351924195}
   m_Layer: 0
   m_Name: WearponPickup
@@ -1625,18 +1624,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.21417, y: 1.0284883}
   m_EdgeRadius: 0
---- !u!114 &351924194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 351924189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b088e6d5cfcc384a9cfe17b06789fd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &351924195
 MonoBehaviour:
   m_ObjectHideFlags: 0
