@@ -19,6 +19,8 @@ TagManager:
   - Misil
   - Bazooka
   - Pared
+  - Bow
+  - Arrow
   layers:
   - Default
   - TransparentFX
