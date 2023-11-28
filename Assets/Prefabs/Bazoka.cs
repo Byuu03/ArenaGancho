@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dissparos : MonoBehaviour
+public class Bazoka : MonoBehaviour
 {
     public GameObject balas;
     public Transform shotPoint;
@@ -14,15 +14,15 @@ public class Dissparos : MonoBehaviour
     public int maxShots;
     int shotsFire;
 
-    public Animator animato;
+    //public Animator animato;
 
-    [Header ("Boton")]
+    [Header("Boton")]
     public KeyCode bang;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -31,14 +31,14 @@ public class Dissparos : MonoBehaviour
         if (Input.GetKeyDown(bang))
         {
             Shoot();
-            animato.SetBool("enShot", true);
+            //animato.SetBool("enShot", true);
         }
 
         if (Input.GetKeyUp(bang))
         {
-            animato.SetBool("enShot", false);
+            //animato.SetBool("enShot", false);
         }
-        
+
     }
 
     public void Shoot()
@@ -62,7 +62,7 @@ public class Dissparos : MonoBehaviour
 
         }
 
-       
+
 
     }
 
@@ -70,5 +70,4 @@ public class Dissparos : MonoBehaviour
     {
         shotsFire = 0;
     }
-
 }

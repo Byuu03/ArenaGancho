@@ -19,6 +19,8 @@ public class Bow : MonoBehaviour
     public int maxShots;
     int shotsFire;
 
+    public Animator animat;
+
     Vector2 direction; //
 
     [Header("Keybinds")]
@@ -40,6 +42,11 @@ public class Bow : MonoBehaviour
         if (Input.GetKeyDown(shotKey))
         {
             LaunchShoot();
+            animat.SetBool("onShot", true);
+        }
+        if (Input.GetKeyUp(shotKey))
+        {
+            animat.SetBool("onShot", false);
         }
 
         for (int i = 0; i < numberOfPoints; i++) //
