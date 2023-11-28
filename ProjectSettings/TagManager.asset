@@ -21,6 +21,7 @@ TagManager:
   - Pared
   - Bow
   - Arrow
+  - Canon
   layers:
   - Default
   - TransparentFX
