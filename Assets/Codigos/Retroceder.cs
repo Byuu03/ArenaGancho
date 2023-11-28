@@ -61,7 +61,8 @@ public class Retroceder : MonoBehaviour
 
         if (collision.gameObject.tag == "Suelo")
         {
-            StopAttrack();
+            //StopAttrack();
+            StopAttrackWithDelay(0.1f);
         }
     }
 
@@ -69,7 +70,7 @@ public class Retroceder : MonoBehaviour
     {
         if (collision.gameObject.tag == "Suelo")
         {
-            StopAttrack();
+            //StopAttrack();
         }
     }
 
@@ -77,11 +78,18 @@ public class Retroceder : MonoBehaviour
     {
         isAttracted = true;
         attractionOrigin = origin;
+
+        //transform.position = Vector3.Lerp(transform.position, origin, mSpeed);
+    }
+
+    public void StopAttrackWithDelay(float delay)
+    {
+        Invoke("StopAttrack", delay);
     }
 
     public void StopAttrack()
     {
-        //print("Soy la caja y me detuve");
+        
         isAttracted = false;
     }
 

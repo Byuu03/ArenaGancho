@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7385655035363772936}
   - component: {fileID: 5746991335717084191}
   - component: {fileID: 6501910828210700982}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: SpecialParalize
   m_TagString: SpecialBox
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1

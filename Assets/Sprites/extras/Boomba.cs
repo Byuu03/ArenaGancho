@@ -30,10 +30,7 @@ public class Boomba : MonoBehaviour
         {
             Explosion();
         }
-    }
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
         if (collision.gameObject.tag == "PlayerOne")
         {
             Invoke("Explosion", timerExplosion);
@@ -47,6 +44,29 @@ public class Boomba : MonoBehaviour
             //Explosion();
             animattor.SetBool("Touch", true);
         }
+
+        if (collision.gameObject.tag == "Suelo")
+        {
+            Explosion();
+            animattor.SetBool("Touch", true);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        //if (collision.gameObject.tag == "PlayerOne")
+        //{
+        //    Invoke("Explosion", timerExplosion);
+        //    //Explosion();
+        //    animattor.SetBool("Touch", true);
+        //}
+
+        //if (collision.gameObject.tag == "PlayerTwo")
+        //{
+        //    Invoke("Explosion", timerExplosion);
+        //    //Explosion();
+        //    animattor.SetBool("Touch", true);
+        //}
     }
 
     public void Explosion()

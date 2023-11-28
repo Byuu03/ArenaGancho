@@ -164,8 +164,9 @@ GameObject:
   m_Component:
   - component: {fileID: 68430600}
   - component: {fileID: 68430602}
+  - component: {fileID: 68430603}
   m_Layer: 9
-  m_Name: Bow
+  m_Name: "Ca\xF1on"
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -239,6 +240,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &68430603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68430599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1dd0c8bf673a194f8e1482a8d6ca40e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balas: {fileID: 9024232331505674622, guid: abf1907b8e02b2440829e6a4db37b251, type: 3}
+  shotPoint: {fileID: 325075263}
+  bulletForce: 10
+  fireRate: 3
+  maxShots: 2
+  bang: 99
 --- !u!1 &70087010
 GameObject:
   m_ObjectHideFlags: 0
@@ -1608,7 +1627,7 @@ Transform:
   m_GameObject: {fileID: 325075262}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.16, y: 0, z: 0}
+  m_LocalPosition: {x: 1.9, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6463,7 +6482,7 @@ GameObject:
   - component: {fileID: 1711987210}
   - component: {fileID: 1711987211}
   m_Layer: 9
-  m_Name: BowPivot (1)
+  m_Name: PivotCannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

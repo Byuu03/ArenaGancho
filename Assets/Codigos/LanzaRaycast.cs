@@ -72,6 +72,57 @@ public class LanzaRaycast : MonoBehaviour
                     linrender.enabled = false;
                 }
 
+                if (hit.collider.CompareTag("InverseBox"))
+                {
+                    //attraobj = hit.collider. GetComponent<>
+                    Retroceder retrocederscript = hit.collider.GetComponent<Retroceder>();
+                    if (retrocederscript != null)
+                    {
+
+                        retrocederscript.AttrackToRay(raycastOrigin);
+
+                    }
+                    else
+                    {
+
+                    }
+                    linrender.enabled = false;
+                }
+
+                if (hit.collider.CompareTag("ParalyzeBox"))
+                {
+                    //attraobj = hit.collider. GetComponent<>
+                    Retroceder retrocederscript = hit.collider.GetComponent<Retroceder>();
+                    if (retrocederscript != null)
+                    {
+
+                        retrocederscript.AttrackToRay(raycastOrigin);
+
+                    }
+                    else
+                    {
+
+                    }
+                    linrender.enabled = false;
+                }
+
+                if (hit.collider.CompareTag("SlowBox"))
+                {
+                    //attraobj = hit.collider. GetComponent<>
+                    Retroceder retrocederscript = hit.collider.GetComponent<Retroceder>();
+                    if (retrocederscript != null)
+                    {
+
+                        retrocederscript.AttrackToRay(raycastOrigin);
+
+                    }
+                    else
+                    {
+
+                    }
+                    linrender.enabled = false;
+                }
+
             }
        
 
