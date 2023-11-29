@@ -56,6 +56,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Escenario
+    uniqueID: 106109511
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Gancho
+    uniqueID: 1898632849
     locked: 0
