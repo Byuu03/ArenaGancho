@@ -9,15 +9,14 @@ public class DesactivarXTiempo : MonoBehaviour
     public float tiempoDesactivado;
     public bool estaDesactivado = false;
 
-    //Temporizador
-    //public GameObject objetoAActivar;
-    //public float timer;
-    //public float tiempoMax;
+    //Tags
+    public string[] tagsPosibles = {"Tag1", "Tag2", "Tag3"};
+
 
     // Start is called before the first frame update
     void Start()
     {
-        //Invoke("ActivarObjeto", tiempoDeEspera);
+      
     }
 
     // Update is called once per frame
@@ -25,21 +24,6 @@ public class DesactivarXTiempo : MonoBehaviour
     {
        
     }
-
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (!estaDesactivado && collision.gameObject.tag == "PlayerOne")
-    //    {
-
-    //        gameObject.SetActive(false);
-    //        estaDesactivado = true;
-    //        Invoke("ActivarObjetos", tiempoDesactivado);
-
-         
-    //    }
-
-
-    //}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -65,16 +49,12 @@ public class DesactivarXTiempo : MonoBehaviour
 
     public void ActivarObjetos()
     {
+        int randomIndex = Random.Range(0, tagsPosibles.Length);
+        objADesactivar.tag = tagsPosibles[randomIndex];
+
         objADesactivar.SetActive(true);
         estaDesactivado = false;
     }
 
-    //void ActivarObjeto()
-    //{
-    //    if (objetoAActivar != null)
-    //    {
-    //        objetoAActivar.SetActive(true);
-    //    }
-    //}
 
 }

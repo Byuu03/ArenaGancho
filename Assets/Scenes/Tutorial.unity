@@ -5514,6 +5514,10 @@ MonoBehaviour:
   objADesactivar: {fileID: 1137014563}
   tiempoDesactivado: 3
   estaDesactivado: 0
+  tagsPosibles:
+  - Tag1
+  - Tag2
+  - Tag3
 --- !u!1 &1146049184
 GameObject:
   m_ObjectHideFlags: 0
@@ -5957,6 +5961,10 @@ MonoBehaviour:
   objADesactivar: {fileID: 1192841170}
   tiempoDesactivado: 3
   estaDesactivado: 0
+  tagsPosibles:
+  - Bow
+  - Bazooka
+  - Canon
 --- !u!114 &1192841176
 MonoBehaviour:
   m_ObjectHideFlags: 0
