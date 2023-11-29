@@ -430,6 +430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a10694c41a3793f4b918b61cae801aa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ganchar: {fileID: 7610735430993320001}
   desactivadorDeArma: {fileID: 2417325965835566268}
   arrow: {fileID: 3006841827112464749, guid: f52f338a461ce2f43902182c75f5b6e2, type: 3}
   launchforce: 15
@@ -16219,6 +16220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1dd0c8bf673a194f8e1482a8d6ca40e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  garcho: {fileID: 7610735430993320001}
   objADesactivar: {fileID: 3530595854054389721}
   balas: {fileID: 9024232331505674622, guid: abf1907b8e02b2440829e6a4db37b251, type: 3}
   shotPoint: {fileID: 3474070810414331316}
@@ -16677,6 +16679,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 7610735430993320001}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - tag: Bow
     eventos:
       m_PersistentCalls:
@@ -16706,6 +16720,18 @@ MonoBehaviour:
             m_BoolArgument: 1
           m_CallState: 2
         - m_Target: {fileID: 3530595854054389721}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 7610735430993320001}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -16756,6 +16782,18 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 7610735430993320001}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
           m_CallState: 2
   onStay: []
   onExit: []
@@ -21774,6 +21812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d46777816ef63d2468bb2025884ed90c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gancho: {fileID: 7610735430993320001}
   balas: {fileID: 609782899248694212, guid: e900a757dcfac2748bc752a046c4b26d, type: 3}
   shotPoint: {fileID: 8395069816503265572}
   bulletForce: 12

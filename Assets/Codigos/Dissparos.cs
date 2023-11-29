@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Dissparos : MonoBehaviour
 {
+    //GANCHO
+    public GameObject garcho;
+
     public GameObject objADesactivar;
     public GameObject balas;
     public Transform shotPoint;
@@ -57,6 +60,7 @@ public class Dissparos : MonoBehaviour
             {
                 objADesactivar.SetActive(false);
                 //print("Se acabaron los disparos");
+                garcho.SetActive(true);
 
                 Invoke("ResetShots", 0.2f);
             }

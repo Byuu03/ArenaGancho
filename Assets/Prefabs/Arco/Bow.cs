@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Bow : MonoBehaviour
 {
+    //GANCHO
+    public GameObject ganchar;
+
     public GameObject desactivadorDeArma;
 
     public GameObject arrow;
@@ -72,6 +75,7 @@ public class Bow : MonoBehaviour
             {
                 desactivadorDeArma.SetActive(false); //ACAAAAA
                 //print("Se acabaron los disparos");
+                ganchar.SetActive(true);
 
                 Invoke("ReseetShots", 0.2f);
             }

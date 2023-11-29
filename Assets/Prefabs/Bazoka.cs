@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Bazoka : MonoBehaviour
 {
+    //ACTIVADOR DE GANCHO
+    public GameObject gancho;
+
     public GameObject balas;
     public Transform shotPoint;
     public float bulletForce;
@@ -56,6 +59,7 @@ public class Bazoka : MonoBehaviour
             {
                 gameObject.SetActive(false);
                 //print("Se acabaron los disparos");
+                gancho.SetActive(true);
 
                 Invoke("ResetShots", 0.2f);
             }
