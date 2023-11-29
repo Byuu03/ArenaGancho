@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Bow : MonoBehaviour
 {
+    public GameObject desactivadorDeArma;
+
     public GameObject arrow;
     public float launchforce;
     public Transform shotPoint;
@@ -68,7 +70,7 @@ public class Bow : MonoBehaviour
 
             if (shotsFire == maxShots)
             {
-                gameObject.SetActive(false);
+                desactivadorDeArma.SetActive(false); //ACAAAAA
                 //print("Se acabaron los disparos");
 
                 Invoke("ReseetShots", 0.2f);

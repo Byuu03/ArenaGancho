@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class DesactivarXTiempo : MonoBehaviour
 {
-    //public float tiempoDesactivado;
-    //public bool estaDesactivado = false;
+    //DESACTIVADOR
+    public GameObject objADesactivar;
+    public float tiempoDesactivado;
+    public bool estaDesactivado = false;
 
     //Temporizador
-    public GameObject objetoAActivar;
-    public float timer;
-    public float tiempoMax;
+    //public GameObject objetoAActivar;
+    //public float timer;
+    //public float tiempoMax;
 
     // Start is called before the first frame update
     void Start()
@@ -24,40 +26,55 @@ public class DesactivarXTiempo : MonoBehaviour
        
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        //if (!estaDesactivado)
-        //{
-        //    if (collision.gameObject.tag == "PlayerOne")
-        //    {
-        //        gameObject.SetActive(false);
-        //        estaDesactivado = true;
-        //        Invoke("ActivarObjetos", tiempoDesactivado);
-        //    }
-        //}
-
-        if (collision.gameObject.tag == "PlayerOne")
-        {
-            timer -= Time.deltaTime;
-            if (timer >= 0)
-            {
-                objetoAActivar.SetActive(true);
-            }
-        }
-    }
-
-    //public void ActivarObjetos()
+    //private void OnCollisionEnter2D(Collision2D collision)
     //{
-    //    gameObject.SetActive(true);
-    //    estaDesactivado = false;
+    //    if (!estaDesactivado && collision.gameObject.tag == "PlayerOne")
+    //    {
+
+    //        gameObject.SetActive(false);
+    //        estaDesactivado = true;
+    //        Invoke("ActivarObjetos", tiempoDesactivado);
+
+         
+    //    }
+
+
     //}
 
-    void ActivarObjeto()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (objetoAActivar != null)
+        if (!estaDesactivado)
         {
-            objetoAActivar.SetActive(true);
+            if (collision.gameObject.tag == "PlayerOne")
+            {
+                objADesactivar.SetActive(false);
+                estaDesactivado = true;
+                Invoke("ActivarObjetos", tiempoDesactivado);
+            }
+
+            if (collision.gameObject.tag == "PlayerTwo")
+            {
+                objADesactivar.SetActive(false);
+                estaDesactivado = true;
+                Invoke("ActivarObjetos", tiempoDesactivado);
+            }
+
+
         }
     }
+
+    public void ActivarObjetos()
+    {
+        objADesactivar.SetActive(true);
+        estaDesactivado = false;
+    }
+
+    //void ActivarObjeto()
+    //{
+    //    if (objetoAActivar != null)
+    //    {
+    //        objetoAActivar.SetActive(true);
+    //    }
+    //}
 
 }

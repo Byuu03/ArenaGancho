@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Dissparos : MonoBehaviour
 {
+    public GameObject objADesactivar;
     public GameObject balas;
     public Transform shotPoint;
     public float bulletForce;
@@ -54,7 +55,7 @@ public class Dissparos : MonoBehaviour
 
             if (shotsFire == maxShots)
             {
-                gameObject.SetActive(false);
+                objADesactivar.SetActive(false);
                 //print("Se acabaron los disparos");
 
                 Invoke("ResetShots", 0.2f);

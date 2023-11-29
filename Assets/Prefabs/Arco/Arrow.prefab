@@ -184,5 +184,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 805eea3e854c8754bb0c80211546703a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerOneMove: {fileID: 6684766381349434031, guid: 0a2d54e5ae3f7aa4fa60dbe79e61fb89, type: 3}
-  playerTwoMove: {fileID: 3138926283834835988, guid: 4119b0dd0e284d240bd340de60f0de1a, type: 3}
+  playerOneMove: {fileID: 3615436365147176074, guid: 0a2d54e5ae3f7aa4fa60dbe79e61fb89, type: 3}
+  playerTwoMove: {fileID: 2129098843488156062, guid: 4119b0dd0e284d240bd340de60f0de1a, type: 3}

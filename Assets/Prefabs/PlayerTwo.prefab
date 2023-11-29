@@ -10230,7 +10230,6 @@ GameObject:
   - component: {fileID: 2797684292565384883}
   - component: {fileID: 384686937608193575}
   - component: {fileID: 8451474299671374373}
-  - component: {fileID: 3806174316790315107}
   - component: {fileID: 3542374855816400747}
   - component: {fileID: 1961967391402589846}
   - component: {fileID: 7564463881359919281}
@@ -10238,6 +10237,7 @@ GameObject:
   - component: {fileID: 2129098843488156062}
   - component: {fileID: 8077414195748191615}
   - component: {fileID: 4365533599794323752}
+  - component: {fileID: 6600060874420251536}
   m_Layer: 9
   m_Name: PlayerTwo
   m_TagString: PlayerTwo
@@ -10410,27 +10410,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.889906, y: 4.422751}
   m_EdgeRadius: 0
---- !u!114 &3806174316790315107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3709010212982550509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 708ded5c49814fe4aa8be3126dc55704, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grabbed: 0
-  distance: 1.5
-  holdPoint: {fileID: 2669609517660369475}
-  throwForce: 35
-  notgrabbed:
-    serializedVersion: 2
-    m_Bits: 55
-  tomarKey: 111
-  pm: {fileID: 0}
 --- !u!114 &3542374855816400747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10679,6 +10658,27 @@ MonoBehaviour:
           m_CallState: 2
   onStay: []
   onExit: []
+--- !u!114 &6600060874420251536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3709010212982550509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ffe0d2c03ad15041b59cf7c0f53af2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabbed: 0
+  distance: 1.5
+  holdPoint: {fileID: 2669609517660369475}
+  throwForce: 35
+  notgrabbed:
+    serializedVersion: 2
+    m_Bits: 55
+  tomarKey: 111
+  pm: {fileID: 2129098843488156062}
 --- !u!1 &3941695333558450659
 GameObject:
   m_ObjectHideFlags: 0
@@ -16198,6 +16198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1dd0c8bf673a194f8e1482a8d6ca40e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objADesactivar: {fileID: 1688819933154856397}
   balas: {fileID: 9024232331505674622, guid: abf1907b8e02b2440829e6a4db37b251, type: 3}
   shotPoint: {fileID: 5033246836064555993}
   bulletForce: 10
@@ -16374,6 +16375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a10694c41a3793f4b918b61cae801aa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  desactivadorDeArma: {fileID: 884657611032609074}
   arrow: {fileID: 3006841827112464749, guid: f52f338a461ce2f43902182c75f5b6e2, type: 3}
   launchforce: 15
   shotPoint: {fileID: 5725328613249275232}
