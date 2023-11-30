@@ -22,6 +22,8 @@ TagManager:
   - Bow
   - Arrow
   - Canon
+  - ParalyzePower
+  - RetrainPower
   layers:
   - Default
   - TransparentFX

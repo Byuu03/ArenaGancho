@@ -64,6 +64,13 @@ public class SimpleTagChange : MonoBehaviour
         if (collision.gameObject.tag == "Suelo")
         {
             StopAttrack();
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "Pared")
+        {
+            StopAttrack();
+            Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "PlayerOne")

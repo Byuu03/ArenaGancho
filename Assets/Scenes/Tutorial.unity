@@ -3469,7 +3469,7 @@ GameObject:
   - component: {fileID: 743549272}
   m_Layer: 9
   m_Name: block-big (2)
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4103,7 +4103,7 @@ GameObject:
   - component: {fileID: 863273094}
   m_Layer: 9
   m_Name: block-big (1)
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8464,7 +8464,7 @@ GameObject:
   - component: {fileID: 1816382337}
   m_Layer: 9
   m_Name: block-big
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
