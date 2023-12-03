@@ -1790,12 +1790,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 351924189}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -6.65, y: 1.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1165223093}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &351924193
 BoxCollider2D:
@@ -5622,6 +5622,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 755204841}
+  - {fileID: 351924192}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1190437672
@@ -7200,7 +7201,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1502125147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7415,7 +7416,7 @@ GameObject:
   - component: {fileID: 1568687411}
   m_Layer: 0
   m_Name: WearponPickup (1)
-  m_TagString: Bow
+  m_TagString: SlowPower
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10577,7 +10578,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5199077844653030778, guid: 8c4a9621c1e92e84a9087e694dea8918, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5223981095558540729, guid: 8c4a9621c1e92e84a9087e694dea8918, type: 3}
       propertyPath: m_text
@@ -10778,7 +10779,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 351924192}
   - {fileID: 964509124161740212}
   - {fileID: 3117335226155248212}
   - {fileID: 901990371}
@@ -10790,6 +10790,7 @@ SceneRoots:
   - {fileID: 1243617731}
   - {fileID: 1750224615}
   - {fileID: 651210506}
+  - {fileID: 1855914062}
   - {fileID: 727077299}
   - {fileID: 1165223093}
   - {fileID: 1515762274}
@@ -10799,4 +10800,3 @@ SceneRoots:
   - {fileID: 2223330}
   - {fileID: 1994975846}
   - {fileID: 1568687415}
-  - {fileID: 1855914062}

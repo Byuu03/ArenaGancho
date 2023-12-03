@@ -13,10 +13,10 @@ public class Bow : MonoBehaviour
     public float launchforce;
     public Transform shotPoint;
 
-    public GameObject point;
-    GameObject[] points;
-    public int numberOfPoints;
-    public float spaceBetweenPoints;
+    //public GameObject point;
+    //GameObject[] points;
+    //public int numberOfPoints;
+    //public float spaceBetweenPoints;
 
     public float fireRate;
     float nextFire;
@@ -26,7 +26,7 @@ public class Bow : MonoBehaviour
 
     public Animator animat;
 
-    Vector2 direction; //
+    //Vector2 direction; //
 
     [Header("Keybinds")]
     public KeyCode shotKey;
@@ -34,11 +34,11 @@ public class Bow : MonoBehaviour
     // Start is called before the first frame update
     void Start() //
     {
-        points = new GameObject[numberOfPoints];
-        for (int i = 0; i < numberOfPoints; i++)
-        {
-            points[i] = Instantiate(point, shotPoint.position, Quaternion.identity);
-        }
+        //points = new GameObject[numberOfPoints];
+        //for (int i = 0; i < numberOfPoints; i++)
+        //{
+        //    points[i] = Instantiate(point, shotPoint.position, Quaternion.identity);
+        //}
     }
 
     // Update is called once per frame
@@ -54,10 +54,10 @@ public class Bow : MonoBehaviour
             animat.SetBool("onShot", false);
         }
 
-        for (int i = 0; i < numberOfPoints; i++) //
-        {
-            points[i].transform.position = PointPosition(i * spaceBetweenPoints);
-        }
+        //for (int i = 0; i < numberOfPoints; i++) //
+        //{
+        //    points[i].transform.position = PointPosition(i * spaceBetweenPoints);
+        //}
     }
 
     void LaunchShoot()
@@ -85,11 +85,11 @@ public class Bow : MonoBehaviour
         //newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * launchforce;
     }
 
-    Vector2 PointPosition(float t) //
-    {
-        Vector2 position = (Vector2)shotPoint.position + (direction.normalized * launchforce * t) + 0.5f * Physics2D.gravity * (t * t);
-        return position;
-    }
+    //Vector2 PointPosition(float t) //
+    //{
+    //    Vector2 position = (Vector2)shotPoint.position + (direction.normalized * launchforce * t) + 0.5f * Physics2D.gravity * (t * t);
+    //    return position;
+    //}
 
     void ReseetShots()
     {

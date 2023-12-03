@@ -50,6 +50,12 @@ public class Boomba : MonoBehaviour
             Explosion();
             animattor.SetBool("Touch", true);
         }
+
+        //if (collision.gameObject.tag == "Pared")
+        //{
+        //    Explosion();
+        //    animattor.SetBool("Touch", true);
+        //}
     }
 
     private void OnCollisionExit2D(Collision2D collision)

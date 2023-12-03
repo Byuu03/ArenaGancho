@@ -73,6 +73,12 @@ public class SimpleTagChange : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (collision.gameObject.tag == "Box")
+        {
+            StopAttrack();
+            Destroy(gameObject);
+        }
+
         if (collision.gameObject.tag == "PlayerOne")
         {
             playerOneMove.KBCounter = playerOneMove.KBTotalTime;

@@ -51,6 +51,11 @@ public class ColisionaDestruir : MonoBehaviour
             Explosion();
         }
 
+        if (collision.gameObject.tag == "Pared")
+        {
+            Explosion();
+        }
+
     }
 
     private void OnCollisionExit2D(Collision2D collision)

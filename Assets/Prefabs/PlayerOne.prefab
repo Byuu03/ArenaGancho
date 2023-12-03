@@ -183,6 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gancho: {fileID: 7610735430993320001}
+  armaADesactivar: {fileID: 8383408718364213432}
   balas: {fileID: 357274794322599352, guid: f7d8047a41bb99b47892aa1a11c06192, type: 3}
   shotPoint: {fileID: 1208948467625891819}
   bulletForce: 10
@@ -540,9 +541,6 @@ MonoBehaviour:
   arrow: {fileID: 3006841827112464749, guid: f52f338a461ce2f43902182c75f5b6e2, type: 3}
   launchforce: 15
   shotPoint: {fileID: 7990120558878053099}
-  point: {fileID: 7188682997841656633, guid: af328fb5374e8f5428b6ac4ec506ef83, type: 3}
-  numberOfPoints: 10
-  spaceBetweenPoints: 1
   fireRate: 1
   maxShots: 5
   animat: {fileID: 6274721979645194056}
@@ -746,6 +744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gancho: {fileID: 7610735430993320001}
+  armaADesactivar: {fileID: 1433692864597153161}
   balas: {fileID: 357274794322599352, guid: ca282451d36321b4e83977004f874fae, type: 3}
   shotPoint: {fileID: 7511844383598661486}
   bulletForce: 10
@@ -1323,6 +1322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gancho: {fileID: 7610735430993320001}
+  armaADesactivar: {fileID: 5370511628233443004}
   balas: {fileID: 357274794322599352, guid: 7dee17147c740c44fad3a735d9035b13, type: 3}
   shotPoint: {fileID: 4345144832227613133}
   bulletForce: 10
@@ -22689,6 +22689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gancho: {fileID: 7610735430993320001}
+  armaADesactivar: {fileID: 8366780298419180410}
   balas: {fileID: 609782899248694212, guid: e900a757dcfac2748bc752a046c4b26d, type: 3}
   shotPoint: {fileID: 8395069816503265572}
   bulletForce: 12

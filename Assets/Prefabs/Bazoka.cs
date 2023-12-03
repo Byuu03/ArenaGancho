@@ -7,6 +7,9 @@ public class Bazoka : MonoBehaviour
     //ACTIVADOR DE GANCHO
     public GameObject gancho;
 
+    //DESACTIVADOR DE ARMAS
+    public GameObject armaADesactivar;
+
     public GameObject balas;
     public Transform shotPoint;
     public float bulletForce;
@@ -57,7 +60,7 @@ public class Bazoka : MonoBehaviour
 
             if (shotsFire == maxShots)
             {
-                gameObject.SetActive(false);
+                armaADesactivar.SetActive(false);
                 //print("Se acabaron los disparos");
                 gancho.SetActive(true);
 
