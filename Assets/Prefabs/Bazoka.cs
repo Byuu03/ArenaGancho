@@ -64,6 +64,8 @@ public class Bazoka : MonoBehaviour
                 //print("Se acabaron los disparos");
                 gancho.SetActive(true);
 
+                gancho.transform.rotation = Quaternion.Euler(0, 0, 0);
+
                 Invoke("ResetShots", 0.2f);
             }
 
