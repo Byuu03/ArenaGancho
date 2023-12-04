@@ -37,7 +37,7 @@ public class Reaparecer : MonoBehaviour
     }
 
 
-    void Die()
+    public void Die()
     {
         particleController.PlayParticle(ParticleController.Particles.die, transform.position);
         //Respawn();

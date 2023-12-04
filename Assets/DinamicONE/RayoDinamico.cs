@@ -41,8 +41,10 @@ public class RayoDinamico : MonoBehaviour
             if (hit.transform.gameObject.tag == "Suelo")
             {
                 hit.transform.GetComponent<SpriteRenderer>().color = Color.magenta;
+
                 //GameManager.manager.HurtP1(daño);
                 //CinemachineMovimientoCamara.Instance.MoverCamara(2, 2, 0.2f);
+                //hit.transform.GetComponent<Reaparecer>().Die();
             }
         }
         else
