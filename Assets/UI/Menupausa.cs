@@ -33,7 +33,8 @@ public class Menupausa : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         botonPausa.SetActive(false);
-        menuPausa.SetActive(true);
+        menuPausa.SetActive(true); //Aqui se activa
+        
     }
 
     public void Reanudar()
