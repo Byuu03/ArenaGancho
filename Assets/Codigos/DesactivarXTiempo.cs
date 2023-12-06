@@ -13,6 +13,11 @@ public class DesactivarXTiempo : MonoBehaviour
     public string[] tagsPosibles = {"Tag1", "Tag2", "Tag3"};
 
 
+    //ATRAER
+    private bool isAttracted = false;
+    private Vector2 attractionOrigin;
+    public float mSpeed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +27,10 @@ public class DesactivarXTiempo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        if (isAttracted)//
+        {
+            MoveToRay(attractionOrigin);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -54,6 +62,36 @@ public class DesactivarXTiempo : MonoBehaviour
 
         objADesactivar.SetActive(true);
         estaDesactivado = false;
+    }
+
+
+    //ATRAER
+
+    public void AttrackToRay(Vector2 origin)
+    {
+        isAttracted = true;
+        attractionOrigin = origin;
+
+        //transform.position = Vector3.Lerp(transform.position, origin, mSpeed);
+    }
+
+    public void StopAttrackWithDelay(float delay)
+    {
+        Invoke("StopAttrack", delay);
+    }
+
+    public void StopAttrack()
+    {
+
+        isAttracted = false;
+    }
+
+    public void MoveToRay(Vector2 origin) //Apenas se mueve hacia el origen del raycast
+    {
+        //print("Atraje caja");
+
+        transform.position = Vector3.Lerp(transform.position, origin, mSpeed); //1
+
     }
 
 

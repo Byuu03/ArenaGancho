@@ -74,6 +74,8 @@ public class Retroceder : MonoBehaviour
         }
     }
 
+    //ATRAER
+
     public void AttrackToRay(Vector2 origin)
     {
         isAttracted = true;
@@ -84,7 +86,7 @@ public class Retroceder : MonoBehaviour
 
     public void StopAttrackWithDelay(float delay)
     {
-        Invoke("StopAttrack", delay);
+        Invoke("StopAttrack", 1f);
     }
 
     public void StopAttrack()

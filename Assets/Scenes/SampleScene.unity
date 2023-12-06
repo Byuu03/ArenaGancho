@@ -2407,7 +2407,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.2226672, y: 0.36, z: -10}
+  m_LocalPosition: {x: -2.6020122, y: 0.36, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3367,6 +3367,7 @@ GameObject:
   - component: {fileID: 913798625}
   - component: {fileID: 913798624}
   - component: {fileID: 913798623}
+  - component: {fileID: 913798626}
   m_Layer: 5
   m_Name: ButtonREINICIAR
   m_TagString: Untagged
@@ -3488,6 +3489,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 913798621}
   m_CullTransparentMesh: 1
+--- !u!95 &913798626
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913798621}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5d8c0eb7a8471fc4db876641d2a76e8f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &919662957
 GameObject:
   m_ObjectHideFlags: 0
@@ -4518,6 +4540,7 @@ GameObject:
   - component: {fileID: 1057897316}
   - component: {fileID: 1057897315}
   - component: {fileID: 1057897314}
+  - component: {fileID: 1057897317}
   m_Layer: 5
   m_Name: ButtonREANUDAR
   m_TagString: Untagged
@@ -4639,6 +4662,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1057897312}
   m_CullTransparentMesh: 1
+--- !u!95 &1057897317
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057897312}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5d8c0eb7a8471fc4db876641d2a76e8f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1071750122
 GameObject:
   m_ObjectHideFlags: 0
@@ -5528,6 +5572,7 @@ GameObject:
   - component: {fileID: 1293571665}
   - component: {fileID: 1293571664}
   - component: {fileID: 1293571663}
+  - component: {fileID: 1293571666}
   m_Layer: 5
   m_Name: ButtonSALIR
   m_TagString: Untagged
@@ -5649,6 +5694,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1293571661}
   m_CullTransparentMesh: 1
+--- !u!95 &1293571666
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293571661}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5d8c0eb7a8471fc4db876641d2a76e8f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1363327040
 GameObject:
   m_ObjectHideFlags: 0
@@ -6628,7 +6694,7 @@ GameObject:
   - component: {fileID: 1568687413}
   - component: {fileID: 1568687412}
   - component: {fileID: 1568687411}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WearponPickup (1)
   m_TagString: SlowPower
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -6704,6 +6770,7 @@ MonoBehaviour:
   - SlowPower
   - RetrainPower
   - ParalyzePower
+  mSpeed: 0.1
 --- !u!61 &1568687413
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6810,8 +6877,8 @@ Transform:
   m_GameObject: {fileID: 1568687410}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.56, y: -0.2, z: 0}
-  m_LocalScale: {x: 0.08409398, y: 0.08409398, z: 0.08409398}
+  m_LocalPosition: {x: -2.39, y: -0.16, z: 0}
+  m_LocalScale: {x: 0.108576484, y: 0.108576484, z: 0.108576484}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1072958876}
@@ -8844,7 +8911,7 @@ Transform:
   m_GameObject: {fileID: 1994975843}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.2226672, y: 0.36, z: -10}
+  m_LocalPosition: {x: -2.6020122, y: 0.36, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
