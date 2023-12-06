@@ -10,6 +10,15 @@ public class RayoDinamico : MonoBehaviour
     public LineRenderer linerendere;
     public int daño;
 
+    //PARTI
+    public int colisionesNecesarias;
+    public GameObject objetoAActivar;
+    public float tiempoDeActivacion;
+
+    [SerializeField] private int colisionesActuales = 0;
+    [SerializeField] private bool objetoActivado = false;
+    private float tiempoPasado = 0.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +29,19 @@ public class RayoDinamico : MonoBehaviour
     void Update()
     {
         rayoHito();
+
+        if (objetoActivado)
+        {
+            tiempoPasado += Time.deltaTime;
+
+            if (tiempoPasado >= tiempoDeActivacion)
+            {
+                objetoActivado = false;
+                objetoAActivar.SetActive(false);
+                colisionesActuales = 0;
+                tiempoPasado = 0.0f;
+            }
+        }
     }
 
     void rayoHito()
@@ -40,12 +62,36 @@ public class RayoDinamico : MonoBehaviour
 
             if (hit.transform.gameObject.tag == "Suelo")
             {
-                hit.transform.GetComponent<SpriteRenderer>().color = Color.magenta;
+                //hit.transform.GetComponent<SpriteRenderer>().color = Color.magenta;
 
                 //GameManager.manager.HurtP1(daño);
                 //CinemachineMovimientoCamara.Instance.MoverCamara(2, 2, 0.2f);
                 //hit.transform.GetComponent<Reaparecer>().Die();
             }
+
+            //ACA PONER PARTY
+            if (hit.transform.CompareTag("PlayerOne") && !objetoActivado)
+            {
+                colisionesActuales++;
+
+                if (colisionesActuales >= colisionesNecesarias)
+                {
+                    objetoActivado = true;
+                    objetoAActivar.SetActive(true);
+                }
+            }
+
+            if (hit.transform.CompareTag("PlayerTwo") && !objetoActivado)
+            {
+                colisionesActuales++;
+
+                if (colisionesActuales >= colisionesNecesarias)
+                {
+                    objetoActivado = true;
+                    objetoAActivar.SetActive(true);
+                }
+            }
+
         }
         else
         {
