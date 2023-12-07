@@ -10158,7 +10158,7 @@ MonoBehaviour:
   bulletForce: 10
   fireRate: 1
   maxShots: 3
-  bang: 108
+  bang: 262
 --- !u!1 &2466767958566309603
 GameObject:
   m_ObjectHideFlags: 0
@@ -10673,7 +10673,7 @@ MonoBehaviour:
   KBForce: 3
   KBCounter: 0.1
   KBTotalTime: 0.1
-  KnockFromRight: 0
+  KnockFromRight: 1
 --- !u!95 &8077414195748191615
 Animator:
   serializedVersion: 5
@@ -11257,7 +11257,7 @@ MonoBehaviour:
   notgrabbed:
     serializedVersion: 2
     m_Bits: 55
-  tomarKey: 111
+  tomarKey: 260
   pm: {fileID: 2129098843488156062}
 --- !u!1 &3941695333558450659
 GameObject:
@@ -16417,7 +16417,7 @@ MonoBehaviour:
   bulletForce: 10
   fireRate: 1
   maxShots: 3
-  bang: 108
+  bang: 262
 --- !u!1 &4733149273983754866
 GameObject:
   m_ObjectHideFlags: 0
@@ -16528,7 +16528,7 @@ MonoBehaviour:
   gunHolder: {fileID: 657053403681837291}
   gunPivot: {fileID: 2929425996977934833}
   firePoint: {fileID: 2725201531015905600}
-  lanzarGancho: 112
+  lanzarGancho: 261
   hasMaxDistance: 1
   maxDistance: 6
   launchToPoint: 1
@@ -16559,7 +16559,7 @@ MonoBehaviour:
     m_Bits: 1024
   rayDistance: 4
   firepoint: {fileID: 2725201531015905600}
-  lanzaRay: 112
+  lanzaRay: 261
   linrender: {fileID: 4940135290235684173}
 --- !u!120 &4940135290235684173
 LineRenderer:
@@ -16770,7 +16770,7 @@ MonoBehaviour:
   bulletForce: 10
   fireRate: 1
   maxShots: 3
-  bang: 108
+  bang: 262
 --- !u!1 &5319874193326230592
 GameObject:
   m_ObjectHideFlags: 0
@@ -17001,7 +17001,7 @@ MonoBehaviour:
   fireRate: 3
   maxShots: 2
   animato: {fileID: 4715578949140563696}
-  bang: 108
+  bang: 262
 --- !u!95 &4715578949140563696
 Animator:
   serializedVersion: 5
@@ -17181,7 +17181,7 @@ MonoBehaviour:
   fireRate: 1
   maxShots: 5
   animat: {fileID: 3044020744887955002}
-  shotKey: 108
+  shotKey: 262
 --- !u!95 &3044020744887955002
 Animator:
   serializedVersion: 5
@@ -22823,4 +22823,4 @@ MonoBehaviour:
   bulletForce: 12
   fireRate: 3
   maxShots: 3
-  bang: 108
+  bang: 262
