@@ -16,7 +16,7 @@ public class ReinicioEmergencia : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Y))
+        if (Input.GetKeyDown(KeyCode.I))
         {
             changeScene(scenaIndex);
         }

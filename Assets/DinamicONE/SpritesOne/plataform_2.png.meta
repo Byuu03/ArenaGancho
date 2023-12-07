@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 51553a9b0341ae24c9bab084fa0d2797
+guid: 2b0d3dc45589e2149838ff29610ece8a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: plataform_2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 88
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac70fcb8338e9114ca131b8526536ce8
+      internalID: 431069119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataform_2_1
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 96
+        width: 88
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1975fa47d5924544c9a18109058d3b5a
+      internalID: 288843068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataform_2_2
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 88
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a228254a7cf7053428ea4e1dc8c04106
+      internalID: 1089850699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +182,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      plataform_2_0: 431069119
+      plataform_2_1: 288843068
+      plataform_2_2: 1089850699
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

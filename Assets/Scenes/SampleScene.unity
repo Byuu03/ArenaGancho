@@ -3295,7 +3295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c40d6429370a724db93602a259ffb25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenaIndex: 1
+  scenaIndex: 3
 --- !u!4 &727077299
 Transform:
   m_ObjectHideFlags: 0
@@ -6868,7 +6868,7 @@ GameObject:
   - component: {fileID: 1568687411}
   m_Layer: 9
   m_Name: WearponPickup (1)
-  m_TagString: Bazooka
+  m_TagString: RetrainPower
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9880,6 +9880,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 324860989784776384, guid: 4119b0dd0e284d240bd340de60f0de1a, type: 3}
+      propertyPath: lanzaRay
+      value: 261
+      objectReference: {fileID: 0}
     - target: {fileID: 657053403681837291, guid: 4119b0dd0e284d240bd340de60f0de1a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.18
@@ -9920,9 +9924,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 848037792702337212, guid: 4119b0dd0e284d240bd340de60f0de1a, type: 3}
+      propertyPath: bang
+      value: 262
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483731394261751732, guid: 4119b0dd0e284d240bd340de60f0de1a, type: 3}
+      propertyPath: lanzarGancho
+      value: 261
+      objectReference: {fileID: 0}
+    - target: {fileID: 2767050351421874699, guid: 4119b0dd0e284d240bd340de60f0de1a, type: 3}
+      propertyPath: bang
+      value: 262
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241827599393097312, guid: 4119b0dd0e284d240bd340de60f0de1a, type: 3}
+      propertyPath: shotKey
+      value: 262
+      objectReference: {fileID: 0}
+    - target: {fileID: 3273221994997967979, guid: 4119b0dd0e284d240bd340de60f0de1a, type: 3}
+      propertyPath: bang
+      value: 262
+      objectReference: {fileID: 0}
     - target: {fileID: 3709010212982550509, guid: 4119b0dd0e284d240bd340de60f0de1a, type: 3}
       propertyPath: m_Name
       value: PlayerTwo
+      objectReference: {fileID: 0}
+    - target: {fileID: 6600060874420251536, guid: 4119b0dd0e284d240bd340de60f0de1a, type: 3}
+      propertyPath: tomarKey
+      value: 260
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084942367038905602, guid: 4119b0dd0e284d240bd340de60f0de1a, type: 3}
+      propertyPath: bang
+      value: 262
+      objectReference: {fileID: 0}
+    - target: {fileID: 8930019859174681056, guid: 4119b0dd0e284d240bd340de60f0de1a, type: 3}
+      propertyPath: bang
+      value: 262
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
