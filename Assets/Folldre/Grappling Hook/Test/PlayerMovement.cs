@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
 
     bool Air = false;
 
+    //public RotarGancho parentGancho;
+
     //PUAS / KILL
     bool Pua = false;
 
@@ -63,6 +65,8 @@ public class PlayerMovement : MonoBehaviour
                 derecha = false;
                 _rigidbody.velocity = new Vector2(-MovementSpeed, _rigidbody.velocity.y);
                 transform.localRotation = Quaternion.Euler(0, -180, 0f);
+
+                //parentGancho.ResetearRotacionIzquierda();
             }
             else if (Input.GetKey(derechaKey))
             {
@@ -70,6 +74,8 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetFloat("Speed", Mathf.Abs(MovementSpeed));
                 _rigidbody.velocity = new Vector2(MovementSpeed, _rigidbody.velocity.y);
                 transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+
+                //parentGancho.ResetearRotacionDerecha();
             }
 
 

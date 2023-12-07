@@ -62,7 +62,8 @@ public class Bazoka : MonoBehaviour
             {
                 armaADesactivar.SetActive(false);
                 //print("Se acabaron los disparos");
-                gancho.SetActive(true);
+
+                //gancho.SetActive(true);
 
                 gancho.transform.rotation = Quaternion.Euler(0, 0, 0);
 

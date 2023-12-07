@@ -4926,7 +4926,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884657611032609074}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3facf2e1d9c88674e8c7f3513e4e8405, type: 3}
   m_Name: 
@@ -4934,6 +4934,8 @@ MonoBehaviour:
   vel: 115
   rotarDerecha: 273
   rotarIzquierda: 274
+  derecha: 0
+  izquierda: 0
 --- !u!1 &1159812773235684520
 GameObject:
   m_ObjectHideFlags: 0
@@ -9957,7 +9959,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1688819933154856397}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3facf2e1d9c88674e8c7f3513e4e8405, type: 3}
   m_Name: 
@@ -9965,6 +9967,8 @@ MonoBehaviour:
   vel: 115
   rotarDerecha: 273
   rotarIzquierda: 274
+  derecha: 0
+  izquierda: 0
 --- !u!1 &2078466158840891098
 GameObject:
   m_ObjectHideFlags: 0
@@ -10744,10 +10748,10 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 6558334486328120109}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 3278153138889058576}
+          m_TargetAssemblyTypeName: RotarGancho, Assembly-CSharp
+          m_MethodName: 
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10832,10 +10836,10 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 6558334486328120109}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 3278153138889058576}
+          m_TargetAssemblyTypeName: RotarGancho, Assembly-CSharp
+          m_MethodName: 
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10920,10 +10924,10 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 6558334486328120109}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 3278153138889058576}
+          m_TargetAssemblyTypeName: RotarGancho, Assembly-CSharp
+          m_MethodName: 
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11008,10 +11012,10 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 6558334486328120109}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 3278153138889058576}
+          m_TargetAssemblyTypeName: RotarGancho, Assembly-CSharp
+          m_MethodName: 
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11096,10 +11100,10 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 6558334486328120109}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 3278153138889058576}
+          m_TargetAssemblyTypeName: RotarGancho, Assembly-CSharp
+          m_MethodName: 
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11184,10 +11188,10 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 6558334486328120109}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 3278153138889058576}
+          m_TargetAssemblyTypeName: RotarGancho, Assembly-CSharp
+          m_MethodName: 
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -16490,7 +16494,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: d3010fd8a319e404e9b52d7239407f6a, type: 3}
   m_Color: {r: 0.6698113, g: 0.25128788, b: 0.034122407, a: 1}
   m_FlipX: 0
@@ -17065,9 +17069,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3facf2e1d9c88674e8c7f3513e4e8405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 115
+  vel: 150
   rotarDerecha: 273
   rotarIzquierda: 274
+  derecha: 0
+  izquierda: 0
 --- !u!1 &6585362157861218185
 GameObject:
   m_ObjectHideFlags: 0
@@ -17539,7 +17545,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6945405307842877470}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3facf2e1d9c88674e8c7f3513e4e8405, type: 3}
   m_Name: 
@@ -17547,6 +17553,8 @@ MonoBehaviour:
   vel: 115
   rotarDerecha: 273
   rotarIzquierda: 274
+  derecha: 0
+  izquierda: 0
 --- !u!1 &6953427749206384896
 GameObject:
   m_ObjectHideFlags: 0
@@ -17702,7 +17710,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7521968361653585224}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3facf2e1d9c88674e8c7f3513e4e8405, type: 3}
   m_Name: 
@@ -17710,6 +17718,8 @@ MonoBehaviour:
   vel: 115
   rotarDerecha: 273
   rotarIzquierda: 274
+  derecha: 0
+  izquierda: 0
 --- !u!1 &7852218830350883686
 GameObject:
   m_ObjectHideFlags: 0
@@ -22667,7 +22677,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8426304881066253479}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3facf2e1d9c88674e8c7f3513e4e8405, type: 3}
   m_Name: 
@@ -22675,6 +22685,8 @@ MonoBehaviour:
   vel: 115
   rotarDerecha: 273
   rotarIzquierda: 274
+  derecha: 0
+  izquierda: 0
 --- !u!1 &8665188191674932545
 GameObject:
   m_ObjectHideFlags: 0

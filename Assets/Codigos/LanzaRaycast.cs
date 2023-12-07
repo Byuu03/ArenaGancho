@@ -67,7 +67,7 @@ public class LanzaRaycast : MonoBehaviour
                     }
                     else
                     {
-                        
+                        retrocederscript.StopAttrack();
                     }
                     linrender.enabled = false;
                 }

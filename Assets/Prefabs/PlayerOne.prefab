@@ -266,7 +266,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: d3010fd8a319e404e9b52d7239407f6a, type: 3}
   m_Color: {r: 0.6698113, g: 0.25128788, b: 0.034122407, a: 1}
   m_FlipX: 0
@@ -606,7 +606,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433692864597153161}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3facf2e1d9c88674e8c7f3513e4e8405, type: 3}
   m_Name: 
@@ -614,6 +614,8 @@ MonoBehaviour:
   vel: 115
   rotarDerecha: 119
   rotarIzquierda: 115
+  derecha: 0
+  izquierda: 0
 --- !u!1 &1534496444416182320
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,7 +919,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2417325965835566268}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3facf2e1d9c88674e8c7f3513e4e8405, type: 3}
   m_Name: 
@@ -925,6 +927,8 @@ MonoBehaviour:
   vel: 115
   rotarDerecha: 119
   rotarIzquierda: 115
+  derecha: 0
+  izquierda: 0
 --- !u!1 &2420792048359312468
 GameObject:
   m_ObjectHideFlags: 0
@@ -6370,7 +6374,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3530595854054389721}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3facf2e1d9c88674e8c7f3513e4e8405, type: 3}
   m_Name: 
@@ -6378,6 +6382,8 @@ MonoBehaviour:
   vel: 115
   rotarDerecha: 119
   rotarIzquierda: 115
+  derecha: 0
+  izquierda: 0
 --- !u!1 &3765309600256931115
 GameObject:
   m_ObjectHideFlags: 0
@@ -11669,7 +11675,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5370511628233443004}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3facf2e1d9c88674e8c7f3513e4e8405, type: 3}
   m_Name: 
@@ -11677,6 +11683,8 @@ MonoBehaviour:
   vel: 115
   rotarDerecha: 119
   rotarIzquierda: 115
+  derecha: 0
+  izquierda: 0
 --- !u!1 &5486068871819127372
 GameObject:
   m_ObjectHideFlags: 0
@@ -16769,9 +16777,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3facf2e1d9c88674e8c7f3513e4e8405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 115
+  vel: 150
   rotarDerecha: 119
   rotarIzquierda: 115
+  derecha: 0
+  izquierda: 0
 --- !u!1 &7622978035425758445
 GameObject:
   m_ObjectHideFlags: 0
@@ -17152,10 +17162,10 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 7610735430993320001}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 3851458379860156930}
+          m_TargetAssemblyTypeName: RotarGancho, Assembly-CSharp
+          m_MethodName: ResetearRotacion
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -17240,10 +17250,10 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 7610735430993320001}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 3851458379860156930}
+          m_TargetAssemblyTypeName: RotarGancho, Assembly-CSharp
+          m_MethodName: ResetearRotacion
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -17328,10 +17338,10 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 7610735430993320001}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 3851458379860156930}
+          m_TargetAssemblyTypeName: RotarGancho, Assembly-CSharp
+          m_MethodName: ResetearRotacion
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -17416,10 +17426,10 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 7610735430993320001}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 3851458379860156930}
+          m_TargetAssemblyTypeName: RotarGancho, Assembly-CSharp
+          m_MethodName: ResetearRotacion
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -17504,10 +17514,10 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 7610735430993320001}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 3851458379860156930}
+          m_TargetAssemblyTypeName: RotarGancho, Assembly-CSharp
+          m_MethodName: ResetearRotacion
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -17592,10 +17602,10 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 7610735430993320001}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 3851458379860156930}
+          m_TargetAssemblyTypeName: RotarGancho, Assembly-CSharp
+          m_MethodName: ResetearRotacion
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -22736,7 +22746,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8383408718364213432}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3facf2e1d9c88674e8c7f3513e4e8405, type: 3}
   m_Name: 
@@ -22744,6 +22754,8 @@ MonoBehaviour:
   vel: 115
   rotarDerecha: 119
   rotarIzquierda: 115
+  derecha: 0
+  izquierda: 0
 --- !u!1 &8526893542425202978
 GameObject:
   m_ObjectHideFlags: 0

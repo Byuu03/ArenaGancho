@@ -9,6 +9,9 @@ public class RotarGancho : MonoBehaviour
     public KeyCode rotarDerecha;
     public KeyCode rotarIzquierda;
 
+    public bool derecha;
+    public bool izquierda;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,4 +30,15 @@ public class RotarGancho : MonoBehaviour
             transform.Rotate(0f, 0f, -vel * Time.deltaTime);
         }
     }
+
+    public void ResetearRotacionDerecha()
+    {
+        transform.rotation = Quaternion.Euler(0, 0, 0);
+    }
+
+    public void ResetearRotacionIzquierda()
+    {
+        transform.rotation = Quaternion.Euler(0, -180, 0);
+    }
+
 }
