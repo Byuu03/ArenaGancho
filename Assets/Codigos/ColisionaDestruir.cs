@@ -6,6 +6,8 @@ public class ColisionaDestruir : MonoBehaviour
 {
     [SerializeField] private float radio;
     [SerializeField] private float fuerzaExplos;
+
+    public ParticleSystem humopart;
     //[SerializeField] private float timerExplosion;
 
     // Start is called before the first frame update
@@ -17,7 +19,7 @@ public class ColisionaDestruir : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        humopart.Play();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
