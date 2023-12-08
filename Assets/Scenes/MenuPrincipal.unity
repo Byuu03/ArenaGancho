@@ -649,7 +649,7 @@ Animator:
   m_GameObject: {fileID: 152222710}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5d8c0eb7a8471fc4db876641d2a76e8f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 10f7236cb45861a40b97fc4e2a9adc3b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1070,7 +1070,7 @@ Animator:
   m_GameObject: {fileID: 1092811885}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5d8c0eb7a8471fc4db876641d2a76e8f, type: 2}
+  m_Controller: {fileID: 9100000, guid: ae81e028747ed0141a97506d2ad9b5a4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1095,7 +1095,7 @@ GameObject:
   - component: {fileID: 1112027524}
   - component: {fileID: 1112027527}
   m_Layer: 5
-  m_Name: ButtonPlay (1)
+  m_Name: ButtonTutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1225,7 +1225,7 @@ Animator:
   m_GameObject: {fileID: 1112027522}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5d8c0eb7a8471fc4db876641d2a76e8f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 897b98f791e0d8846bd21bc5c4426191, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
