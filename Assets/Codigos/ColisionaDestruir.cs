@@ -7,6 +7,8 @@ public class ColisionaDestruir : MonoBehaviour
     [SerializeField] private float radio;
     [SerializeField] private float fuerzaExplos;
 
+    public GameObject objExplosion;
+
     public ParticleSystem humopart;
     //[SerializeField] private float timerExplosion;
 
@@ -67,6 +69,8 @@ public class ColisionaDestruir : MonoBehaviour
 
     public void Explosion()
     {
+        Instantiate(objExplosion, transform.position, Quaternion.identity);
+
         CinemachineMovimientoCamara.Instance.MoverCamara(2, 2, 0.2f);
 
         Collider2D[] objetos = Physics2D.OverlapCircleAll(transform.position, radio);

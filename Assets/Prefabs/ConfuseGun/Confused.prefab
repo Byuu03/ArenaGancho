@@ -174,6 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newTag: InverseBox
   nuevoSprite: {fileID: 21300000, guid: 51553a9b0341ae24c9bab084fa0d2797, type: 3}
+  objExplosion: {fileID: 1967835574231978638, guid: 3e196c9e632c76841a71cb6e2dc6d010, type: 3}
   playerOneMove: {fileID: 3615436365147176074, guid: 0a2d54e5ae3f7aa4fa60dbe79e61fb89, type: 3}
   playerTwoMove: {fileID: 2129098843488156062, guid: 4119b0dd0e284d240bd340de60f0de1a, type: 3}
   mSpeed: 0.1

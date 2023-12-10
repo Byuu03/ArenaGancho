@@ -8,6 +8,7 @@ public class SimpleTagChange : MonoBehaviour
     public Sprite nuevoSprite;
 
     private SpriteRenderer spRender;
+    public GameObject objExplosion;
 
     //RETROCESO
     public PlayerMovement playerOneMove;
@@ -63,30 +64,40 @@ public class SimpleTagChange : MonoBehaviour
     {
         if (collision.gameObject.tag == "Suelo")
         {
+            Instantiate(objExplosion, transform.position, Quaternion.identity);
+
             StopAttrack();
             Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "Puas")
         {
+            Instantiate(objExplosion, transform.position, Quaternion.identity);
+
             StopAttrack();
             Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "Pared")
         {
+            Instantiate(objExplosion, transform.position, Quaternion.identity);
+
             StopAttrack();
             Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "Box")
         {
+            Instantiate(objExplosion, transform.position, Quaternion.identity);
+
             StopAttrack();
             Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "PlayerOne")
         {
+            Instantiate(objExplosion, transform.position, Quaternion.identity);
+
             playerOneMove.KBCounter = playerOneMove.KBTotalTime;
             if (collision.transform.position.x <= transform.position.x)
             {
@@ -102,6 +113,8 @@ public class SimpleTagChange : MonoBehaviour
 
         if (collision.gameObject.tag == "PlayerTwo")
         {
+            Instantiate(objExplosion, transform.position, Quaternion.identity);
+
             playerTwoMove.KBCounter = playerTwoMove.KBTotalTime;
             if (collision.transform.position.x <= transform.position.x)
             {

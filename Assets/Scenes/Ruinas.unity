@@ -3282,7 +3282,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &727077298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10145,7 +10145,7 @@ GameObject:
   - component: {fileID: 979976851076289250}
   m_Layer: 9
   m_Name: PortaArmas
-  m_TagString: Bow
+  m_TagString: SlowPower
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
