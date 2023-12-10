@@ -217,11 +217,15 @@ public class PlayerTwoMovement : MonoBehaviour
     {
         canMove = false;
         Invoke("ActivarReaccion", 0.5f);
+
+        animator.SetBool("enPua", true);
+        animator.SetBool("enAire", false);
     }
 
     public void ActivarReaccion()
     {
         canMove = true;
+        animator.SetBool("enPua", false);
     }
 
     //TWIST

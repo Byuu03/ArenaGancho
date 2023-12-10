@@ -226,11 +226,17 @@ public class PlayerMovement : MonoBehaviour
     {
         canMove = false;
         Invoke("ActivarReaccion", 0.5f);
+
+        animator.SetBool("inPuas", true);
+        animator.SetBool("inAir", false);
     }
 
     public void ActivarReaccion()
     {
         canMove = true;
+        animator.SetBool("inPuas", false);
+        //animator.SetFloat("Speed", 0);
+
     }
 
 

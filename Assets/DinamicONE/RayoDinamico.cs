@@ -72,6 +72,23 @@ public class RayoDinamico : MonoBehaviour
             //ACA PONER PARTY
             if (hit.transform.CompareTag("PlayerOne") && !objetoActivado)
             {
+
+                GameManager.manager.HurtP1(daño);
+                CinemachineMovimientoCamara.Instance.MoverCamara(2, 2, 0.2f);
+
+                Reaparecer reaparecerJ1 = hit.collider.GetComponent<Reaparecer>();
+                if (reaparecerJ1 != null)
+                {
+                    reaparecerJ1.Die();
+                }
+
+                PlayerMovement movimientoJ1 = hit.collider.GetComponent<PlayerMovement>();
+                if (movimientoJ1 != null)
+                {
+                    movimientoJ1.DesactivarReaccion();
+                }
+
+
                 colisionesActuales++;
 
                 if (colisionesActuales >= colisionesNecesarias)
@@ -83,6 +100,23 @@ public class RayoDinamico : MonoBehaviour
 
             if (hit.transform.CompareTag("PlayerTwo") && !objetoActivado)
             {
+
+                GameManager.manager.HurtP2();
+                CinemachineMovimientoCamara.Instance.MoverCamara(2, 2, 0.2f);
+
+                Reaparecer reaparecerJ2 = hit.collider.GetComponent<Reaparecer>();
+                if (reaparecerJ2 != null)
+                {
+                    reaparecerJ2.Die();
+                }
+
+                PlayerTwoMovement movimientoJ2 = hit.collider.GetComponent<PlayerTwoMovement>();
+                if (movimientoJ2 != null)
+                {
+                    movimientoJ2.DesactivarReaccion();
+                }
+
+
                 colisionesActuales++;
 
                 if (colisionesActuales >= colisionesNecesarias)

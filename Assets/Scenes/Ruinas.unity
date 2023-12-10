@@ -1931,7 +1931,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
   m_PivotOffset: {x: 0, y: 0, z: 0}
-  m_AmplitudeGain: 0
+  m_AmplitudeGain: 1.966358
   m_FrequencyGain: 2
   mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!114 &356912421
@@ -8061,7 +8061,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -8194,7 +8194,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -10278,6 +10278,8 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1994975846}
   - {fileID: 2223330}
+  - {fileID: 459916726}
+  - {fileID: 729132308838399900}
   - {fileID: 70087011}
   - {fileID: 964509124161740212}
   - {fileID: 3117335226155248212}
@@ -10295,6 +10297,4 @@ SceneRoots:
   - {fileID: 1515762274}
   - {fileID: 3809638418754601083}
   - {fileID: 1502125148}
-  - {fileID: 459916726}
   - {fileID: 740358788}
-  - {fileID: 729132308838399900}
