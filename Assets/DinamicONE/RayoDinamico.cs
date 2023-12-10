@@ -5,7 +5,7 @@ using UnityEngine;
 public class RayoDinamico : MonoBehaviour
 {
     public Transform pointo;
-    //public LayerMask layerOne; //CON QUE INTERACTUA
+    public LayerMask layerOne; //CON QUE INTERACTUA
 
     public LineRenderer linerendere;
     public int daño;
@@ -46,7 +46,7 @@ public class RayoDinamico : MonoBehaviour
 
     void rayoHito()
     {
-        RaycastHit2D hit = Physics2D.Raycast(pointo.position, transform.TransformDirection(Vector2.down), 10f);
+        RaycastHit2D hit = Physics2D.Raycast(pointo.position, transform.TransformDirection(Vector2.down), 10f, layerOne);
 
         if (hit)
         {

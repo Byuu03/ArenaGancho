@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class RotateController : MonoBehaviour
 {
-    public Giratorio rotacion;
-    public int contador;
+
+    public float tiempoActivo;
+    public float tiempoInactivo;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(CicloActivarDesactivar());
     }
 
     // Update is called once per frame
@@ -19,11 +20,16 @@ public class RotateController : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    IEnumerator CicloActivarDesactivar()
     {
-        if (true)
+        while (true)
         {
+            gameObject.SetActive(true);
+            yield return new WaitForSeconds(tiempoActivo);
 
+
+            gameObject.SetActive(false);
+            yield return new WaitForSeconds(tiempoInactivo);
         }
     }
 }
