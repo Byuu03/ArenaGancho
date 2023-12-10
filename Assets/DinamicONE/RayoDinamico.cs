@@ -60,13 +60,15 @@ public class RayoDinamico : MonoBehaviour
             linerendere.SetPosition(0, pointo.position);
             linerendere.SetPosition(1, hit.point);
 
-            if (hit.transform.gameObject.tag == "Suelo")
+            if (hit.transform.gameObject.tag == "Techo")
             {
                 //hit.transform.GetComponent<SpriteRenderer>().color = Color.magenta;
+                //Giratorio rotaciones = hit.collider.GetComponent<Giratorio>();
+                //if (rotaciones != null)
+                //{
+                //    rotaciones.RotarIzquierda();
+                //}
 
-                //GameManager.manager.HurtP1(daño);
-                //CinemachineMovimientoCamara.Instance.MoverCamara(2, 2, 0.2f);
-                //hit.transform.GetComponent<Reaparecer>().Die();
             }
 
             //ACA PONER PARTY
@@ -74,7 +76,7 @@ public class RayoDinamico : MonoBehaviour
             {
 
                 GameManager.manager.HurtP1(daño);
-                //CinemachineMovimientoCamara.Instance.MoverCamara(2, 2, 0.2f);
+                CinemachineMovimientoCamara.Instance.MoverCamara(2, 2, 0.2f);
 
                 Reaparecer reaparecerJ1 = hit.collider.GetComponent<Reaparecer>();
                 if (reaparecerJ1 != null)
@@ -102,7 +104,7 @@ public class RayoDinamico : MonoBehaviour
             {
 
                 GameManager.manager.HurtP2();
-                //CinemachineMovimientoCamara.Instance.MoverCamara(2, 2, 0.2f);
+                CinemachineMovimientoCamara.Instance.MoverCamara(2, 2, 0.2f);
 
                 Reaparecer reaparecerJ2 = hit.collider.GetComponent<Reaparecer>();
                 if (reaparecerJ2 != null)

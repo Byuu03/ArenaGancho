@@ -25,6 +25,7 @@ TagManager:
   - ParalyzePower
   - RetrainPower
   - SlowPower
+  - Techo
   layers:
   - Default
   - TransparentFX

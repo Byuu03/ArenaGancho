@@ -10638,7 +10638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d717bd548a3c93c408551e63e2578df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPos: {x: 3.18, y: 1.2}
+  startPos: {x: 6.48, y: 1.11}
   particleController: {fileID: 3237845507799346052}
 --- !u!114 &1961967391402589846
 MonoBehaviour:

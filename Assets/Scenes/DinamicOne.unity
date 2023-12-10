@@ -321,7 +321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
   m_PivotOffset: {x: 0, y: 0, z: 0}
-  m_AmplitudeGain: 0
+  m_AmplitudeGain: 1.96225
   m_FrequencyGain: 2
   mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!114 &55411348
@@ -3466,14 +3466,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5668704223117304913, guid: 0a2d54e5ae3f7aa4fa60dbe79e61fb89, type: 3}
-      propertyPath: startPos.x
-      value: -10.21
-      objectReference: {fileID: 0}
-    - target: {fileID: 5668704223117304913, guid: 0a2d54e5ae3f7aa4fa60dbe79e61fb89, type: 3}
-      propertyPath: startPos.y
-      value: 1.11
-      objectReference: {fileID: 0}
     - target: {fileID: 7622978035425758445, guid: 0a2d54e5ae3f7aa4fa60dbe79e61fb89, type: 3}
       propertyPath: m_Name
       value: PlayerOne
@@ -3880,7 +3872,7 @@ GameObject:
   - component: {fileID: 873879373}
   - component: {fileID: 873879372}
   m_Layer: 9
-  m_Name: New Sprite
+  m_Name: Techo
   m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4327,7 +4319,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d9e20be5d6ed74db8acf1fb6fa1172, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 10
+  velocidad: 50
+  girosCompletos: 0
 --- !u!1001 &952494630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4375,14 +4368,6 @@ PrefabInstance:
     - target: {fileID: 657053403681837291, guid: 4119b0dd0e284d240bd340de60f0de1a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3542374855816400747, guid: 4119b0dd0e284d240bd340de60f0de1a, type: 3}
-      propertyPath: startPos.x
-      value: 6.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 3542374855816400747, guid: 4119b0dd0e284d240bd340de60f0de1a, type: 3}
-      propertyPath: startPos.y
-      value: 1.11
       objectReference: {fileID: 0}
     - target: {fileID: 3709010212982550509, guid: 4119b0dd0e284d240bd340de60f0de1a, type: 3}
       propertyPath: m_Name
