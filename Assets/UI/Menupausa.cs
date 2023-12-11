@@ -29,7 +29,7 @@ public class Menupausa : MonoBehaviour
     public void Pausa()
     {
         juegoPausado = true;
-        Time.timeScale = 0f;
+        Time.timeScale = 0f; //ORIGEN DEL PROBLEMA
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         botonPausa.SetActive(false);
