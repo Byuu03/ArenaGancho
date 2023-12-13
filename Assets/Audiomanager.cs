@@ -27,6 +27,9 @@ public class Audiomanager : MonoBehaviour
     public static AudioClip DisparosimpleSound;
     public static AudioClip BowSound;
 
+    //UI
+    public static AudioClip BotonesSound;
+
     static AudioSource audioScr;
     //// Start is called before the first frame update
     void Start()
@@ -53,6 +56,9 @@ public class Audiomanager : MonoBehaviour
         //Armas
         DisparosimpleSound = Resources.Load<AudioClip>("Disparosimple");
         BowSound = Resources.Load<AudioClip>("Bow");
+
+        //UI
+        BotonesSound = Resources.Load<AudioClip>("Botones");
 
         audioScr = GetComponent<AudioSource>();
     }
@@ -128,6 +134,11 @@ public class Audiomanager : MonoBehaviour
 
             case "Bow":
                 audioScr.PlayOneShot(BowSound);
+                break;
+
+            //UI
+            case "Botones":
+                audioScr.PlayOneShot(BotonesSound);
                 break;
         }
     }
