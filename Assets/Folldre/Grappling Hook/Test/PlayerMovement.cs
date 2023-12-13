@@ -67,6 +67,8 @@ public class PlayerMovement : MonoBehaviour
                 _rigidbody.velocity = new Vector2(-MovementSpeed, _rigidbody.velocity.y);
                 transform.localRotation = Quaternion.Euler(0, -180, 0f);
 
+                //Audiomanager.PlaySound("Direccion");
+
                 //parentGancho.ResetearRotacionIzquierda();
             }
             else if (Input.GetKey(derechaKey))
@@ -76,18 +78,30 @@ public class PlayerMovement : MonoBehaviour
                 _rigidbody.velocity = new Vector2(MovementSpeed, _rigidbody.velocity.y);
                 transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
 
+                //Audiomanager.PlaySound("Direccion");
+
                 //parentGancho.ResetearRotacionDerecha();
             }
 
+            if (Input.GetKeyDown(derechaKey))
+            {
+                Audiomanager.PlaySound("Direccion");
+            }
+            if (Input.GetKeyDown(izquierdaKey))
+            {
+                Audiomanager.PlaySound("Direccion");
+            }
 
             if (Input.GetKeyUp(izquierdaKey))
             {
                 animator.SetFloat("Speed", 0);
+                //Audiomanager.PlaySound("Direccion");
             }
             if (Input.GetKeyUp(derechaKey))
             {
                 derecha = true;
                 animator.SetFloat("Speed", 0);
+                //Audiomanager.PlaySound("Direccion");
                 //_rigidbody.velocity = new Vector2(MovementSpeed, _rigidbody.velocity.y);
                 //transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
             }
@@ -157,6 +171,8 @@ public class PlayerMovement : MonoBehaviour
         {
             Air = true;
             animator.SetBool("inAir", true);
+
+            //Audiomanager.PlaySound("Aterrizar");
         }
 
         if (collision.gameObject.tag == "Puas")
@@ -174,6 +190,8 @@ public class PlayerMovement : MonoBehaviour
         {
             Air = false;
             animator.SetBool("inAir", false);
+
+            Audiomanager.PlaySound("Aterrizar");
         }
 
         if (collision.gameObject.tag == "Pared")

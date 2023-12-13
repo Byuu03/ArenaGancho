@@ -100,7 +100,7 @@ public class GrapplingGun : MonoBehaviour
         else if (Input.GetKeyDown(lanzarGancho) /*&& !atraer*/)   //ESTA
         {
             SetGrapplePoint();              //Establece el punto de agarre
-            //print("Dispare");
+            //Audiomanager.PlaySound("Gancho");
         }
         else if (Input.GetKey(KeyCode.R))   //Manejo de rotacion y lanzamiento
         {
@@ -189,7 +189,7 @@ public class GrapplingGun : MonoBehaviour
     public void Grapple()
     {
         //LOGICA DE LANZAMIENTO Y ATRACCION
-
+        Audiomanager.PlaySound("Gancho");
 
         if (!launchToPoint && !autoCongifureDistance)
         {
@@ -223,7 +223,7 @@ public class GrapplingGun : MonoBehaviour
                     //print("Nada habia");
                     Vector2 attracDirection = ((Vector2)gunPivot.position - rb.position).normalized;  // Calcular la dirección de atracción desde el pivote de la pistola hacia el objeto
                     rb.AddForce(attracDirection * attractionForce, ForceMode2D.Force);  // Aplicar una fuerza de atracción al objeto utilizando la dirección calculada y la fuerza de atracción configurada
-                    print("Nada habia");
+                    //print("Nada habia");
 
                 }
             }
@@ -239,6 +239,7 @@ public class GrapplingGun : MonoBehaviour
             {
                 ballRigidbody.gravityScale = 0;
                 ballRigidbody.velocity = Vector2.zero;
+                
                 print("Grapple");
             }
             if (Launch_Type == LaunchType.Physics_Launch && !atraer)

@@ -73,16 +73,27 @@ public class PlayerTwoMovement : MonoBehaviour
                 transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
             }
 
+            if (Input.GetKeyDown(derechaKey))
+            {
+                Audiomanager.PlaySound("Direccion");
+            }
+            if (Input.GetKeyDown(izquierdaKey))
+            {
+                Audiomanager.PlaySound("Direccion");
+            }
+
 
             if (Input.GetKeyUp(izquierdaKey))
             {
                 animator.SetFloat("Speede", 0);
+                //Audiomanager.PlaySound("Direccion");
             }
             if (Input.GetKeyUp(derechaKey))
             {
                 derecha = true;
                 animator.SetFloat("Speede", 0);
-                
+                //Audiomanager.PlaySound("Direccion");
+
             }
 
 
@@ -166,6 +177,8 @@ public class PlayerTwoMovement : MonoBehaviour
         {
             Air = false;
             animator.SetBool("enAire", false);
+
+            Audiomanager.PlaySound("Aterrizar");
         }
 
         if (collision.gameObject.tag == "Pared")
