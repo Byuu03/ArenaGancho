@@ -34,7 +34,36 @@ public class Arrow : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         hasHit = true;
-        //rb.velocity = Vector2.zero;
-        //rb.isKinematic = true;
+
+        if (collision.gameObject.tag == "PlayerOne")
+        {
+            Audiomanager.PlaySound("Flecha");
+        }
+
+        if (collision.gameObject.tag == "PlayerTwo")
+        {
+            Audiomanager.PlaySound("Flecha");
+        }
+
+        if (collision.gameObject.tag == "Suelo")
+        {
+            Audiomanager.PlaySound("Flecha");
+        }
+
+        if (collision.gameObject.tag == "PlayerTwo")
+        {
+            Audiomanager.PlaySound("Pared");
+        }
+
+        if (collision.gameObject.tag == "Box")
+        {
+            Audiomanager.PlaySound("Flecha");
+        }
+
+        if (collision.gameObject.tag == "Pared")
+        {
+            Audiomanager.PlaySound("Flecha");
+        }
+
     }
 }

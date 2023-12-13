@@ -66,6 +66,7 @@ public class SimpleTagChange : MonoBehaviour
         {
             Instantiate(objExplosion, transform.position, Quaternion.identity);
 
+            Audiomanager.PlaySound("Colsionbala");
             StopAttrack();
             Destroy(gameObject);
         }
@@ -74,6 +75,7 @@ public class SimpleTagChange : MonoBehaviour
         {
             Instantiate(objExplosion, transform.position, Quaternion.identity);
 
+            Audiomanager.PlaySound("Colsionbala");
             StopAttrack();
             Destroy(gameObject);
         }
@@ -82,6 +84,7 @@ public class SimpleTagChange : MonoBehaviour
         {
             Instantiate(objExplosion, transform.position, Quaternion.identity);
 
+            Audiomanager.PlaySound("Colsionbala");
             StopAttrack();
             Destroy(gameObject);
         }
@@ -90,6 +93,7 @@ public class SimpleTagChange : MonoBehaviour
         {
             Instantiate(objExplosion, transform.position, Quaternion.identity);
 
+            Audiomanager.PlaySound("Colsionbala");
             StopAttrack();
             Destroy(gameObject);
         }

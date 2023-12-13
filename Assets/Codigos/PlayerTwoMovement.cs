@@ -198,6 +198,8 @@ public class PlayerTwoMovement : MonoBehaviour
         if (collision.gameObject.tag == "ParalyzeBox")
         {
             Invoke("DesactivarMovimiento", 0f);
+
+            Audiomanager.PlaySound("Paralisis");
             Destroy(collision.gameObject);
             //collision.gameObject.SetActive(false);
         }
@@ -205,6 +207,8 @@ public class PlayerTwoMovement : MonoBehaviour
         if (collision.gameObject.tag == "InverseBox")
         {
             Invoke("DesactivarMovimientoAnormal", 0f);
+
+            Audiomanager.PlaySound("Confuse");
             Destroy(collision.gameObject);
             //collision.gameObject.SetActive(false);
         }
@@ -212,6 +216,8 @@ public class PlayerTwoMovement : MonoBehaviour
         if (collision.gameObject.tag == "SlowBox")
         {
             Invoke("DesactivarLentitud", 0f);
+
+            Audiomanager.PlaySound("Slower");
             Destroy(collision.gameObject);
             //collision.gameObject.SetActive(false);
         }
@@ -224,6 +230,7 @@ public class PlayerTwoMovement : MonoBehaviour
     {
         canMove = false;
         ganchameTwo.OffGrappleGun();
+        Audiomanager.PlaySound("Paralisis");
         Invoke("ActivarMovimiento", 3f);
         print("No me puedo Mover");
     }
@@ -254,6 +261,7 @@ public class PlayerTwoMovement : MonoBehaviour
     public void DesactivarMovimientoAnormal()
     {
         isTwist = true;
+        Audiomanager.PlaySound("Confuse");
         Invoke("ActivarMovimientoAnormal", 4f);
         print("MOVIMIENTO ALTERADO");
     }
@@ -269,6 +277,8 @@ public class PlayerTwoMovement : MonoBehaviour
     public void DesactivarLentitud()
     {
         isSlow = true;
+
+        Audiomanager.PlaySound("Slower");
         Invoke("ActivarLentitud", 5f);
         print("LENTO");
     }

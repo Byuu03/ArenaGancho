@@ -29,11 +29,13 @@ public class Boomba : MonoBehaviour
         if (collision.gameObject.tag == "Puas")
         {
             Explosion();
+            Audiomanager.PlaySound("Explotion");
         }
 
         if (collision.gameObject.tag == "PlayerOne")
         {
             Invoke("Explosion", timerExplosion);
+            Audiomanager.PlaySound("Explotion");
             //Explosion();
             animattor.SetBool("Touch", true);
         }
@@ -41,6 +43,7 @@ public class Boomba : MonoBehaviour
         if (collision.gameObject.tag == "PlayerTwo")
         {
             Invoke("Explosion", timerExplosion);
+            Audiomanager.PlaySound("Explotion");
             //Explosion();
             animattor.SetBool("Touch", true);
         }
@@ -48,6 +51,7 @@ public class Boomba : MonoBehaviour
         if (collision.gameObject.tag == "Suelo")
         {
             Explosion();
+            Audiomanager.PlaySound("Explotion");
             animattor.SetBool("Touch", true);
         }
 

@@ -65,6 +65,7 @@ public class Bow : MonoBehaviour
         if (Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
+            Audiomanager.PlaySound("Bow");
 
             GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
             newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * launchforce;

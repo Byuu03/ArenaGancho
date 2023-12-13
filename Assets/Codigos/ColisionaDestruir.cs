@@ -30,6 +30,7 @@ public class ColisionaDestruir : MonoBehaviour
         {
             //Invoke("Explosion", timerExplosion);
             Explosion();
+            Audiomanager.PlaySound("Explotion");
             //animattor.SetBool("Touch", true);
         }
 
@@ -37,27 +38,32 @@ public class ColisionaDestruir : MonoBehaviour
         {
             //Invoke("Explosion", timerExplosion);
             Explosion();
+            Audiomanager.PlaySound("Explotion");
             //animattor.SetBool("Touch", true);
         }
 
         if (collision.gameObject.tag == "Puas")
         {
             Explosion();
+            Audiomanager.PlaySound("Explotion");
         }
 
         if (collision.gameObject.tag == "Box")
         {
             Explosion();
+            Audiomanager.PlaySound("Explotion");
         }
 
         if (collision.gameObject.tag == "SpecialBox")
         {
             Explosion();
+            Audiomanager.PlaySound("Explotion");
         }
 
         if (collision.gameObject.tag == "Pared")
         {
             Explosion();
+            Audiomanager.PlaySound("Explotion");
         }
 
     }
@@ -84,6 +90,8 @@ public class ColisionaDestruir : MonoBehaviour
                 float distancia = 1 + direccion.magnitude;
                 float fuerzaFinal = fuerzaExplos / distancia;
                 rb2D.AddForce(direccion * fuerzaFinal);
+
+                
             }
         }
 

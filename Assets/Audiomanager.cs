@@ -15,8 +15,17 @@ public class Audiomanager : MonoBehaviour
     //CAJAS
     public static AudioClip AparecercajaSound;
     public static AudioClip RecojecajaSound;
-    ////public static AudioClip PandaCorreSound;
-    ////public static AudioClip PowerupSound;
+
+    //BALAS
+    public static AudioClip FlechaSound;
+    public static AudioClip ExplotionSound;
+    public static AudioClip ParalisisSound;
+    public static AudioClip ConfuseSound;
+    public static AudioClip SlowerSound;
+
+    //ARMAS
+    public static AudioClip DisparosimpleSound;
+    public static AudioClip BowSound;
 
     static AudioSource audioScr;
     //// Start is called before the first frame update
@@ -33,8 +42,17 @@ public class Audiomanager : MonoBehaviour
         //CAJAS
         AparecercajaSound = Resources.Load<AudioClip>("Aparececaja");
         RecojecajaSound = Resources.Load<AudioClip>("Recojecaja");
-        //PandaCorreSound = Resources.Load<AudioClip>("Panda_pasto");
-        //PowerupSound = Resources.Load<AudioClip>("ImpacObstac");
+
+        //BALAS
+        FlechaSound = Resources.Load<AudioClip>("Flecha");
+        ExplotionSound = Resources.Load<AudioClip>("Explotion");
+        ParalisisSound = Resources.Load<AudioClip>("Paralisis");
+        ConfuseSound = Resources.Load<AudioClip>("Confuse");
+        SlowerSound = Resources.Load<AudioClip>("Slower");
+
+        //Armas
+        DisparosimpleSound = Resources.Load<AudioClip>("Disparosimple");
+        BowSound = Resources.Load<AudioClip>("Bow");
 
         audioScr = GetComponent<AudioSource>();
     }
@@ -72,6 +90,7 @@ public class Audiomanager : MonoBehaviour
                 case "Derribado":
                     audioScr.PlayOneShot(DerribadoSound);
                     break;
+
                 //CAJAS
                 case "Aparececaja":
                     audioScr.PlayOneShot(AparecercajaSound);
@@ -81,13 +100,35 @@ public class Audiomanager : MonoBehaviour
                     audioScr.PlayOneShot(RecojecajaSound);
                     break;
 
-    //            //case "Panda_pasto":
-    //            //    audioScr.PlayOneShot(PandaCorreSound);
-    //            //    break;
+                //BALAS
+                case "Flecha":
+                    audioScr.PlayOneShot(FlechaSound);
+                    break;
 
-    //            //case "ImpacObstac":
-    //            //    audioScr.PlayOneShot(PowerupSound);
-    //            //    break;
+                case "Explotion":
+                    audioScr.PlayOneShot(ExplotionSound);
+                    break;
+
+            case "Paralisis":
+                audioScr.PlayOneShot(ParalisisSound);
+                break;
+
+            case "Confuse":
+                audioScr.PlayOneShot(ConfuseSound);
+                break;
+
+            case "Slower":
+                audioScr.PlayOneShot(ConfuseSound);
+                break;
+
+            //Armas
+            case "Disparosimple":
+                audioScr.PlayOneShot(DisparosimpleSound);
+                break;
+
+            case "Bow":
+                audioScr.PlayOneShot(BowSound);
+                break;
         }
     }
 }

@@ -20,6 +20,8 @@ public class Bazoka : MonoBehaviour
     public int maxShots;
     int shotsFire;
 
+    //public bool esSimple = false;
+
     //public Animator animato;
 
     [Header("Boton")]
@@ -37,6 +39,8 @@ public class Bazoka : MonoBehaviour
         if (Input.GetKeyDown(bang))
         {
             Shoot();
+
+            
             //animato.SetBool("enShot", true);
         }
 
@@ -52,6 +56,7 @@ public class Bazoka : MonoBehaviour
         if (Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
+            Audiomanager.PlaySound("Explotion");
 
             GameObject bullet = Instantiate(balas, shotPoint.position, shotPoint.rotation) as GameObject;
             bullet.GetComponent<Rigidbody2D>().AddForce(shotPoint.right * bulletForce, ForceMode2D.Impulse);
