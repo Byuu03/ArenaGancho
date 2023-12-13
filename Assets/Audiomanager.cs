@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class Audiomanager : MonoBehaviour
 {
+    //JUGADORES
     public static AudioClip DireccionSound;
     public static AudioClip AterrizarSound;
     public static AudioClip GanchoSound;
-    //public static AudioClip AlertaSound;
-    //public static AudioClip BotonesSound;
-    ////public static AudioClip MuroSound;
-    ////public static AudioClip PandaSound;
-    ////public static AudioClip BotonesSound;
+    public static AudioClip SoltarganchoSound;
+    public static AudioClip ColisionbalaSound;
+    public static AudioClip DerribadoSound;
+
+    //CAJAS
+    public static AudioClip AparecercajaSound;
+    public static AudioClip RecojecajaSound;
     ////public static AudioClip PandaCorreSound;
     ////public static AudioClip PowerupSound;
 
@@ -19,14 +22,17 @@ public class Audiomanager : MonoBehaviour
     //// Start is called before the first frame update
     void Start()
     {
+        //JUGADORES
         DireccionSound = Resources.Load<AudioClip>("Direccion");
         AterrizarSound = Resources.Load<AudioClip>("Aterrizar");
         GanchoSound = Resources.Load<AudioClip>("Gancho");
-        //AlertaSound = Resources.Load<AudioClip>("Alert");
-        //BotonesSound = Resources.Load<AudioClip>("Botones");
-        //MuroSound = Resources.Load<AudioClip>("ImpacMuro");
-        //PandaSound = Resources.Load<AudioClip>("Panda");
-        //BotonesSound = Resources.Load<AudioClip>("Botones");
+        SoltarganchoSound = Resources.Load<AudioClip>("Soltargancho");
+        ColisionbalaSound = Resources.Load<AudioClip>("Colsionbala");
+        DerribadoSound = Resources.Load<AudioClip>("Derribado");
+
+        //CAJAS
+        AparecercajaSound = Resources.Load<AudioClip>("Aparececaja");
+        RecojecajaSound = Resources.Load<AudioClip>("Recojecaja");
         //PandaCorreSound = Resources.Load<AudioClip>("Panda_pasto");
         //PowerupSound = Resources.Load<AudioClip>("ImpacObstac");
 
@@ -43,6 +49,7 @@ public class Audiomanager : MonoBehaviour
     {
         switch (clip)
         {
+            //JJUGADORES
             case "Direccion": audioScr.PlayOneShot(DireccionSound);
                 break;
 
@@ -54,25 +61,25 @@ public class Audiomanager : MonoBehaviour
                 audioScr.PlayOneShot(GanchoSound);
                 break;
 
-    //        case "Alert":
-    //            audioScr.PlayOneShot(AlertaSound);
-    //            break;
+            case "Soltargancho":
+                audioScr.PlayOneShot(SoltarganchoSound);
+                break;
 
-    //        case "Botones":
-    //            audioScr.PlayOneShot(BotonesSound);
-    //            break;
+            case "Colsionbala":
+                audioScr.PlayOneShot(ColisionbalaSound);
+                break;
 
-    //            //case "ImpacMuro":
-    //            //    audioScr.PlayOneShot(MuroSound);
-    //            //    break;
+                case "Derribado":
+                    audioScr.PlayOneShot(DerribadoSound);
+                    break;
+                //CAJAS
+                case "Aparececaja":
+                    audioScr.PlayOneShot(AparecercajaSound);
+                    break;
 
-    //            //case "Panda":
-    //            //    audioScr.PlayOneShot(PandaSound);
-    //            //    break;
-
-    //            //case "Botones":
-    //            //    audioScr.PlayOneShot(BotonesSound);
-    //            //    break;
+                case "Recojecaja":
+                    audioScr.PlayOneShot(RecojecajaSound);
+                    break;
 
     //            //case "Panda_pasto":
     //            //    audioScr.PlayOneShot(PandaCorreSound);

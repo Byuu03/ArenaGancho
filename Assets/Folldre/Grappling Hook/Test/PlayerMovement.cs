@@ -202,6 +202,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Puas")
         {
             Pua = true;
+            Audiomanager.PlaySound("Colsionbala");
             Invoke("DesactivarReaccion", 0f); //
             animator.SetBool("inPuas", true);
             animator.SetBool("inAir", false);

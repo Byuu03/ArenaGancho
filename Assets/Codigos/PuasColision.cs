@@ -24,6 +24,7 @@ public class PuasColision : MonoBehaviour
             {
                 objetoActivado = true;
                 objetoAActivar.SetActive(true);
+                Audiomanager.PlaySound("Derribado");
             }
         }
 
@@ -35,6 +36,7 @@ public class PuasColision : MonoBehaviour
             {
                 objetoActivado = true;
                 objetoAActivar.SetActive(true);
+                Audiomanager.PlaySound("Derribado");
             }
         }
     }

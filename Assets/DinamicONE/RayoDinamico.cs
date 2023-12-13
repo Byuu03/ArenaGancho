@@ -82,6 +82,8 @@ public class RayoDinamico : MonoBehaviour
                 if (reaparecerJ1 != null)
                 {
                     reaparecerJ1.Die();
+                    Audiomanager.PlaySound("Derribado");
+                    Audiomanager.PlaySound("Colsionbala");
                 }
 
                 PlayerMovement movimientoJ1 = hit.collider.GetComponent<PlayerMovement>();
@@ -110,6 +112,8 @@ public class RayoDinamico : MonoBehaviour
                 if (reaparecerJ2 != null)
                 {
                     reaparecerJ2.Die();
+                    Audiomanager.PlaySound("Derribado");
+                    Audiomanager.PlaySound("Colsionbala");
                 }
 
                 PlayerTwoMovement movimientoJ2 = hit.collider.GetComponent<PlayerTwoMovement>();

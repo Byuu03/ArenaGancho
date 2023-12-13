@@ -177,6 +177,7 @@ public class GrapplingGun : MonoBehaviour
             else
             {
                 fueraRangojpg.SetActive(true);
+                Audiomanager.PlaySound("Soltargancho");
                 print("Nada habia Al final de todo");
             }
 

@@ -41,6 +41,7 @@ public class DesactivarXTiempo : MonoBehaviour
             {
                 objADesactivar.SetActive(false);
                 estaDesactivado = true;
+                Audiomanager.PlaySound("Recojecaja");
                 Invoke("ActivarObjetos", tiempoDesactivado);
             }
 
@@ -48,6 +49,7 @@ public class DesactivarXTiempo : MonoBehaviour
             {
                 objADesactivar.SetActive(false);
                 estaDesactivado = true;
+                Audiomanager.PlaySound("Recojecaja");
                 Invoke("ActivarObjetos", tiempoDesactivado);
             }
 
@@ -62,6 +64,7 @@ public class DesactivarXTiempo : MonoBehaviour
 
         objADesactivar.SetActive(true);
         estaDesactivado = false;
+        Audiomanager.PlaySound("Aparececaja");
     }
 
 
