@@ -12,6 +12,8 @@ public class PlayerTwoMovement : MonoBehaviour
     bool Air = false;
     bool Pua = false;
 
+    public GrapplingGun ganchameTwo;
+
     //Animacion
     public Animator animator;
 
@@ -202,6 +204,7 @@ public class PlayerTwoMovement : MonoBehaviour
     public void DesactivarMovimiento()
     {
         canMove = false;
+        ganchameTwo.OffGrappleGun();
         Invoke("ActivarMovimiento", 3f);
         print("No me puedo Mover");
     }

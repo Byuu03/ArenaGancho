@@ -17011,6 +17011,7 @@ MonoBehaviour:
   MovementSpeed: 4
   JumpForce: 15
   derecha: 1
+  ganchame: {fileID: 1992050539146987401}
   animator: {fileID: 4602073689617738891}
   canMove: 0
   isSlow: 0
@@ -17101,7 +17102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d717bd548a3c93c408551e63e2578df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPos: {x: -10.21, y: 1.11}
+  startPos: {x: -8.53, y: 1.12}
   particleController: {fileID: 8051909641806112293}
 --- !u!114 &5120159280294168816
 MonoBehaviour:

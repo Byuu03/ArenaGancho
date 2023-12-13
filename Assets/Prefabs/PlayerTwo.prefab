@@ -10638,7 +10638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d717bd548a3c93c408551e63e2578df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPos: {x: 6.48, y: 1.11}
+  startPos: {x: 4.16, y: 1.12}
   particleController: {fileID: 3237845507799346052}
 --- !u!114 &1961967391402589846
 MonoBehaviour:
@@ -10706,6 +10706,7 @@ MonoBehaviour:
   MovementSpeed: 4
   JumpForce: 15
   derecha: 1
+  ganchameTwo: {fileID: 2483731394261751732}
   animator: {fileID: 8077414195748191615}
   canMove: 0
   isSlow: 0

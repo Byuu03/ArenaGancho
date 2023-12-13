@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class CambiarLayer : MonoBehaviour
 {
-    public string nvoLayer = "Water";
+    //public string nvoLayer = "Water";
+    public GrapplingGun ganchoOne;
+    public GrapplingGun ganchoTwo;
 
     // Start is called before the first frame update
     void Start()
@@ -22,8 +24,21 @@ public class CambiarLayer : MonoBehaviour
     {
         if (collision.gameObject.tag == "PlayerOne")
         {
-            int newLayerIndex = LayerMask.NameToLayer(nvoLayer);
-            gameObject.layer = newLayerIndex;
+            ganchoOne.OffGrappleGun();
+            print("J1 CHOCOLA");
+            //int newLayerIndex = LayerMask.NameToLayer(nvoLayer);
+            //gameObject.layer = newLayerIndex;
+
+            //gameObject.layer = LayerMask.LayerToName(nvoLayer);
+        }
+
+        if (collision.gameObject.tag == "PlayerTwo")
+        {
+            ganchoTwo.OffGrappleGun();
+            print("J2 CHOCO");
+
+            //int newLayerIndex = LayerMask.NameToLayer(nvoLayer);
+            //gameObject.layer = newLayerIndex;
 
             //gameObject.layer = LayerMask.LayerToName(nvoLayer);
         }

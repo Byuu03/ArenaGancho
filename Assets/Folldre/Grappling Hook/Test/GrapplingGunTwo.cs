@@ -1,9 +1,11 @@
-锘縰sing UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class GrapplingGun : MonoBehaviour
+public class GrapplingGunTwo : MonoBehaviour
 {
     [Header("Scripts:")]
-    public GrappleRope grappleRope;
+    public GrappleRopeTwo grappleRope;
 
     //public GameObject point;   //
     private GameObject hitObj;   //
@@ -26,7 +28,7 @@ public class GrapplingGun : MonoBehaviour
 
     [Header("LanzarGancho")]
     public KeyCode lanzarGancho;
-    
+
 
     [Header("Distance:")]
     [SerializeField] private bool hasMaxDistance = true;
@@ -56,7 +58,7 @@ public class GrapplingGun : MonoBehaviour
 
     public Rigidbody2D ballRigidbody;
 
-    [SerializeField] 
+    [SerializeField]
     private bool atraer = false; //
 
     //private LineRenderer linerender;
@@ -69,7 +71,7 @@ public class GrapplingGun : MonoBehaviour
 
     }
 
-    
+
 
     private void Update()
     {
@@ -88,7 +90,7 @@ public class GrapplingGun : MonoBehaviour
             //{
             //    //logica de enganche
             //    hitObj.transform.parent = null;
-                
+
             //    point.transform.position = new Vector3(100, 100, 0);
             //    print("Solte");
             //    atraer = false; 
@@ -135,7 +137,7 @@ public class GrapplingGun : MonoBehaviour
 
             //fueraRangojpg.SetActive(false);
         }
-     
+
     }
 
     public void OffGrappleGun()
@@ -155,13 +157,13 @@ public class GrapplingGun : MonoBehaviour
             RaycastHit2D _hit = Physics2D.Raycast(firePoint.position, transform.right);
             if ((_hit.transform.gameObject.layer == arrastableLayerNumber || grappleToAll) && ((Vector2.Distance(_hit.point, firePoint.position) <= maxDistance) || !hasMaxDistance))
             {
-                
+
                 //atraer = true; //ESTA
-                
+
                 //DistanceVector = (Vector2)point.transform.position - (Vector2)gunPivot.position;
-              
+
                 hitObj = _hit.transform.gameObject;
-                
+
                 //hitObj.transform.parent = point.transform;
                 grapplePoint = _hit.point;
 
@@ -180,9 +182,9 @@ public class GrapplingGun : MonoBehaviour
                 print("Nada habia Al final de todo");
             }
 
-           
+
         }
-       
+
     }
 
     //FUNCION QUE MANEJA LA LOGICA DE LANZAMIENTO Y ATRACCION
@@ -193,20 +195,20 @@ public class GrapplingGun : MonoBehaviour
 
         if (!launchToPoint && !autoCongifureDistance)
         {
-            
-            // Establece la distancia del resorte y la frecuencia seg煤n los valores de targetDistance y targetFrequency
+
+            // Establece la distancia del resorte y la frecuencia seg鷑 los valores de targetDistance y targetFrequency
             m_springJoint2D.distance = targetDistance;
             m_springJoint2D.frequency = targetFrequency;
         }
 
         if (!launchToPoint && !atraer)
         {
-            
+
 
             if (autoCongifureDistance)
             {
-                
-                m_springJoint2D.autoConfigureDistance = true;  // Habilita la configuraci贸n autom谩tica de la distancia del resorte
+
+                m_springJoint2D.autoConfigureDistance = true;  // Habilita la configuraci髇 autom醫ica de la distancia del resorte
                 m_springJoint2D.frequency = 0;                 // Establece la frecuencia del resorte en 0 para evitar que oscile
             }
             m_springJoint2D.connectedAnchor = grapplePoint;    // Establecer el punto de anclaje conectado del resorte en el punto de agarre
@@ -214,15 +216,15 @@ public class GrapplingGun : MonoBehaviour
 
             //ATRACCION DE OBJETOS CERCANOS
 
-            Collider2D[] nearbyColliders = Physics2D.OverlapCircleAll(grapplePoint, attractionRadius); // Detectar todos los colliders cercanos dentro del radio de atracci贸n desde el punto de agarre
-            foreach (Collider2D collider in nearbyColliders)  // Iterar a trav茅s de cada collider en la lista de colliders cercanos
+            Collider2D[] nearbyColliders = Physics2D.OverlapCircleAll(grapplePoint, attractionRadius); // Detectar todos los colliders cercanos dentro del radio de atracci髇 desde el punto de agarre
+            foreach (Collider2D collider in nearbyColliders)  // Iterar a trav閟 de cada collider en la lista de colliders cercanos
             {
                 Rigidbody2D rb = collider.GetComponent<Rigidbody2D>();
                 if (rb != null)
                 {
                     //print("Nada habia");
-                    Vector2 attracDirection = ((Vector2)gunPivot.position - rb.position).normalized;  // Calcular la direcci贸n de atracci贸n desde el pivote de la pistola hacia el objeto
-                    rb.AddForce(attracDirection * attractionForce, ForceMode2D.Force);  // Aplicar una fuerza de atracci贸n al objeto utilizando la direcci贸n calculada y la fuerza de atracci贸n configurada
+                    Vector2 attracDirection = ((Vector2)gunPivot.position - rb.position).normalized;  // Calcular la direcci髇 de atracci髇 desde el pivote de la pistola hacia el objeto
+                    rb.AddForce(attracDirection * attractionForce, ForceMode2D.Force);  // Aplicar una fuerza de atracci髇 al objeto utilizando la direcci髇 calculada y la fuerza de atracci髇 configurada
                     print("Nada habia");
 
                 }
@@ -249,7 +251,7 @@ public class GrapplingGun : MonoBehaviour
                 m_springJoint2D.enabled = true;
                 print("Grapple");
             }
-           
+
         }
     }
 
@@ -262,5 +264,4 @@ public class GrapplingGun : MonoBehaviour
             Gizmos.DrawWireSphere(firePoint.position, maxDistance);
         }
     }
-
 }

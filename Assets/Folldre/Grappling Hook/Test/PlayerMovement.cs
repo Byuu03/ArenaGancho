@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     bool Air = false;
 
     //public RotarGancho parentGancho;
+    public GrapplingGun ganchame;
 
     //PUAS / KILL
     bool Pua = false;
@@ -211,6 +212,7 @@ public class PlayerMovement : MonoBehaviour
     public void DesactivarMovimiento()
     {
         canMove = false;
+        ganchame.OffGrappleGun();
         Invoke("ActivarMovimiento", 3f);
         print("No me puedo Mover");
     }
