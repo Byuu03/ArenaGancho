@@ -38,7 +38,10 @@ public class LanzaRaycast : MonoBehaviour
 
             if (hit.collider != null)
             {
-
+                if (hit.collider.gameObject.layer == 9)
+                {
+                    ApagarLineRender();
+                }
                
 
                 //Debug.Log("Raycast golpeo: " + hit.collider.name);
@@ -136,7 +139,9 @@ public class LanzaRaycast : MonoBehaviour
             }
             else
             {
-               
+                linrender.enabled = false;
+                linrender.SetPosition(0, firepoint.position);
+                linrender.SetPosition(0, hit.point);
             }
 
 
@@ -144,10 +149,17 @@ public class LanzaRaycast : MonoBehaviour
         }
         if (Input.GetKeyUp(lanzaRay))
         {
-      
-            
+
+            ApagarLineRender();
             linrender.enabled = false;
         }
 
     }
+
+    public void ApagarLineRender()
+    {
+        linrender.enabled = false;
+
+    }
+
 }

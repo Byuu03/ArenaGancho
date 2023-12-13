@@ -6,7 +6,7 @@ public class CambiarLayer : MonoBehaviour
 {
     //public string nvoLayer = "Water";
     public GrapplingGun ganchoOne;
-    public GrapplingGun ganchoTwo;
+    //public GrapplingGun ganchoTwo;
 
     // Start is called before the first frame update
     void Start()
@@ -34,8 +34,8 @@ public class CambiarLayer : MonoBehaviour
 
         if (collision.gameObject.tag == "PlayerTwo")
         {
-            ganchoTwo.OffGrappleGun();
-            print("J2 CHOCO");
+            //ganchoTwo.OffGrappleGun();
+           //rint("J2 CHOCO");
 
             //int newLayerIndex = LayerMask.NameToLayer(nvoLayer);
             //gameObject.layer = newLayerIndex;

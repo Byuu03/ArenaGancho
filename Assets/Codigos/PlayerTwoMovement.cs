@@ -168,6 +168,11 @@ public class PlayerTwoMovement : MonoBehaviour
             animator.SetBool("enAire", false);
         }
 
+        if (collision.gameObject.tag == "Pared")
+        {
+            ganchameTwo.OffGrappleGun();
+        }
+
         if (collision.gameObject.tag == "Puas")
         {
             Pua = true;

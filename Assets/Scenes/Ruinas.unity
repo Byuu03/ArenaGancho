@@ -889,7 +889,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ganchoOne: {fileID: 1203759854}
-  ganchoTwo: {fileID: 1203759854}
 --- !u!1 &127089195
 GameObject:
   m_ObjectHideFlags: 0

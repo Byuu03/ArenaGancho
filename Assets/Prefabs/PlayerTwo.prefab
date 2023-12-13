@@ -16601,7 +16601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 1975
   rayDistance: 4
   firepoint: {fileID: 2725201531015905600}
   lanzaRay: 261

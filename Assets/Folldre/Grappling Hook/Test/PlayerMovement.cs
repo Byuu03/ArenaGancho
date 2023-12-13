@@ -176,6 +176,11 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("inAir", false);
         }
 
+        if (collision.gameObject.tag == "Pared")
+        {
+            ganchame.OffGrappleGun();
+        }
+
         if (collision.gameObject.tag == "Puas")
         {
             Pua = true;
