@@ -192,6 +192,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Air = false;
             animator.SetBool("inAir", false);
+            ganchame.OffGrappleGun();
 
             Audiomanager.PlaySound("Aterrizar");
         }

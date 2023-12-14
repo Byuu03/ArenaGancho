@@ -177,7 +177,7 @@ public class PlayerTwoMovement : MonoBehaviour
         {
             Air = false;
             animator.SetBool("enAire", false);
-
+            ganchameTwo.OffGrappleGun();
             Audiomanager.PlaySound("Aterrizar");
         }
 
