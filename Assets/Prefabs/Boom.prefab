@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radio: 2
-  fuerzaExplos: 2500
+  fuerzaExplos: 2550
   timerExplosion: 1.39
   animattor: {fileID: 6763100139328977403}
 --- !u!95 &6763100139328977403
