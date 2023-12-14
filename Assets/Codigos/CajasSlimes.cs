@@ -22,11 +22,13 @@ public class CajasSlimes : MonoBehaviour
         if (collision.gameObject.tag == "PlayerOne")
         {
             animator.SetBool("Colision", true);
+            Audiomanager.PlaySound("Slime");
         }
 
         if (collision.gameObject.tag == "PlayerTwo")
         {
             animator.SetBool("Colision", true);
+            Audiomanager.PlaySound("Slime");
         }
     }
 

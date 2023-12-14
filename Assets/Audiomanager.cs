@@ -11,10 +11,12 @@ public class Audiomanager : MonoBehaviour
     public static AudioClip SoltarganchoSound;
     public static AudioClip ColisionbalaSound;
     public static AudioClip DerribadoSound;
+    public static AudioClip MoverseSound;
 
     //CAJAS
     public static AudioClip AparecercajaSound;
     public static AudioClip RecojecajaSound;
+    public static AudioClip SlimeSound;
 
     //BALAS
     public static AudioClip FlechaSound;
@@ -41,10 +43,12 @@ public class Audiomanager : MonoBehaviour
         SoltarganchoSound = Resources.Load<AudioClip>("Soltargancho");
         ColisionbalaSound = Resources.Load<AudioClip>("Colsionbala");
         DerribadoSound = Resources.Load<AudioClip>("Derribado");
+        MoverseSound = Resources.Load<AudioClip>("Moverse");
 
         //CAJAS
         AparecercajaSound = Resources.Load<AudioClip>("Aparececaja");
         RecojecajaSound = Resources.Load<AudioClip>("Recojecaja");
+        SlimeSound = Resources.Load<AudioClip>("Slime");
 
         //BALAS
         FlechaSound = Resources.Load<AudioClip>("Flecha");
@@ -97,8 +101,12 @@ public class Audiomanager : MonoBehaviour
                     audioScr.PlayOneShot(DerribadoSound);
                     break;
 
-                //CAJAS
-                case "Aparececaja":
+            case "Moverse":
+                audioScr.PlayOneShot(MoverseSound);
+                break;
+
+            //CAJAS
+            case "Aparececaja":
                     audioScr.PlayOneShot(AparecercajaSound);
                     break;
 
@@ -106,8 +114,12 @@ public class Audiomanager : MonoBehaviour
                     audioScr.PlayOneShot(RecojecajaSound);
                     break;
 
-                //BALAS
-                case "Flecha":
+            case "Slime":
+                audioScr.PlayOneShot(SlimeSound);
+                break;
+
+            //BALAS
+            case "Flecha":
                     audioScr.PlayOneShot(FlechaSound);
                     break;
 

@@ -67,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
                 _rigidbody.velocity = new Vector2(-MovementSpeed, _rigidbody.velocity.y);
                 transform.localRotation = Quaternion.Euler(0, -180, 0f);
 
-                //Audiomanager.PlaySound("Direccion");
+                //Audiomanager.PlaySound("Moverse");
 
                 //parentGancho.ResetearRotacionIzquierda();
             }
@@ -78,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
                 _rigidbody.velocity = new Vector2(MovementSpeed, _rigidbody.velocity.y);
                 transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
 
-                //Audiomanager.PlaySound("Direccion");
+                //Audiomanager.PlaySound("Moverse");
 
                 //parentGancho.ResetearRotacionDerecha();
             }
@@ -95,12 +95,14 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyUp(izquierdaKey))
             {
                 animator.SetFloat("Speed", 0);
+                //Audiomanager.PlaySound("Moverse");
                 //Audiomanager.PlaySound("Direccion");
             }
             if (Input.GetKeyUp(derechaKey))
             {
                 derecha = true;
                 animator.SetFloat("Speed", 0);
+                //Audiomanager.PlaySound("Moverse");
                 //Audiomanager.PlaySound("Direccion");
                 //_rigidbody.velocity = new Vector2(MovementSpeed, _rigidbody.velocity.y);
                 //transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
