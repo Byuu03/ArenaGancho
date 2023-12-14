@@ -44,7 +44,7 @@ public class LanzaRaycast : MonoBehaviour
                 }
                
 
-                //Debug.Log("Raycast golpeo: " + hit.collider.name);
+                Debug.Log("Raycast golpeo: " + hit.collider.name);
 
                 if (hit.collider.CompareTag("SpecialBox"))
                 {
