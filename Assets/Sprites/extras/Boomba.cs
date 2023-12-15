@@ -8,6 +8,8 @@ public class Boomba : MonoBehaviour
     [SerializeField] private float fuerzaExplos;
     [SerializeField] private float timerExplosion;
 
+    public GameObject boomEffect;
+
     public Animator animattor;
 
     // Start is called before the first frame update
@@ -29,37 +31,52 @@ public class Boomba : MonoBehaviour
         if (collision.gameObject.tag == "Puas")
         {
             Explosion();
+            Instantiate(boomEffect, transform.position, Quaternion.identity);
             Audiomanager.PlaySound("Explotion");
+            animattor.SetBool("Touch", true);
+        }
+
+        if (collision.gameObject.tag == "Box")
+        {
+            Explosion();
+            Instantiate(boomEffect, transform.position, Quaternion.identity);
+            Audiomanager.PlaySound("Explotion");
+            animattor.SetBool("Touch", true);
         }
 
         if (collision.gameObject.tag == "PlayerOne")
         {
-            Invoke("Explosion", timerExplosion);
+            //Invoke("Explosion", timerExplosion);
+            Instantiate(boomEffect, transform.position, Quaternion.identity);
             Audiomanager.PlaySound("Explotion");
-            //Explosion();
+            Explosion();
             animattor.SetBool("Touch", true);
         }
 
         if (collision.gameObject.tag == "PlayerTwo")
         {
-            Invoke("Explosion", timerExplosion);
+            //Invoke("Explosion", timerExplosion);
+            Instantiate(boomEffect, transform.position, Quaternion.identity);
             Audiomanager.PlaySound("Explotion");
-            //Explosion();
+            Explosion();
             animattor.SetBool("Touch", true);
         }
 
         if (collision.gameObject.tag == "Suelo")
         {
             Explosion();
+            Instantiate(boomEffect, transform.position, Quaternion.identity);
             Audiomanager.PlaySound("Explotion");
             animattor.SetBool("Touch", true);
         }
 
-        //if (collision.gameObject.tag == "Pared")
-        //{
-        //    Explosion();
-        //    animattor.SetBool("Touch", true);
-        //}
+        if (collision.gameObject.tag == "Pared")
+        {
+            Explosion();
+            Instantiate(boomEffect, transform.position, Quaternion.identity);
+            Audiomanager.PlaySound("Explotion");
+            animattor.SetBool("Touch", true);
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)

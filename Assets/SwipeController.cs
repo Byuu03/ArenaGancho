@@ -23,6 +23,23 @@ public class SwipeController : MonoBehaviour, IEndDragHandler
         dragThreshould = Screen.width / 15;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            //Next();
+            Previous();
+            Audiomanager.PlaySound("Deslizar");
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            //Previous();
+            Next();
+            Audiomanager.PlaySound("Deslizar");
+        }
+    }
+
     public void OnEndDrag(PointerEventData eventData)
     {
         if (Mathf.Abs(eventData.position.x - eventData.pressPosition.x) > dragThreshould)

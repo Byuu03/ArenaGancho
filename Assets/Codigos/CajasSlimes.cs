@@ -30,6 +30,16 @@ public class CajasSlimes : MonoBehaviour
             animator.SetBool("Colision", true);
             Audiomanager.PlaySound("Slime");
         }
+
+        if (collision.gameObject.tag == "Suelo")
+        {
+            Audiomanager.PlaySound("Slime");
+        }
+
+        if (collision.gameObject.tag == "Pared")
+        {
+            Audiomanager.PlaySound("Slime");
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -43,6 +53,8 @@ public class CajasSlimes : MonoBehaviour
         {
             animator.SetBool("Colision", false);
         }
+
+       
     }
 
 }

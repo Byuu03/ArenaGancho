@@ -76,13 +76,14 @@ public class RayoDinamico : MonoBehaviour
             {
 
                 GameManager.manager.HurtP1(daño);
-                CinemachineMovimientoCamara.Instance.MoverCamara(2, 2, 0.2f);
+                //CinemachineMovimientoCamara.Instance.MoverCamara(2, 2, 0.2f);
 
                 Reaparecer reaparecerJ1 = hit.collider.GetComponent<Reaparecer>();
                 if (reaparecerJ1 != null)
                 {
                     reaparecerJ1.Die();
                     Audiomanager.PlaySound("Derribado");
+                    CinemachineMovimientoCamara.Instance.MoverCamara(2, 2, 0.2f);
                     Audiomanager.PlaySound("Colsionbala");
                 }
 
@@ -106,13 +107,14 @@ public class RayoDinamico : MonoBehaviour
             {
 
                 GameManager.manager.HurtP2();
-                CinemachineMovimientoCamara.Instance.MoverCamara(2, 2, 0.2f);
+                //CinemachineMovimientoCamara.Instance.MoverCamara(2, 2, 0.2f);
 
                 Reaparecer reaparecerJ2 = hit.collider.GetComponent<Reaparecer>();
                 if (reaparecerJ2 != null)
                 {
                     reaparecerJ2.Die();
                     Audiomanager.PlaySound("Derribado");
+                    CinemachineMovimientoCamara.Instance.MoverCamara(2, 2, 0.2f);
                     Audiomanager.PlaySound("Colsionbala");
                 }
 

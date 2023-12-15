@@ -167,6 +167,7 @@ MonoBehaviour:
   radio: 2
   fuerzaExplos: 2550
   timerExplosion: 1.39
+  boomEffect: {fileID: 3011795066641221049, guid: beaede58548f23c4f87b0113e3a76fb5, type: 3}
   animattor: {fileID: 6763100139328977403}
 --- !u!95 &6763100139328977403
 Animator:

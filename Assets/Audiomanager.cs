@@ -31,6 +31,7 @@ public class Audiomanager : MonoBehaviour
 
     //UI
     public static AudioClip BotonesSound;
+    public static AudioClip DeslizarSound;
 
     static AudioSource audioScr;
     //// Start is called before the first frame update
@@ -63,6 +64,7 @@ public class Audiomanager : MonoBehaviour
 
         //UI
         BotonesSound = Resources.Load<AudioClip>("Botones");
+        DeslizarSound = Resources.Load<AudioClip>("Deslizar");
 
         audioScr = GetComponent<AudioSource>();
     }
@@ -151,6 +153,10 @@ public class Audiomanager : MonoBehaviour
             //UI
             case "Botones":
                 audioScr.PlayOneShot(BotonesSound);
+                break;
+
+            case "Deslizar":
+                audioScr.PlayOneShot(DeslizarSound);
                 break;
         }
     }
