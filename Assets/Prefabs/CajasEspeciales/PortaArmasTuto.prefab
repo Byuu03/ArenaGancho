@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 2581107266941631313}
   m_Layer: 9
   m_Name: PortaArmasTuto
-  m_TagString: Bow
+  m_TagString: Misil
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objADesactivar: {fileID: 3383257995133944120}
-  tiempoDesactivado: 3
+  tiempoDesactivado: 5
   estaDesactivado: 0
   tagsPosibles:
   - Bow

@@ -77,6 +77,57 @@ public class Boomba : MonoBehaviour
             Audiomanager.PlaySound("Explotion");
             animattor.SetBool("Touch", true);
         }
+
+        //------BALAS------
+
+        if (collision.gameObject.tag == "Misil")
+        {
+            Explosion();
+            Instantiate(boomEffect, transform.position, Quaternion.identity);
+            Audiomanager.PlaySound("Explotion");
+            animattor.SetBool("Touch", true);
+        }
+
+        if (collision.gameObject.tag == "Arrow")
+        {
+            Explosion();
+            Instantiate(boomEffect, transform.position, Quaternion.identity);
+            Audiomanager.PlaySound("Explotion");
+            animattor.SetBool("Touch", true);
+        }
+
+        if (collision.gameObject.tag == "Bomba")
+        {
+            Explosion();
+            Instantiate(boomEffect, transform.position, Quaternion.identity);
+            Audiomanager.PlaySound("Explotion");
+            animattor.SetBool("Touch", true);
+        }
+
+        if (collision.gameObject.tag == "InverseBox")
+        {
+            Explosion();
+            Instantiate(boomEffect, transform.position, Quaternion.identity);
+            Audiomanager.PlaySound("Explotion");
+            animattor.SetBool("Touch", true);
+        }
+
+        if (collision.gameObject.tag == "ParalyzeBox")
+        {
+            Explosion();
+            Instantiate(boomEffect, transform.position, Quaternion.identity);
+            Audiomanager.PlaySound("Explotion");
+            animattor.SetBool("Touch", true);
+        }
+
+        if (collision.gameObject.tag == "SlowBox")
+        {
+            Explosion();
+            Instantiate(boomEffect, transform.position, Quaternion.identity);
+            Audiomanager.PlaySound("Explotion");
+            animattor.SetBool("Touch", true);
+        }
+
     }
 
     private void OnCollisionExit2D(Collision2D collision)

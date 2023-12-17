@@ -131,6 +131,65 @@ public class SimpleTagChange : MonoBehaviour
             StopAttrack();
 
         }
+
+        //-------------BALASSS----------------
+
+        if (collision.gameObject.tag == "Misil")
+        {
+            Instantiate(objExplosion, transform.position, Quaternion.identity);
+
+            Audiomanager.PlaySound("Colsionbala");
+            StopAttrack();
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "Arrow")
+        {
+            Instantiate(objExplosion, transform.position, Quaternion.identity);
+
+            Audiomanager.PlaySound("Colsionbala");
+            StopAttrack();
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "Bomba")
+        {
+            Instantiate(objExplosion, transform.position, Quaternion.identity);
+
+            Audiomanager.PlaySound("Colsionbala");
+            StopAttrack();
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "InverseBox")
+        {
+            Instantiate(objExplosion, transform.position, Quaternion.identity);
+
+            Audiomanager.PlaySound("Colsionbala");
+            StopAttrack();
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "ParalyzeBox")
+        {
+            Instantiate(objExplosion, transform.position, Quaternion.identity);
+
+            Audiomanager.PlaySound("Colsionbala");
+            StopAttrack();
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "SlowBox")
+        {
+            Instantiate(objExplosion, transform.position, Quaternion.identity);
+
+            Audiomanager.PlaySound("Colsionbala");
+            StopAttrack();
+            Destroy(gameObject);
+        }
+
+
+
     }
 
     //ATRAER CAJA

@@ -7295,7 +7295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objADesactivar: {fileID: 1366022379}
-  tiempoDesactivado: 3
+  tiempoDesactivado: 5
   estaDesactivado: 0
   tagsPosibles:
   - Bow
@@ -12443,7 +12443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objADesactivar: {fileID: 7633217787035779175}
-  tiempoDesactivado: 3
+  tiempoDesactivado: 5
   estaDesactivado: 0
   tagsPosibles:
   - Bow

@@ -10831,10 +10831,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PortaArmasTuto 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3383257995133944120, guid: 9a8851f0d91967f4c9d08093f7456cb4, type: 3}
-      propertyPath: m_TagString
-      value: Canon
-      objectReference: {fileID: 0}
     - target: {fileID: 6327077938145766404, guid: 9a8851f0d91967f4c9d08093f7456cb4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.74
@@ -12103,10 +12099,6 @@ PrefabInstance:
     - target: {fileID: 3383257995133944120, guid: 48a6438183e85cb44825a5fde4b5756c, type: 3}
       propertyPath: m_Name
       value: PortaArmasTuto
-      objectReference: {fileID: 0}
-    - target: {fileID: 3383257995133944120, guid: 48a6438183e85cb44825a5fde4b5756c, type: 3}
-      propertyPath: m_TagString
-      value: Bow
       objectReference: {fileID: 0}
     - target: {fileID: 6327077938145766404, guid: 48a6438183e85cb44825a5fde4b5756c, type: 3}
       propertyPath: m_LocalPosition.x

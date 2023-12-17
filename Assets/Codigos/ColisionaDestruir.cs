@@ -66,6 +66,44 @@ public class ColisionaDestruir : MonoBehaviour
             Audiomanager.PlaySound("Explotion");
         }
 
+        //OTRAS BALAS
+
+        if (collision.gameObject.tag == "Misil")
+        {
+            Explosion();
+            Audiomanager.PlaySound("Explotion");
+        }
+
+        if (collision.gameObject.tag == "Arrow")
+        {
+            Explosion();
+            Audiomanager.PlaySound("Explotion");
+        }
+
+        if (collision.gameObject.tag == "Bomba")
+        {
+            Explosion();
+            Audiomanager.PlaySound("Explotion");
+        }
+
+        if (collision.gameObject.tag == "InverseBox")
+        {
+            Explosion();
+            Audiomanager.PlaySound("Explotion");
+        }
+
+        if (collision.gameObject.tag == "ParalyzeBox")
+        {
+            Explosion();
+            Audiomanager.PlaySound("Explotion");
+        }
+
+        if (collision.gameObject.tag == "SlowBox")
+        {
+            Explosion();
+            Audiomanager.PlaySound("Explotion");
+        }
+
     }
 
     private void OnCollisionExit2D(Collision2D collision)

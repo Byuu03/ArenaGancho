@@ -65,5 +65,43 @@ public class Arrow : MonoBehaviour
             Audiomanager.PlaySound("Flecha");
         }
 
+        //BALASAS
+
+        if (collision.gameObject.tag == "Misil")
+        {
+  
+            Audiomanager.PlaySound("Flecha");
+        }
+
+        if (collision.gameObject.tag == "Arrow")
+        {
+            
+            Audiomanager.PlaySound("Flecha");
+        }
+
+        if (collision.gameObject.tag == "Bomba")
+        {
+            
+            Audiomanager.PlaySound("Flecha");
+        }
+
+        if (collision.gameObject.tag == "InverseBox")
+        {
+            
+            Audiomanager.PlaySound("Flecha");
+        }
+
+        if (collision.gameObject.tag == "ParalyzeBox")
+        {
+            
+            Audiomanager.PlaySound("Flecha");
+        }
+
+        if (collision.gameObject.tag == "SlowBox")
+        {
+            
+            Audiomanager.PlaySound("Flecha");
+        }
+
     }
 }
