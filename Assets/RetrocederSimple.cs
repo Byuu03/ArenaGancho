@@ -35,7 +35,7 @@ public class RetrocederSimple : MonoBehaviour
                 playerOneMove.KnockFromRight = false;
             }
             
-            Destroy(gameObject, 0.1f);
+            Destroy(gameObject, 0.5f);
         }
 
         if (collision.gameObject.tag == "PlayerTwo")
@@ -50,22 +50,22 @@ public class RetrocederSimple : MonoBehaviour
                 playerTwoMove.KnockFromRight = false;
             }
            
-            Destroy(gameObject, 0.1f);
+            Destroy(gameObject, 0.5f);
         }
 
         if (collision.gameObject.tag == "Suelo")
         {
-            Destroy(gameObject);
+            Destroy(gameObject, 0.5f);
         }
 
         if (collision.gameObject.tag == "Pared")
         {
-            Destroy(gameObject);
+            Destroy(gameObject, 0.5f);
         }
 
         if (collision.gameObject.tag == "Box")
         {
-            Destroy(gameObject);
+            Destroy(gameObject, 0.5f);
         }
 
         if (collision.gameObject.tag == "SpecialBox")
