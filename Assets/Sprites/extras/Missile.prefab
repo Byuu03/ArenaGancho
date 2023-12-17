@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radio: 1
-  fuerzaExplos: 2100
+  fuerzaExplos: 2150
   objExplosion: {fileID: 1967835574231978638, guid: 3e196c9e632c76841a71cb6e2dc6d010, type: 3}
   humopart: {fileID: 3508945753912026287}
 --- !u!1 &2114648421242196920
