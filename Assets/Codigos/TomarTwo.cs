@@ -106,6 +106,15 @@ public class TomarTwo : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Puas")
+        {
+            grabbed = false;
+            //collision.gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
+        }
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;

@@ -22,6 +22,8 @@ public class PuasColision : MonoBehaviour
 
             if (colisionesActuales >= colisionesNecesarias)
             {
+                collision.gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
+
                 objetoActivado = true;
                 objetoAActivar.SetActive(true);
                 Audiomanager.PlaySound("Derribado");

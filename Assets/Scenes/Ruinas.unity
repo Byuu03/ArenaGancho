@@ -1017,8 +1017,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.1451, y: 0.1072, z: 0}
-    m_Extent: {x: 1.704, y: 0.8205, z: 0}
+    m_Center: {x: -0.1509, y: 0.11035001, z: 0}
+    m_Extent: {x: 1.6995, y: 0.82115, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1486,8 +1486,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.19120002, y: 0.17285001, z: 0}
-    m_Extent: {x: 1.7327, y: 0.82745004, z: 0}
+    m_Center: {x: -0.1911, y: 0.15959999, z: 0}
+    m_Extent: {x: 1.7366, y: 0.83070004, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -8818,8 +8818,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.06279999, y: 0.18615001, z: 0}
-    m_Extent: {x: 1.7189, y: 0.84555, z: 0}
+    m_Center: {x: -0.058399975, y: 0.18319997, z: 0}
+    m_Extent: {x: 1.7193999, y: 0.84449995, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -12771,8 +12771,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 3.7103, y: -3.3941503, z: 0}
-    m_Extent: {x: 5.5541997, y: 4.78585, z: 0}
+    m_Center: {x: 3.7114499, y: -3.39355, z: 0}
+    m_Extent: {x: 5.54805, y: 4.77765, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -15093,8 +15093,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.36255, y: -0.6592001, z: 0}
-    m_Extent: {x: 3.19715, y: 2.0484, z: 0}
+    m_Center: {x: 1.3613, y: -0.65999997, z: 0}
+    m_Extent: {x: 3.1939, y: 2.0499, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -16251,8 +16251,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.1433, y: 0.1119, z: 0}
-    m_Extent: {x: 1.7253001, y: 0.8219, z: 0}
+    m_Center: {x: -0.14930004, y: 0.11200002, z: 0}
+    m_Extent: {x: 1.7167001, y: 0.8184, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -16864,9 +16864,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2510441634751674747, guid: 0a2d54e5ae3f7aa4fa60dbe79e61fb89, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3312104420453364430, guid: 0a2d54e5ae3f7aa4fa60dbe79e61fb89, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7622978035425758445, guid: 0a2d54e5ae3f7aa4fa60dbe79e61fb89, type: 3}
       propertyPath: m_Name
       value: PlayerOne
+      objectReference: {fileID: 0}
+    - target: {fileID: 8480716756588629280, guid: 0a2d54e5ae3f7aa4fa60dbe79e61fb89, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17166,9 +17178,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 695155908345327717, guid: 4119b0dd0e284d240bd340de60f0de1a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3709010212982550509, guid: 4119b0dd0e284d240bd340de60f0de1a, type: 3}
       propertyPath: m_Name
       value: PlayerTwo
+      objectReference: {fileID: 0}
+    - target: {fileID: 4880546364054465469, guid: 4119b0dd0e284d240bd340de60f0de1a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398663043056907984, guid: 4119b0dd0e284d240bd340de60f0de1a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
