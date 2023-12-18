@@ -756,8 +756,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00395, y: 0.02960001, z: 0}
-    m_Extent: {x: 0.93295, y: 0.3686, z: 0}
+    m_Center: {x: -0.0088, y: 0.025800005, z: 0}
+    m_Extent: {x: 0.9318, y: 0.37330002, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -771,6 +771,9 @@ MonoBehaviour:
   - {x: -0.76855385, y: -0.17270024, z: 0}
   - {x: 0.7517692, y: -0.15591519, z: 0}
   - {x: 0.49160776, y: 0.22305566, z: 0}
+  - {x: 0.2181289, y: -0.048293885, z: 0}
+  - {x: -0.040104434, y: 0.20186979, z: 0}
+  - {x: -0.32254708, y: -0.056363747, z: 0}
   - {x: -0.57553077, y: 0.22305399, z: 0}
 --- !u!1 &48035651
 GameObject:
@@ -6527,8 +6530,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0056500137, y: 0.021750003, z: 0}
-    m_Extent: {x: 0.93415, y: 0.36695, z: 0}
+    m_Center: {x: -0.015200019, y: 0.031100005, z: 0}
+    m_Extent: {x: 0.9281, y: 0.3745, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6542,6 +6545,9 @@ MonoBehaviour:
   - {x: -0.76855385, y: -0.17270024, z: 0}
   - {x: 0.7517692, y: -0.15591519, z: 0}
   - {x: 0.49160776, y: 0.22305566, z: 0}
+  - {x: 0.22282188, y: -0.09829284, z: 0}
+  - {x: -0.0675311, y: 0.23455116, z: 0}
+  - {x: -0.3153935, y: -0.11245622, z: 0}
   - {x: -0.57553077, y: 0.22305399, z: 0}
 --- !u!1 &691751358
 GameObject:
