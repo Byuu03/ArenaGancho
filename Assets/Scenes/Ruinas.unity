@@ -347,7 +347,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 106109511
-  m_SortingLayer: -1
+  m_SortingLayer: -2
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: abee18c1b2a90324e81a00302e944a74, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.8509804}
@@ -1017,8 +1017,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.09710002, y: 0.13209999, z: 0}
-    m_Extent: {x: 1.6141, y: 0.7465, z: 0}
+    m_Center: {x: -0.09474999, y: 0.13905, z: 0}
+    m_Extent: {x: 1.61305, y: 0.74145, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1119,6 +1119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 139832305}
   - component: {fileID: 139832306}
+  - component: {fileID: 139832307}
   m_Layer: 0
   m_Name: Light 2D
   m_TagString: Untagged
@@ -1191,6 +1192,23 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &139832307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139832304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 0.922
+  sharedProfile: {fileID: 11400000, guid: 176997325372976419d0b58ffc99b3bf, type: 2}
 --- !u!1 &166273463
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,8 +1484,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.10034996, y: 0.12510002, z: 0}
-    m_Extent: {x: 1.6078501, y: 0.7388, z: 0}
+    m_Center: {x: -0.10144997, y: 0.1268, z: 0}
+    m_Extent: {x: 1.61515, y: 0.7456, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2834,7 +2852,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -4153,6 +4171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 782858887}
   - component: {fileID: 782858888}
+  - component: {fileID: 782858889}
   m_Layer: 0
   m_Name: Spot (2)
   m_TagString: Untagged
@@ -4192,7 +4211,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.8490566, g: 0.29012772, b: 0, a: 1}
-  m_Intensity: 32.8
+  m_Intensity: 12
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 471a53060000000091d62a71
@@ -4225,6 +4244,27 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!95 &782858889
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782858886}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 750047b7fa7b4ba43971a1e4f23a794f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &792567000
 GameObject:
   m_ObjectHideFlags: 0
@@ -5280,6 +5320,7 @@ GameObject:
   m_Component:
   - component: {fileID: 960151533}
   - component: {fileID: 960151534}
+  - component: {fileID: 960151535}
   m_Layer: 0
   m_Name: Spot (1)
   m_TagString: Untagged
@@ -5319,7 +5360,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.8490566, g: 0.29012772, b: 0, a: 1}
-  m_Intensity: 32.8
+  m_Intensity: 12
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 471a53060000000091d62a71
@@ -5352,6 +5393,27 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!95 &960151535
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960151532}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 750047b7fa7b4ba43971a1e4f23a794f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &982410316
 GameObject:
   m_ObjectHideFlags: 0
@@ -8751,8 +8813,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.10325003, y: 0.13744998, z: 0}
-    m_Extent: {x: 1.61295, y: 0.74025, z: 0}
+    m_Center: {x: -0.10290003, y: 0.13079998, z: 0}
+    m_Extent: {x: 1.6207, y: 0.7451, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -9793,7 +9855,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 106109511
-  m_SortingLayer: -1
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -12644,6 +12706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1660066207}
   - component: {fileID: 1660066208}
+  - component: {fileID: 1660066209}
   m_Layer: 0
   m_Name: Rincon
   m_TagString: Untagged
@@ -12695,13 +12758,13 @@ MonoBehaviour:
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 0
-  m_ShadowIntensity: 0.75
+  m_ShadowIntensityEnabled: 1
+  m_ShadowIntensity: 0.761
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 3.7029498, y: -3.39475, z: 0}
-    m_Extent: {x: 5.5446496, y: 4.78805, z: 0}
+    m_Center: {x: 3.71205, y: -3.3890498, z: 0}
+    m_Extent: {x: 5.54355, y: 4.7862496, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -12716,6 +12779,27 @@ MonoBehaviour:
   - {x: 1.9815989, y: -7.576478, z: 0}
   - {x: 8.726385, y: -7.6477566, z: 0}
   - {x: -0.51187706, y: 0.86140895, z: 0}
+--- !u!95 &1660066209
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660066206}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 00a3b39806f5f66498f24a7fc99f1b72, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1669362126
 GameObject:
   m_ObjectHideFlags: 0
@@ -14337,6 +14421,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1855697232}
   - component: {fileID: 1855697233}
+  - component: {fileID: 1855697234}
   m_Layer: 0
   m_Name: Spot
   m_TagString: Untagged
@@ -14376,7 +14461,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.8490566, g: 0.29012772, b: 0, a: 1}
-  m_Intensity: 32.8
+  m_Intensity: 9.27
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 471a53060000000091d62a71
@@ -14409,6 +14494,27 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!95 &1855697234
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855697231}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 750047b7fa7b4ba43971a1e4f23a794f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1855914057
 GameObject:
   m_ObjectHideFlags: 0
@@ -14922,6 +15028,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1920256794}
   - component: {fileID: 1920256795}
+  - component: {fileID: 1920256796}
   m_Layer: 0
   m_Name: Rincon (1)
   m_TagString: Untagged
@@ -14978,8 +15085,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.3649501, y: -0.6545, z: 0}
-    m_Extent: {x: 3.19835, y: 2.0518, z: 0}
+    m_Center: {x: 1.36355, y: -0.65769994, z: 0}
+    m_Extent: {x: 3.19785, y: 2.0535998, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -14994,6 +15101,27 @@ MonoBehaviour:
   - {x: 4.0312204, y: -2.1805346, z: -0}
   - {x: 3.518672, y: -1.4779758, z: -0}
   - {x: -0.51187706, y: 0.86140895, z: 0}
+--- !u!95 &1920256796
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920256793}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 22730a255c4f13743ae5052581634b9d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1946760136
 GameObject:
   m_ObjectHideFlags: 0
@@ -16115,8 +16243,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.10549998, y: 0.12544999, z: 0}
-    m_Extent: {x: 1.6116, y: 0.74545, z: 0}
+    m_Center: {x: -0.096650004, y: 0.13005, z: 0}
+    m_Extent: {x: 1.62065, y: 0.74985, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
