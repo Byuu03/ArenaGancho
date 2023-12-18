@@ -2167,7 +2167,7 @@ MonoBehaviour:
   Panel: {fileID: 655855634}
   timer: 0
   tiempoMin: 0
-  tiempoMax: 1.5
+  tiempoMax: 1
 --- !u!1 &825871204
 GameObject:
   m_ObjectHideFlags: 0
@@ -3314,7 +3314,7 @@ MonoBehaviour:
   Panel: {fileID: 1304862262}
   timer: 0
   tiempoMin: 0
-  tiempoMax: 1.5
+  tiempoMax: 1
 --- !u!114 &1304862264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3992,7 +3992,7 @@ MonoBehaviour:
   Panel: {fileID: 1850889269}
   timer: 0
   tiempoMin: 0
-  tiempoMax: 1.5
+  tiempoMax: 1
 --- !u!114 &1850889271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4679,7 +4679,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1406297082}
   - {fileID: 3976386}
-  - {fileID: 1129781847}
   - {fileID: 884847641}
   - {fileID: 825871208}
   - {fileID: 165892793}
+  - {fileID: 1129781847}
