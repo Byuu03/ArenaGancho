@@ -64,6 +64,9 @@ TagManager:
   - name: Escenario
     uniqueID: 106109511
     locked: 0
+  - name: Plataformas
+    uniqueID: 396022175
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
